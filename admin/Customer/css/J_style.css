@@ -1,0 +1,36 @@
+.outer_box{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url("../../assets/img/jel_background.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color: #f3f5f7; */
+}
+
+/* .cover_box{
+    box-shadow: 5px 5px 20px;
+    background-color: #f3f5f7;
+    border-radius: 20px;
+} */
+
+.login-box{
+    margin: 200px 400px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 20px;
+}
+
+.login-logo{
+    margin-bottom: 0px;
+}
+/* 
+.login-logo b{
+    font-weight: 500;
+    font-style: normal;
+}
+
+.login-box-msg{
+    text-decoration: underline;
+} */

@@ -1,0 +1,367 @@
+{
+    "meta": {
+        "code": 200,
+        "message": "You have successfully logged in"
+    },
+    "data": {
+        "uuid": "f1a6c16c-f3d8-49c4-b7b9-8ef57e292357",
+        "name": "try-at-home",
+        "max_design_count": 10000,
+        "webar_status": 1,
+        "instore_status": 1,
+        "android_sdk_bundle": "",
+        "ios_sdk_bundle": "",
+        "webar_sdk_domain": "",
+        "admin_status": 1,
+        "warp_status": 1,
+        "brand_type": "FINE",
+        "design_count": 200,
+        "logo_url": "https://api.textronic.in/api/Brand/textronics/TryOn_jewellery.png",
+        "bucket_name": "tryat-home",
+        "has_subsidiary": 0,
+        "instore_expires_at": "2100-01-01 00:00:00",
+        "webar_expires_at": "2100-01-01 00:00:00",
+        "warp_expires_at": "2100-01-01 00:00:00",
+        "active_product_codes": {
+            "Bracelets": {
+                "items": [
+                    "3D-0001-png",
+                    "3D-Break-458-1-png",
+                    "SDC14546",
+                    "SDC14579",
+                    "SDC14597",
+                    "SDC14631",
+                    "SDC14674",
+                    "Bracelet"
+                ],
+                "type": "wrist"
+            },
+            "Earrings": {
+                "items": [
+                    "TExtronic Test",
+                    "510478SDAABA00",
+                    "513818SBGABAP1",
+                    "502113HYLAAA00",
+                    "501770SASADA02",
+                    "500121DKAAGAPL",
+                    "501770SAIADA02",
+                    "503120SEQADA02",
+                    "5041181OKABA02",
+                    "5041181NWABA02",
+                    "5040071BNABA02",
+                    "5041181NSABA02",
+                    "5041181OLABA02",
+                    "5041181NQABA02",
+                    "5039191OMABA02",
+                    "5034142AGABA02",
+                    "513013HZKAAA00",
+                    "510166HLAABA00",
+                    "512714SMWABAP1",
+                    "511819DKDABA00",
+                    "511318DHWABACZ",
+                    "3D-Graff-ear",
+                    "Earrings-68458",
+                    "Earrings-3787",
+                    "Earrings-632",
+                    "ER5DIAMONDTREE",
+                    "ER6DIAMONDTREE",
+                    "Earrings-44868",
+                    "Earrings-83868",
+                    "emraldearings-359-1-png",
+                    "216-Y2626e",
+                    "DSC_9065-original",
+                    "E0001306163",
+                    "E0001243932",
+                    "ER2",
+                    "ER-1",
+                    "e-jardin-ii",
+                    "e-legacy-diamond-i",
+                    "ER-1NARAYAN"
+                ],
+                "type": "ear"
+            },
+            "Maangtika": {
+                "items": [],
+                "type": "forehead"
+            },
+            "Mathapatti": {
+                "items": [],
+                "type": "forehead"
+            },
+            "Necklaces": {
+                "items": [
+                    "Test_1",
+                    "Test_2",
+                    "Test_3",
+                    "IV-HLJ-00004_3_700",
+                    "IV-HLJ-00006_2_700",
+                    "IV-KHK-00002_3_700"
+                ],
+                "type": "neck"
+            },
+            "Nosering": {
+                "items": [],
+                "type": "nose"
+            },
+            "Rings": {
+                "items": [
+                    "Ring_SLR17997",
+                    "Ring_1SLR17997",
+                    "SLR17997",
+                    "SLR18066",
+                    "SLR18347",
+                    "SLR18350",
+                    "SLR18468",
+                    "SLR18470",
+                    "SLR18478",
+                    "SLR19262",
+                    "3D_Ring22test",
+                    "_SON7484",
+                    "ZR33",
+                    "ZG98",
+                    "bella-xiv",
+                    "bella-ring-viii",
+                    "bella-v",
+                    "512621FFIAS00",
+                    "502117FCSAB09",
+                    "51D1D1FVFAA00",
+                    "500178FMAAB09",
+                    "501093FBHAB02",
+                    "501054FBGAB02",
+                    "504116FEMAA02",
+                    "503419FADAA02",
+                    "503419FOQAA02",
+                    "503419FGDAA02",
+                    "503419FAOAA02",
+                    "503419FAIAA02",
+                    "503419FFTAA02",
+                    "Ring"
+                ],
+                "type": "finger"
+            },
+            "Sets": {
+                "items": [
+                    "SET006",
+                    "SET007",
+                    "SET008"
+                ],
+                "type": "set"
+            },
+            "brand_filters": {
+                "items": [
+                    "calibration",
+                    "collection",
+                    "metal_type",
+                    "sub_category",
+                    "store_name",
+                    "total_price",
+                    "location",
+                    "metal_purity_(in_kt)",
+                    "metal_weight_(in_gms)"
+                ],
+                "type": "generic"
+            },
+            "config": {
+                "items": [
+                    "logo_url"
+                ],
+                "type": "generic"
+            },
+            "Watch": {
+                "items": [
+                    "watch8",
+                    "Bulova",
+                    "Rolex",
+                    "Citizen",
+                    "Bulova_lll",
+                    "Apple_Rosegold",
+                    "Bulova_V",
+                    "CitizenIII",
+                    "Diamond_blue",
+                    "CitizenIV",
+                    "watch14",
+                    "watch15",
+                    "2D-002",
+                    "2D-003",
+                    "2D-005",
+                    "2D-001",
+                    "2D-004",
+                    "3D_R_Lwatch_1",
+                    "Watch_3d_L-R"
+                ],
+                "type": "wrist"
+            },
+            "Eyewear": {
+                "items": [],
+                "type": "eye"
+            },
+            "Handbag": {
+                "items": [],
+                "type": "handbag"
+            }
+        },
+        "disable_product_codes": {
+            "Bracelets": {
+                "items": [],
+                "type": "wrist"
+            },
+            "Earrings": {
+                "items": [
+                    "3D-E1041-png",
+                    "Earrings-3787",
+                    "Earrings-68458",
+                    "necklace-set-59-earrings",
+                    "601-Z5962e",
+                    "Earrings-22683",
+                    "necklace-set-5-earrings",
+                    "E0001244069",
+                    "E0001206692",
+                    "earring",
+                    "earring1",
+                    "Earring2",
+                    "Earring3",
+                    "Earring3_more",
+                    "Earring3_less",
+                    "ER2ASMOTIWALA",
+                    "E14322-SSILBIBWM"
+                ],
+                "type": "ear"
+            },
+            "Maangtika": {
+                "items": [],
+                "type": "forehead"
+            },
+            "Mathapatti": {
+                "items": [
+                    "mathaapatti"
+                ],
+                "type": "forehead"
+            },
+            "Necklaces": {
+                "items": [
+                    "L02_2377",
+                    "Necklaces-45517",
+                    "Necklaces-96021",
+                    "Necklaces-98260",
+                    "SGD059",
+                    "choker-necklace-set-16-necklace-min",
+                    "necklace-set-5-necklace",
+                    "necklace-set-59-necklace",
+                    "DSC06778-original",
+                    "513817NDDAAAP1",
+                    "222-Y2952",
+                    "216-Y2638",
+                    "DSC06776"
+                ],
+                "type": "neck"
+            },
+            "Nosering": {
+                "items": [
+                    "Nosering"
+                ],
+                "type": "nose"
+            },
+            "Rings": {
+                "items": [
+                    "SLR18468",
+                    "SLR18478",
+                    "SLR19262",
+                    "ZR33",
+                    "ZG98",
+                    "R16810D88DXMDI_ALT2",
+                    "R07443DSSACIDI_ALT1"
+                ],
+                "type": "finger"
+            },
+            "Sets": {
+                "items": [
+                    "SET002",
+                    "SET001",
+                    "SET003",
+                    "SET004",
+                    "SET005"
+                ],
+                "type": "set"
+            },
+            "brand_filters": {
+                "items": [],
+                "type": "generic"
+            },
+            "config": {
+                "items": [],
+                "type": "generic"
+            },
+            "Watch": {
+                "items": [
+                    "Bulova_IV",
+                    "Citizen_ll",
+                    "CitizenV",
+                    "BulovaVI",
+                    "BulovaVII"
+                ],
+                "type": "wrist"
+            },
+            "Eyewear": {
+                "items": [
+                    "ew2",
+                    "EW1",
+                    "EW-5",
+                    "EW-4",
+                    "EW-3",
+                    "rigel_glasses",
+                    "mustang_glasses",
+                    "aviator_glasses",
+                    "rayban",
+                    "sun_glasses",
+                    "eyewear_specs"
+                ],
+                "type": "eye"
+            },
+            "Handbag": {
+                "items": [
+                    "bag1",
+                    "bag2",
+                    "bag3",
+                    "Samsung865Litreslowresolutionwithout",
+                    "High",
+                    "Samsung_crystal-without",
+                    "Samsung_crystal-with",
+                    "Samsung865LitresAnimation",
+                    "Samsung865LitresAnimation1",
+                    "Samsung865LitresAnimation3",
+                    "recliner-sofa_2",
+                    "recliner_sofa"
+                ],
+                "type": "handbag"
+            }
+        },
+        "webar_ml_model": 1,
+        "viewer_ml_model": 1,
+        "whatsapp_number": "",
+        "contact_number": "",
+        "communication_email": "",
+        "leads_email": "",
+        "studio_mode": "https://api.textronic.in/images/model/studio_mode.png",
+        "gallery_mode": "https://api.textronic.in/images/model/gallery_mode.png",
+        "warp_desktop": "https://mirrar.s3.ap-south-1.amazonaws.com/tryat-home/warp_desktop.png",
+        "warp_mobile": "https://mirrar.s3.ap-south-1.amazonaws.com/tryat-home/warp_mobile.png",
+        "warp_table": "https://mirrar.s3.ap-south-1.amazonaws.com/tryat-home/warp_table.png",
+        "industry": "jewellery",
+        "default_screen": "camera",
+        "primary_color": "#4f4f4f",
+        "amplitude_id": null,
+        "loading_text": "null",
+        "ui_components": "{\"ui_components\":{\"filters\":false,\"wishlist\":true,\"shopping_cart\":true,\"product_code\":true,\"loading_text\":\"Please wait, virtual try-on powered shopping experience loading!\",\"details_button\":true,\"categories_text\":true,\"necklace_stacking\":true,\"ring_stacking\":true,\"multiple_hand_models\":true,\"multiple_face_models\":false,\"camera_mode\":true,\"gallery_mode\":true,\"studio_mode\":true,\"profile_tab\":false,\"take_photo\":true,\"image_share_options\":true,\"user_options\":true,\"zoom_in_out\":true,\"change_photo\":false,\"show_logo\":true,\"save_user_photo\":true,\"survey_popup\":true,\"flipped_camera\":true,\"video_calling\":false,\"sort_field\":\"\",\"alternate_cart_flow\":false,\"comparison_mode\":true,\"customize_screen\":false,\"skintone_feature\":false,\"category_scroll_buttons\":true}}",
+        "gallery_mode_hand_images": "[\"galleryModeHandModel6.jpg\",\"galleryModeHandModel5.jpg\"]",
+        "gallery_mode_face_images": [
+             "https://api.textronic.in/images/model/gallery_mode.png"
+           
+        ],
+        "subdomain": "tryathome",
+        "amplitude_secret": null,
+        "subdomain_visibility": null,
+        "post_event": "",
+        "model_images": null
+    },
+    "brand_name":"textronics"
+}

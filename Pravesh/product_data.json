@@ -1,0 +1,4391 @@
+[
+  {
+      "data":[
+        {
+      "data": {
+        "image_url": "https://api.textronic.in/images/Textronics/Maangtika/image_url/TDS-Maangtika-01.png",
+        "thumbnail_url": "",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Swayahm"
+      },
+      "is_calibrated": true,
+      "height": 60,
+      "x_offset": 0,
+      "y_offset": 5,
+      "inventory": [
+        {
+          "product_code": "TDS-Maangtika-01",
+          "collection": "Swayahm",
+          "gender": "Female"
+        }
+      ],
+      "product_code": "TDS-Maangtika-01",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "meta": {
+        "model": "1"
+      },
+      "total_price": -1,
+      "collection": "Swayahm",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 0,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 1
+    },
+        {
+      "data": {
+        "image_url": "https://api.textronic.in/images/Textronics/Maangtika/image_url/TDS-Maangtika-02.png",
+        "thumbnail_url": "",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Swayahm"
+      },
+      "is_calibrated": true,
+      "height": 60,
+      "x_offset": 0,
+      "y_offset": 5,
+      "inventory": [
+        {
+          "product_code": "TDS-Maangtika-02",
+          "collection": "Swayahm",
+          "gender": "Female"
+        }
+      ],
+      "product_code": "TDS-Maangtika-02",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "meta": {
+        "model": "1"
+      },
+      "total_price": -1,
+      "collection": "Swayahm",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 0,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 1
+    },
+        {
+      "data": {
+        "image_url": "https://api.textronic.in/images/Textronics/Maangtika/image_url/TDS-Maangtika-03.png",
+        "thumbnail_url": "",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Swayahm"
+      },
+      "is_calibrated": true,
+      "height": 60,
+      "x_offset": 0,
+      "y_offset": 5,
+      "inventory": [
+        {
+          "product_code": "TDS-Maangtika-03",
+          "collection": "Swayahm",
+          "gender": "Female"
+        }
+      ],
+      "product_code": "TDS-Maangtika-03",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "meta": {
+        "model": "1"
+      },
+      "total_price": -1,
+      "collection": "Swayahm",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 0,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 1
+    },
+        {
+      "data": {
+        "image_url": "https://api.textronic.in/images/Textronics/Maangtika/image_url/TDS-Maangtika-04.png",
+        "thumbnail_url": "",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Swayahm"
+      },
+      "is_calibrated": true,
+      "height": 60,
+      "x_offset": 0,
+      "y_offset": 5,
+      "inventory": [
+        {
+          "product_code": "TDS-Maangtika-04",
+          "collection": "Swayahm",
+          "gender": "Female"
+        }
+      ],
+      "product_code": "TDS-Maangtika-04",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "meta": {
+        "model": "1"
+      },
+      "total_price": -1,
+      "collection": "Swayahm",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 0,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 1
+    },
+        {
+      "data": {
+        "image_url": "https://api.textronic.in/images/Textronics/Maangtika/image_url/TDS-Maangtika-05.png",
+        "thumbnail_url": "",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Swayahm"
+      },
+      "is_calibrated": true,
+      "height": 60,
+      "x_offset": 0,
+      "y_offset": 5,
+      "inventory": [
+        {
+          "product_code": "TDS-Maangtika-05",
+          "collection": "Swayahm",
+          "gender": "Female"
+        }
+      ],
+      "product_code": "TDS-Maangtika-05",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "meta": {
+        "model": "1"
+      },
+      "total_price": -1,
+      "collection": "Swayahm",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 0,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 1
+    }
+          ],
+      "meta":{
+        "error_code": "",
+        "message": "Success",
+        "total": 1,
+        "has_more_pages": true,
+        "current_page": 1,
+        "total_record": 1,
+        "sets_info": []    
+     },
+      "cat":"Maangtika"
+  },
+   {
+      "data":[
+        {
+      "data": {
+        "image_url": "https://api.textronic.in/images/Textronics/Mathapatti/image_url/mangtika.png",
+        "thumbnail_url": "",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Swayahm"
+      },
+      "is_calibrated": true,
+      "height": 100,
+      "x_offset": 0,
+      "y_offset": 0,
+      "inventory": [
+        {
+          "product_code": "Mathaptti_Test_1",
+          "collection": "Swayahm",
+          "gender": "Female"
+        }
+      ],
+      "product_code": "Test_1",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "meta": {
+        "model": "1"
+      },
+      "total_price": -1,
+      "collection": "Swayahm",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 0,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 1
+    }
+          ],
+      "meta":{
+        "error_code": "",
+        "message": "Success",
+        "total": 1,
+        "has_more_pages": true,
+        "current_page": 1,
+        "total_record": 1,
+        "sets_info": []    
+     },
+      "cat":"Mathapatti"
+  },
+  {
+    "data": [
+    {
+      "data": {
+        "image_url": "https://api.textronic.in/images/Textronics/Mangalsutras/TDS-Mangalsutra-01.png",
+        "thumbnail_url": "https://api.textronic.in/images/Textronics/Mangalsutras/TDS-Mangalsutra-01.png",
+        "disable": 1,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Bestsellers"
+      },
+      "is_calibrated": false,
+      "height": 215,
+      "x_offset": -3,
+      "y_offset": -5,
+      "inventory": [
+        {
+          "product_code": "TDS-Mangalsutra",
+          "collection": "Bestsellers",
+          "gender": "Female"
+        }
+      ],
+      "product_code": "TDS-Mangalsutra",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "total_price": -1,
+      "collection": "Bestsellers",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 0
+    },
+    {
+      "data": {
+        "image_url": "https://api.textronic.in/images/Textronics/Mangalsutras/TDS-Mangalsutra-02.png",
+        "thumbnail_url": "https://api.textronic.in/images/Textronics/Mangalsutras/TDS-Mangalsutra-02.png",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Bestsellers"
+      },
+      "is_calibrated": true,
+      "height": 250,
+      "x_offset": -3,
+      "y_offset": -15,
+      "inventory": [
+        {
+          "product_code": "TDS-Mangalsutra-02",
+          "collection": "Bestsellers",
+          "gender": "Female"
+        }
+      ],
+      "product_code": "TDS-Mangalsutra-02",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "total_price": -1,
+      "collection": "Bestsellers",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 0
+    },
+    {
+      "data": {
+        "image_url": "https://api.textronic.in/images/Textronics/Mangalsutras/TDS-Mangalsutra-03.png",
+        "thumbnail_url": "https://api.textronic.in/images/Textronics/Mangalsutras/TDS-Mangalsutra-03.png",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Bestsellers"
+      },
+      "is_calibrated": true,
+      "height": 250,
+      "x_offset": -3,
+      "y_offset": -15,
+      "inventory": [
+        {
+          "product_code": "TDS-Mangalsutra-03",
+          "collection": "Bestsellers",
+          "gender": "Female"
+        }
+      ],
+      "product_code": "TDS-Mangalsutra-03",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "total_price": -1,
+      "collection": "Bestsellers",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 0
+    }
+  ],
+    "meta": {
+    "error_code": "",
+    "message": "Success",
+    "total": 1,
+    "has_more_pages": true,
+    "current_page": 1,
+    "total_record": 20,
+    "sets_info": [
+      {
+        "PendantSets": {
+          "category": "PendantSets",
+          "label": "Pendant Sets",
+          "type": "set",
+          "sets_info": [
+            {
+              "set_category": "PendantSets",
+              "category": "Earrings",
+              "type": "ear",
+              "category_singular": "earring",
+              "data_key": "earring_data",
+              "code_key": "earring"
+            },
+            {
+              "set_category": "PendantSets",
+              "category": "Pendants",
+              "type": "neck",
+              "category_singular": "pendant",
+              "data_key": "pendant_data",
+              "code_key": "pendant"
+            }
+          ]
+        },
+        "NecklaceSets": {
+          "category": "NecklaceSets",
+          "label": "Necklace Sets",
+          "type": "set",
+          "sets_info": [
+            {
+              "set_category": "NecklaceSets",
+              "category": "Earrings",
+              "type": "ear",
+              "category_singular": "earring",
+              "data_key": "earring_data",
+              "code_key": "earring"
+            },
+            {
+              "set_category": "NecklaceSets",
+              "category": "Necklaces",
+              "type": "neck",
+              "category_singular": "necklace",
+              "data_key": "necklace_data",
+              "code_key": "necklace"
+            }
+          ]
+        },
+        "Sets": {
+          "category": "Sets",
+          "label": "Sets",
+          "type": "set",
+          "sets_info": [
+            {
+              "set_category": "Sets",
+              "category": "Earrings",
+              "type": "ear",
+              "category_singular": "earring",
+              "data_key": "earring_data",
+              "code_key": "earring"
+            },
+            {
+              "set_category": "Sets",
+              "category": "Necklaces",
+              "type": "neck",
+              "category_singular": "necklace",
+              "data_key": "necklace_data",
+              "code_key": "necklace"
+            }
+          ]
+        }
+      }
+    ]
+  },
+    "cat" : "Mangalsutras" 
+  },
+ {
+    "data": [
+    {
+      "data": {
+        "image_url": "https://api.textronic.in/images/Textronics/Necklaces/image_url/TDS-Nec-01.png",
+        "thumbnail_url": "",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Swayahm"
+      },
+      "is_calibrated": true,
+      "height": 252,
+      "x_offset": -2,
+      "y_offset": -16,
+      "inventory": [
+        {
+          "product_code": "TDS-Nec-01",
+          "collection": "Swayahm",
+          "gender": "Female"
+        }
+      ],
+      "product_code": "TDS-Nec-01",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "meta": {
+        "model": "1"
+      },
+      "total_price": -1,
+      "collection": "Swayahm",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 0,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 1
+    },
+    {
+      "data": {
+        "image_url": "https://api.textronic.in/images/Textronics/Necklaces/image_url/TDS-Nec-02.png",
+        "thumbnail_url": "",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Akshayam"
+      },
+      "is_calibrated": true,
+      "height": 150,
+      "x_offset": -2,
+      "y_offset": -18,
+      "inventory": [
+        {
+          "product_code": "TDS-Nec-02",
+          "collection": "Akshayam",
+          "gender": "Female"
+        }
+      ],
+      "product_code": "TDS-Nec-02",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "total_price": -1,
+      "collection": "Akshayam",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 0,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 0
+    },
+    {
+      "data": {
+        "image_url": "https://api.textronic.in/images/Textronics/Necklaces/image_url/TDS-Nec-03.png",
+        "thumbnail_url": "",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Akshayam"
+      },
+      "is_calibrated": true,
+      "height": 250,
+      "x_offset": -3.8,
+      "y_offset": -10,
+      "inventory": [
+        {
+          "product_code": "TDS-Nec-03",
+          "collection": "Akshayam",
+          "gender": "Female"
+        }
+      ],
+      "product_code": "TDS-Nec-03",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "total_price": -1,
+      "collection": "Akshayam",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 0,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 0
+    },
+    {
+      "data": {
+        "image_url": "https://api.textronic.in/images/Textronics/Necklaces/image_url/TDS-Nec-04.png",
+        "thumbnail_url": "",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Swayahm"
+      },
+      "is_calibrated": true,
+       "height": 170,
+      "x_offset": -2.5,
+      "y_offset": -9,
+      "inventory": [
+        {
+          "product_code": "Handcrafted Carving stone necklace"
+        }
+      ],
+      "product_code": "TDS-Nec-04",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "meta": {
+        "model": "1"
+      },
+      "total_price": -1,
+      "collection": "Swayahm",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 0,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 1
+    },
+     {
+      "data": {
+        "image_url": "https://api.textronic.in/images/Textronics/Necklaces/image_url/TDS-Nec-05.png",
+        "thumbnail_url": "",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Swayahm"
+      },
+      "is_calibrated": true,
+      "height": 100,
+      "x_offset": 0,
+      "y_offset": -5,
+      "inventory": [
+        {
+          "product_code": "Handcrafted Meenakari Green Choker Necklace"
+        }
+      ],
+      "product_code": "TDS-Nec-05",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "meta": {
+        "model": "1"
+      },
+      "total_price": -1,
+      "collection": "Swayahm",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 0,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 1
+    }
+    ],
+    "meta": {
+    "error_code": "",
+    "message": "Success",
+    "total": 1,
+    "has_more_pages": true,
+    "current_page": 1,
+    "total_record": 17025,
+    "sets_info": [
+      {
+         "PendantSets": {
+          "category": "PendantSets",
+          "label": "Pendant Sets",
+          "type": "set",
+          "sets_info": [
+            {
+              "set_category": "PendantSets",
+              "category": "Earrings",
+              "type": "ear",
+              "category_singular": "earring",
+              "data_key": "earring_data",
+              "code_key": "earring"
+            },
+            {
+              "set_category": "PendantSets",
+              "category": "Pendants",
+              "type": "neck",
+              "category_singular": "pendant",
+              "data_key": "pendant_data",
+              "code_key": "pendant"
+            }
+          ]
+        },
+        "NecklaceSets": {
+          "category": "NecklaceSets",
+          "label": "Necklace Sets",
+          "type": "set",
+          "sets_info": [
+            {
+              "set_category": "NecklaceSets",
+              "category": "Earrings",
+              "type": "ear",
+              "category_singular": "earring",
+              "data_key": "earring_data",
+              "code_key": "earring"
+            },
+            {
+              "set_category": "NecklaceSets",
+              "category": "Necklaces",
+              "type": "neck",
+              "category_singular": "necklace",
+              "data_key": "necklace_data",
+              "code_key": "necklace"
+            }
+          ]
+        },
+        "Sets": {
+          "category": "Sets",
+          "label": "Sets",
+          "type": "set",
+          "sets_info": [
+            {
+              "set_category": "Sets",
+              "category": "Earrings",
+              "type": "ear",
+              "category_singular": "earring",
+              "data_key": "earring_data",
+              "code_key": "earring"
+            },
+            {
+              "set_category": "Sets",
+              "category": "Necklaces",
+              "type": "neck",
+              "category_singular": "necklace",
+              "data_key": "necklace_data",
+              "code_key": "necklace"
+            }
+          ]
+        }
+      }
+    ]
+  },
+    "cat" : "Necklaces"
+  },
+  {
+    "data": [
+    {
+      "data": {
+        "image_url": "https://api.textronic.in/images/Textronics/Pendants/image_url/TDS-Pendent-02.png",
+        "thumbnail_url": "",
+        "disable": 0,
+        "picker_value": "View Details",
+        "collection": "Religious",
+        "site_link": ""
+      },
+      "is_calibrated": true,
+      "is_uploaded": true,
+     
+      "inventory": [
+        {
+          "product_code": "TDS-Pendent-02",
+          "collection": "Religious",
+          "gender": "Female"
+        }
+      ],
+      "product_code": "TDS-Pendent-02",
+      "shine_count": "0",
+      "total_price": -1,
+      "collection": "Religious",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 1
+    },
+    {
+      "data": {
+        "image_url": "https://api.textronic.in/images/Textronics/Pendants/image_url/TDS-Pendent-01.png",
+        "thumbnail_url": "",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Swayahm"
+      },
+      "is_calibrated": true,
+      "height": 252,
+      "x_offset": -2,
+      "y_offset": -16,
+      "inventory": [
+        {
+          "product_code": "TDS-Pendent-01",
+          "collection": "Swayahm",
+          "gender": "Female"
+        }
+      ],
+      "product_code": "TDS-Pendent-01",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "meta": {
+        "model": "1"
+      },
+      "total_price": -1,
+      "collection": "Swayahm",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 0,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 1
+    },
+    {
+      "data": {
+        "image_url": "https://api.textronic.in/images/Textronics/Pendants/image_url/IV-RHS-00017_2_1200.PNG",
+        "thumbnail_url": "",
+        "disable": 0,
+        "picker_value": "View Details",
+        "collection": "Udayam",
+        "site_link": ""
+      },
+      "is_calibrated": true,
+      "is_uploaded": true,
+      "height": 243,
+      "x_offset": -4.2,
+      "y_offset": -20,
+      "inventory": [
+        {
+          "product_code": "IV-RHS-00017_2",
+          "collection": "Udayam",
+          "gender": "Female"
+        }
+      ],
+      "product_code": "IV-RHS-00017_2",
+      "shine_count": "0",
+      "total_price": -1,
+      "collection": "Udayam",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 19
+    }
+  ],
+    "meta": {
+    "error_code": "",
+    "message": "Success",
+    "total": 1,
+    "has_more_pages": true,
+    "current_page": 1,
+    "total_record": 2941,
+    "sets_info": [
+      {
+        "PendantSets": {
+          "category": "PendantSets",
+          "label": "Pendant Sets",
+          "type": "set",
+          "sets_info": [
+            {
+              "set_category": "PendantSets",
+              "category": "Earrings",
+              "type": "ear",
+              "category_singular": "earring",
+              "data_key": "earring_data",
+              "code_key": "earring"
+            },
+            {
+              "set_category": "PendantSets",
+              "category": "Pendants",
+              "type": "neck",
+              "category_singular": "pendant",
+              "data_key": "pendant_data",
+              "code_key": "pendant"
+            }
+          ]
+        },
+        "NecklaceSets": {
+          "category": "NecklaceSets",
+          "label": "Necklace Sets",
+          "type": "set",
+          "sets_info": [
+            {
+              "set_category": "NecklaceSets",
+              "category": "Earrings",
+              "type": "ear",
+              "category_singular": "earring",
+              "data_key": "earring_data",
+              "code_key": "earring"
+            },
+            {
+              "set_category": "NecklaceSets",
+              "category": "Necklaces",
+              "type": "neck",
+              "category_singular": "necklace",
+              "data_key": "necklace_data",
+              "code_key": "necklace"
+            }
+          ]
+        },
+        "Sets": {
+          "category": "Sets",
+          "label": "Sets",
+          "type": "set",
+          "sets_info": [
+            {
+              "set_category": "Sets",
+              "category": "Earrings",
+              "type": "ear",
+              "category_singular": "earring",
+              "data_key": "earring_data",
+              "code_key": "earring"
+            },
+            {
+              "set_category": "Sets",
+              "category": "Necklaces",
+              "type": "neck",
+              "category_singular": "necklace",
+              "data_key": "necklace_data",
+              "code_key": "necklace"
+            }
+          ]
+        }
+      }
+    ]
+  },
+    "cat" : "Pendants" 
+  },
+  {
+    "data": [
+    {
+      "data": {
+        "image_url": "https://api.textronic.in/images/Textronics/Rings/image_url/TDS-Ring-01.webp",
+        "location": "",
+        "material_type": "",
+        "picker_price": "",
+        "sub_category": "",
+        "total_price": ""
+      },
+      "height": 60,
+      "inventory": [
+        {
+          "product_code": "TDS-Ring-01"
+        }
+      ],
+      "isSetOnly": 0,
+      "is_uploaded": true,
+      "product_code": "TDS-Ring-01",
+      "size_multiplier": 0,
+      "x_offset": 0,
+      "y_offset": 13.831391334533691,
+      "total_price": "",
+      "collection": "",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "order_key": "1",
+      "is_calibrated": false,
+      "position": 0
+    },
+    {
+      "data": {
+        "image_url": "https://api.textronic.in/images/Textronics/Rings/image_url/TDS-Ring-02.webp",
+        "location": "",
+        "material_type": "",
+        "picker_price": "",
+        "sub_category": "",
+        "total_price": ""
+      },
+      "height": 60,
+      "inventory": [
+        {
+          "product_code": "TDS-Ring-02"
+        }
+      ],
+      "isSetOnly": 0,
+      "is_uploaded": true,
+      "product_code": "TDS-Ring-02",
+      "size_multiplier": 0,
+      "x_offset": 0,
+      "y_offset": 13.831391334533691,
+      "total_price": "",
+      "collection": "",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "order_key": "1",
+      "is_calibrated": false,
+      "position": 0
+    },
+    {
+      "data": {
+        "image_url": "https://api.textronic.in/images/Textronics/Rings/image_url/TDS-Ring-03.webp",
+        "location": "",
+        "material_type": "",
+        "picker_price": "",
+        "sub_category": "",
+        "total_price": ""
+      },
+      "height": 60,
+      "inventory": [
+        {
+          "product_code": "TDS-Ring-03"
+        }
+      ],
+      "isSetOnly": 0,
+      "is_uploaded": true,
+      "product_code": "TDS-Ring-03",
+      "size_multiplier": 0,
+      "x_offset": 0,
+      "y_offset": 13.831391334533691,
+      "total_price": "",
+      "collection": "",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "order_key": "1",
+      "is_calibrated": false,
+      "position": 0
+    },
+    {
+      "data": {
+        "image_url": "https://api.textronic.in/images/Textronics/Rings/image_url/TDS-Ring-04.webp",
+        "location": "",
+        "material_type": "",
+        "picker_price": "",
+        "sub_category": "",
+        "total_price": ""
+      },
+      "height": 60,
+      "inventory": [
+        {
+          "product_code": "TDS-Ring-04"
+        }
+      ],
+      "isSetOnly": 0,
+      "is_uploaded": true,
+      "product_code": "TDS-Ring-04",
+      "size_multiplier": 0,
+      "x_offset": 0,
+      "y_offset": 13.831391334533691,
+      "total_price": "",
+      "collection": "",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "order_key": "1",
+      "is_calibrated": false,
+      "position": 0
+    }
+  ],
+    "meta": {
+    "error_code": "",
+    "message": "Success",
+    "total": 2,
+    "has_more_pages": true,
+    "current_page": 1,
+    "total_record": 31,
+    "sets_info": [
+      {
+        "Sets": {
+          "category": "Sets",
+          "label": "Sets",
+          "type": "set",
+          "sets_info": [
+            {
+              "set_category": "Sets",
+              "category": "Earrings",
+              "type": "ear",
+              "category_singular": "earring",
+              "data_key": "earring_data",
+              "code_key": "earring"
+            },
+            {
+              "set_category": "Sets",
+              "category": "Necklaces",
+              "type": "neck",
+              "category_singular": "necklace",
+              "data_key": "necklace_data",
+              "code_key": "necklace"
+            }
+          ]
+        }
+      }
+    ]
+  },
+     "cat" : "Rings"
+  },
+  {
+    "data": [
+    {
+      "data": {
+        "image_url": "https://api.textronic.in/images/Textronics/Watch/image_url/TDS-Watch-01.webp",
+        "thumbnail_url": "",
+        "disable": 0
+      },
+      "is_calibrated": false,
+      "is_uploaded": false,
+      "height": 40,
+      "x_offset": 0,
+      "y_offset": 0,
+      "product_code": "TDS-Watch-01",
+      "total_price": -1,
+      "collection": "",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 18
+    },
+    {
+      "data": {
+        "image_url": "https://api.textronic.in/images/Textronics/Watch/image_url/TDS-Watch-02.webp",
+        "thumbnail_url": "",
+        "disable": 0
+      },
+      "is_calibrated": false,
+      "is_uploaded": false,
+      "height": 40,
+      "x_offset": 0,
+      "y_offset": 0,
+      "product_code": "TDS-Watch-02",
+      "total_price": -1,
+      "collection": "",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 18
+    },
+    {
+      "data": {
+        "image_url": "https://api.textronic.in/images/Textronics/Watch/image_url/TDS-Watch-03.webp",
+        "thumbnail_url": "",
+        "disable": 0
+      },
+      "is_calibrated": false,
+      "is_uploaded": false,
+      "height": 40,
+      "x_offset": 0,
+      "y_offset": 0,
+      "product_code": "TDS-Watch-03",
+      "total_price": -1,
+      "collection": "",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 18
+    },
+    {
+      "data": {
+        "image_url": "https://api.textronic.in/images/Textronics/Watch/image_url/TDS-Watch-04.webp",
+        "thumbnail_url": "",
+        "disable": 0
+      },
+      "is_calibrated": false,
+      "is_uploaded": false,
+      "height": 40,
+      "x_offset": 0,
+      "y_offset": 0,
+      "product_code": "TDS-Watch-04",
+      "total_price": -1,
+      "collection": "",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 18
+    }
+  ],
+    "meta": {
+    "error_code": "",
+    "message": "Success",
+    "total": 2,
+    "has_more_pages": true,
+    "current_page": 1,
+    "total_record": 24,
+    "sets_info": [
+      {
+        "Sets": {
+          "category": "Sets",
+          "label": "Sets",
+          "type": "set",
+          "sets_info": [
+            {
+              "set_category": "Sets",
+              "category": "Earrings",
+              "type": "ear",
+              "category_singular": "earring",
+              "data_key": "earring_data",
+              "code_key": "earring"
+            },
+            {
+              "set_category": "Sets",
+              "category": "Necklaces",
+              "type": "neck",
+              "category_singular": "necklace",
+              "data_key": "necklace_data",
+              "code_key": "necklace"
+            }
+          ]
+        }
+      }
+    ]
+  },
+    "cat" : "Watch"
+  },
+  {
+    "data": [
+    {
+      "data": {
+        "image_url": "https://api.textronic.in/images/Textronics/Earrings/image_url/TDS-Earring-01.png",
+        "thumbnail_url": "https://api.textronic.in/images/Textronics/Earrings/image_url/TDS-Earring-01.png",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": " ",
+        "collection": "Bestsellers"
+      },
+      "is_calibrated": true,
+      "height": 35,
+      "x_offset": -1,
+      "y_offset": -2,
+      "inventory": [
+        {
+          "product_code": "TDS-Earring-01",
+          "collection": "Bestsellers",
+          "gender": "Female"
+        }
+      ],
+      "product_code": "TDS-Earring-01",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "meta": {
+        "model": "1"
+      },
+      "total_price": -1,
+      "collection": "Bestsellers",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 7006
+    },    
+    {
+      "data": {
+        "image_url": "https://api.textronic.in/images/Textronics/Earrings/image_url/TDS-Earring-02.png",
+        "thumbnail_url": "",
+        "disable": 0
+      },
+      "is_calibrated": true,
+      "is_uploaded": false,
+      "height": 44,
+      "x_offset": -5,
+      "y_offset": 1,
+      "shine_count": "0",
+      "meta": {
+        "model": "1"
+      },
+      "product_code": "TDS-Earring-02",
+      "total_price": -1,
+      "collection": "",
+      "brand_id": "",
+      "disable": 1,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "51",
+      "position": 17
+    },
+    {
+      "data": {
+        "image_url": "https://api.textronic.in/images/Textronics/Earrings/image_url/TDS-Earring-04.png",
+        "thumbnail_url": "https://api.textronic.in/images/Textronics/Earrings/image_url/TDS-Earring-04.png",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Bestsellers"
+      },
+      "is_calibrated": true,
+      "height": 28,
+      "x_offset": 0,
+      "y_offset": -4,
+      "inventory": [
+        {
+          "product_code": "TDS-Earring-04",
+          "collection": "Bestsellers",
+          "gender": "Female"
+        }
+      ],
+      "product_code": "TDS-Earring-04",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "meta": {
+        "model": "69"
+      },
+      "total_price": -1,
+      "collection": "Bestsellers",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 9990
+    },
+    {
+      "data": {
+        "disable": 1,
+        "image_url": "https://api.textronic.in/images/Textronics/Earrings/image_url/TDS-Earring-05.png",
+        "location": "",
+        "material_type": "",
+        "picker_value": "View Details",
+        "sub_category": "Hoop Bali",
+        "total_price": "21000",
+        "metal_purity_(in_kt)": "22",
+        "metal_type": "Gold"
+      },
+      "height": 45,
+      "inventory": [
+        {
+          "product_code": "TDS-Earring-05",
+          "sub_category": "Dangler",
+          "total_price": "210000",
+          "metal_purity_(in_kt)": "22",
+          "metal_type": "White Gold",
+          "metal_weight_(in_gms)": "2.968",
+          "diamond_type": "JK SI",
+          "gemstone_color": "Gold, Green",
+          "gemstone_type": "Emrald",
+          "location": "Location_1",
+          "store_name": "Store 4",
+          "diamond_weight_(in_kt)": "0.18",
+          "gemstone_weight_(in_kt)": "4.73, 3.45"
+        }
+      ],
+      "is_calibrated": true,
+      "is_uploaded": true,
+      "product_code": "TDS-Earring-05",
+      "shine_count": "0",
+      "size_multiplier": 1,
+      "x_offset": -2,
+      "y_offset": 0,
+      "order_key": "4",
+      "meta": {
+        "model": "1"
+      },
+      "total_price": "21000",
+      "collection": "",
+      "brand_id": "",
+      "disable": 1,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "position": 2
+    },
+    {
+      "data": {
+        "disable": 0,
+        "image_url": "https://api.textronic.in/images/Textronics/Earrings/image_url/TDS-Earring-06.png",
+        "location": "",
+        "material_type": "",
+        "picker_value": "View Details",
+        "sub_category": "Studs",
+        "total_price": "9800",
+        "collection": "Fancy",
+        "metal_purity_(in_kt)": "21",
+        "metal_type": "Yellow, White Gold, Pink Gold",
+        "dangle_points": [
+          {
+            "y": 1,
+            "intensity": 0
+          }
+        ]
+      },
+      "height": 30,
+      "inventory": [
+        {
+          "product_code": "TDS-Earring-06",
+          "sub_category": "Long Earring",
+          "collection": "Fancy",
+          "total_price": "198000",
+          "metal_purity_(in_kt)": "21",
+          "metal_type": "White Gold",
+          "metal_weight_(in_gms)": "4.684, 2.54, 0.05",
+          "diamond_type": "JK SI",
+          "location": "Location_2",
+          "store_name": "Store 3",
+          "diamond_weight_(in_kt)": "0.68"
+        }
+      ],
+      "is_uploaded": true,
+      "product_code": "TDS-Earring-06",
+      "shine_count": "3",
+      "size_multiplier": 1,
+      "x_offset": 0,
+      "y_offset": -8,
+      "is_calibrated": true,
+      "order_key": "3",
+      "meta": {
+        "model": "1"
+      },
+      "total_price": "9800",
+      "collection": "Fancy",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "position": 3
+    },
+    {
+      "data": {
+        "disable": 0,
+        "image_url": "https://api.textronic.in/images/Textronics/Earrings/image_url/TDS-Earring-animated.png",
+        "location": "",
+        "material_type": "",
+        "picker_value": "View Details",
+        "sub_category": "Bali",
+        "total_price": "23863",
+        "metal_purity_(in_kt)": "18",
+        "metal_type": "Gold"
+      },
+      "height": 50,
+      "inventory": [
+        {
+          "product_code": "TDS-Earring-animated",
+          "sub_category": "Short Earring",
+          "total_price": "238630",
+          "metal_purity_(in_kt)": "18",
+          "metal_type": "White Gold",
+          "metal_weight_(in_gms)": "7.44",
+          "diamond_type": "JK SI",
+          "gemstone_color": "Silver",
+          "gemstone_type": "Diamond",
+          "location": "Location_2",
+          "store_name": "Store 2",
+          "diamond_weight_(in_kt)": "0.64",
+          "gemstone_weight_(in_kt)": "4.56, 2.43"
+        }
+      ],
+      "is_uploaded": true,
+      "product_code": "TDS-Earring-animated",
+      "shine_count": "0",
+      "size_multiplier": 1,
+      "x_offset": -8,
+      "y_offset": 2,
+      "is_calibrated": true,
+      "order_key": "2",
+      "meta": {
+        "model": "1"
+      },
+      "total_price": "23863",
+      "collection": "",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "position": 4
+    },
+    {
+      "data": {
+        "disable": 0,
+        "image_url": "https://api.textronic.in/images/Textronics/Earrings/image_url/TDS-Earring-07.png",
+        "thumbnail_url": "https://api.textronic.in/images/Textronics/Earrings/image_url/TDS-Earring-07.png"
+      },
+      "height": 50,
+      "is_calibrated": true,
+      "is_uploaded": false,
+      "shine_count": "0",
+      "x_offset": -7,
+      "y_offset": -4,
+      "meta": {
+        "model": "1"
+      },
+      "product_code": "TDS-Earring-07",
+      "total_price": -1,
+      "collection": "",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "51",
+      "position": 7
+    },
+    {
+      "data": {
+        "image_url": "https://api.textronic.in/images/Textronics/Earrings/image_url/TDS-Earring-08.png",
+        "thumbnail_url": "https://api.textronic.in/images/Textronics/Earrings/image_url/TDS-Earring-08.png",
+        "disable": 0
+      },
+      "is_calibrated": true,
+      "is_uploaded": false,
+      "height": 58,
+      "x_offset": -5,
+      "y_offset": -4,
+      "shine_count": "0",
+      "meta": {
+        "model": "1"
+      },
+      "product_code": "TDS-Earring-08",
+      "total_price": -1,
+      "collection": "",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "51",
+      "position": 12
+    },
+    {
+      "data": {
+        "image_url": "https://api.textronic.in/images/Textronics/Earrings/image_url/TDS-Earring-09.png",
+        "thumbnail_url": "https://api.textronic.in/images/Textronics/Earrings/image_url/TDS-Earring-09.png",
+        "disable": 0
+      },
+      "is_calibrated": true,
+      "is_uploaded": false,
+      "height": 60,
+      "x_offset": -4,
+      "y_offset": -5,
+      "shine_count": "0",
+      "meta": {
+        "model": "1"
+      },
+      "product_code": "TDS-Earring-09",
+      "total_price": -1,
+      "collection": "",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "51",
+      "position": 12
+    }
+  ],
+    "meta": {
+    "error_code": "",
+    "message": "Success",
+    "total": 1,
+    "has_more_pages": true,
+    "current_page": 1,
+    "total_record": 45,
+    "sets_info": [
+      {
+        "Sets": {
+          "category": "Sets",
+          "label": "Sets",
+          "type": "set",
+          "sets_info": [
+            {
+              "set_category": "Sets",
+              "category": "Earrings",
+              "type": "ear",
+              "category_singular": "earring",
+              "data_key": "earring_data",
+              "code_key": "earring"
+            },
+            {
+              "set_category": "Sets",
+              "category": "Necklaces",
+              "type": "neck",
+              "category_singular": "necklace",
+              "data_key": "necklace_data",
+              "code_key": "necklace"
+            }
+          ]
+        }
+      }
+    ]
+  },
+    "cat" : "Earrings"
+  },
+  {
+    "data": [
+    {
+      "data": {
+        "image_url": "https://api.textronic.in/images/Textronics/Bracelets/image_url/TDS-Bracelet-01.png",
+        "location": "",
+        "material_type": "",
+        "picker_price": "",
+        "sub_category": "",
+        "total_price": "",
+        "disable": 0
+      },
+      "height": 175,
+      "inventory": [
+        {
+          "product_code": "TDS-Bracelet-01"
+        }
+      ],
+      "isSetOnly": 0,
+      "is_uploaded": true,
+      "product_code": "TDS-Bracelet-01",
+      "size_multiplier": 0,
+      "x_offset": 0,
+      "y_offset": 0,
+      "total_price": "",
+      "collection": "",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "order_key": "1",
+      "is_calibrated": false,
+      "position": 2
+    },
+    {
+      "data": {
+        "image_url": "https://s3.ap-south-1.amazonaws.com/mirrar/Meghnademo/inventory/Bracelets/SDC14579.png",
+        "location": "",
+        "material_type": "",
+        "picker_price": "",
+        "sub_category": "",
+        "total_price": ""
+      },
+      "height": 175,
+      "inventory": [
+        {
+          "product_code": "SDC14579"
+        }
+      ],
+      "isSetOnly": 0,
+      "is_uploaded": true,
+      "product_code": "SDC14579",
+      "size_multiplier": 0,
+      "x_offset": 0,
+      "y_offset": 0,
+      "total_price": "",
+      "collection": "",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "order_key": "1",
+      "is_calibrated": false,
+      "position": 3
+    },
+    {
+      "data": {
+        "image_url": "https://s3.ap-south-1.amazonaws.com/mirrar/Meghnademo/inventory/Bracelets/SDC14597.png",
+        "location": "",
+        "material_type": "",
+        "picker_price": "",
+        "sub_category": "",
+        "total_price": "",
+        "disable": 0
+      },
+      "height": 175,
+      "inventory": [
+        {
+          "product_code": "SDC14597"
+        }
+      ],
+      "isSetOnly": 0,
+      "is_uploaded": true,
+      "product_code": "SDC14597",
+      "size_multiplier": 0,
+      "x_offset": 0,
+      "y_offset": 0,
+      "total_price": "",
+      "collection": "",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "order_key": "1",
+      "is_calibrated": false,
+      "position": 4
+    },
+    {
+      "data": {
+        "image_url": "https://s3.ap-south-1.amazonaws.com/mirrar/Meghnademo/inventory/Bracelets/SDC14631.png",
+        "location": "",
+        "material_type": "",
+        "picker_price": "",
+        "sub_category": "",
+        "total_price": "",
+        "disable": 0
+      },
+      "height": 175,
+      "inventory": [
+        {
+          "product_code": "SDC14631"
+        }
+      ],
+      "isSetOnly": 0,
+      "is_uploaded": true,
+      "product_code": "SDC14631",
+      "size_multiplier": 0,
+      "x_offset": 0,
+      "y_offset": 0,
+      "total_price": "",
+      "collection": "",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "order_key": "1",
+      "is_calibrated": false,
+      "position": 5
+    },
+    {
+      "data": {
+        "image_url": "https://s3.ap-south-1.amazonaws.com/mirrar/Meghnademo/inventory/Bracelets/SDC14674.png",
+        "location": "",
+        "material_type": "",
+        "picker_price": "",
+        "sub_category": "",
+        "total_price": "",
+        "disable": 0
+      },
+      "height": 175,
+      "inventory": [
+        {
+          "product_code": "SDC14674"
+        }
+      ],
+      "isSetOnly": 0,
+      "is_uploaded": true,
+      "product_code": "SDC14674",
+      "size_multiplier": 0,
+      "x_offset": 0,
+      "y_offset": 0,
+      "total_price": "",
+      "collection": "",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "order_key": "1",
+      "is_calibrated": false,
+      "position": 6
+    },
+    {
+      "data": {
+        "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tryat-home/Bracelets/Bracelet/1651135423/Bracelet.png",
+        "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tryat-home/Bracelets/Bracelet/1651135423/thumbnail/Bracelet.png",
+        "disable": 0
+      },
+      "is_calibrated": false,
+      "is_uploaded": false,
+      "height": 40,
+      "x_offset": 0,
+      "y_offset": 0,
+      "product_code": "Bracelet",
+      "total_price": -1,
+      "collection": "",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 7
+    }
+  ],
+    "meta": {
+    "error_code": "",
+    "message": "Success",
+    "total": 1,
+    "has_more_pages": false,
+    "current_page": 1,
+    "total_record": 8,
+    "sets_info": [
+      {
+        "Sets": {
+          "category": "Sets",
+          "label": "Sets",
+          "type": "set",
+          "sets_info": [
+            {
+              "set_category": "Sets",
+              "category": "Earrings",
+              "type": "ear",
+              "category_singular": "earring",
+              "data_key": "earring_data",
+              "code_key": "earring"
+            },
+            {
+              "set_category": "Sets",
+              "category": "Necklaces",
+              "type": "neck",
+              "category_singular": "necklace",
+              "data_key": "necklace_data",
+              "code_key": "necklace"
+            }
+          ]
+        }
+      }
+    ]
+  },
+    "cat" : "Bracelets"
+  },
+  {
+   "data": [
+    {
+      "earring": "necklace-set-5-earrings",
+      "necklace": "necklace-set-5-necklace",
+      "data": {
+        "disable": 1
+      },
+      "inventory": [
+        {
+          "product_code": "SET005"
+        }
+      ],
+      "set_code": "SET005",
+      "product_code": "SET005",
+      "total_price": -1,
+      "collection": "",
+      "brand_id": "",
+      "disable": 1,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "is_calibrated": false,
+      "position": 4,
+      "earrings_data": {
+        "data": {
+          "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tryat-home/Earrings/necklace-set-5-earrings/1611065544/necklace-set-5-earrings.png",
+          "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tryat-home/Earrings/necklace-set-5-earrings/1611065544/thumbnail/necklace-set-5-earrings.png",
+          "disable": 1
+        },
+        "is_calibrated": true,
+        "is_uploaded": false,
+        "height": 52,
+        "x_offset": 0,
+        "y_offset": 0,
+        "shine_count": "0",
+        "meta": {
+          "model": "1"
+        }
+      },
+      "meta": [
+        {
+          "type": "ear",
+          "category": "Earrings",
+          "code_key": "earring",
+          "data_key": "earrings_data"
+        },
+        {
+          "type": "neck",
+          "category": "Necklaces",
+          "code_key": "necklace",
+          "data_key": "necklaces_data"
+        }
+      ],
+      "necklaces_data": {
+        "data": {
+          "disable": 1,
+          "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/mirrar-default/Necklaces/necklace-set-5-necklace/1601108399/necklace-set-5-necklace.png",
+          "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/mirrar-default/Necklaces/necklace-set-5-necklace/1601108399/thumbnail/necklace-set-5-necklace.png"
+        },
+        "height": 118.8,
+        "is_calibrated": true,
+        "is_uploaded": false,
+        "x_offset": 0,
+        "y_offset": -10,
+        "shine_count": "0",
+        "meta": {
+          "faceWidth": "223.86439544337026",
+          "faceHeight": "210.9038759267986",
+          "model": "1",
+          "scalingFactor": "1.3357245475363912"
+        }
+      }
+    },
+    {
+      "earring": "Earrings-22683",
+      "necklace": "Necklaces-45517",
+      "data": {
+        "disable": 1
+      },
+      "inventory": [
+        {
+          "product_code": "SET001"
+        }
+      ],
+      "set_code": "SET001",
+      "product_code": "SET001",
+      "total_price": -1,
+      "collection": "",
+      "brand_id": "",
+      "disable": 1,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "is_calibrated": false,
+      "position": 1,
+      "earrings_data": {
+        "data": {
+          "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tryat-home/Earrings/Earrings-22683/1611065243/Earrings-22683.png",
+          "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tryat-home/Earrings/Earrings-22683/1611065243/thumbnail/Earrings-22683.png",
+          "disable": 1
+        },
+        "is_calibrated": true,
+        "is_uploaded": false,
+        "height": 22,
+        "x_offset": 0,
+        "y_offset": 0,
+        "shine_count": "0",
+        "meta": {
+          "model": "1"
+        }
+      },
+      "meta": [
+        {
+          "type": "ear",
+          "category": "Earrings",
+          "code_key": "earring",
+          "data_key": "earrings_data"
+        },
+        {
+          "type": "neck",
+          "category": "Necklaces",
+          "code_key": "necklace",
+          "data_key": "necklaces_data"
+        }
+      ],
+      "necklaces_data": {
+        "data": {
+          "disable": 1,
+          "image_url": "https://s3.ap-south-1.amazonaws.com/mirrar/meghnademo/Necklaces/Necklaces-45517.png",
+          "location": "",
+          "material_type": "",
+          "picker_value": "View Details",
+          "sub_category": "",
+          "total_price": "100000",
+          "metal_purity_(in_kt)": "22",
+          "metal_type": "Gold"
+        },
+        "height": 210,
+        "inventory": [
+          {
+            "product_code": "Necklaces-45517",
+            "total_price": "250000",
+            "metal_purity_(in_kt)": "22",
+            "metal_type": "Gold",
+            "metal_weight_(in_gms)": "4.052",
+            "diamond_type": "JK SI",
+            "location": "Location_4",
+            "store_name": "Store 2",
+            "sub-cayegory": "Long Necklace",
+            "diamond_weight_(in_kt)": "0.34"
+          }
+        ],
+        "is_calibrated": true,
+        "is_uploaded": true,
+        "product_code": "Necklaces-45517",
+        "size_multiplier": 1,
+        "x_offset": -2,
+        "y_offset": -21,
+        "shine_count": "3",
+        "order_key": "2",
+        "meta": {
+          "faceWidth": "280.27346069942365",
+          "faceHeight": "265.4907413059218",
+          "model": "1",
+          "scalingFactor": "1.6814413616041715"
+        }
+      }
+    },
+    {
+      "earring": "necklace-set-59-earrings",
+      "necklace": "necklace-set-59-necklace",
+      "data": {
+        "disable": 1
+      },
+      "inventory": [
+        {
+          "product_code": "SET004"
+        }
+      ],
+      "set_code": "SET004",
+      "product_code": "SET004",
+      "total_price": -1,
+      "collection": "",
+      "brand_id": "",
+      "disable": 1,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "is_calibrated": false,
+      "position": 3,
+      "earrings_data": {
+        "data": {
+          "disable": 1,
+          "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/mirrar-default/Earrings/necklace-set-59-earrings/1601108372/necklace-set-59-earrings.png",
+          "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/mirrar-default/Earrings/necklace-set-59-earrings/1601108372/thumbnail/necklace-set-59-earrings.png"
+        },
+        "height": 46,
+        "is_calibrated": true,
+        "is_uploaded": false,
+        "x_offset": 0,
+        "y_offset": 0,
+        "shine_count": "0",
+        "meta": {
+          "model": "1"
+        }
+      },
+      "meta": [
+        {
+          "type": "ear",
+          "category": "Earrings",
+          "code_key": "earring",
+          "data_key": "earrings_data"
+        },
+        {
+          "type": "neck",
+          "category": "Necklaces",
+          "code_key": "necklace",
+          "data_key": "necklaces_data"
+        }
+      ],
+      "necklaces_data": {
+        "data": {
+          "disable": 1,
+          "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/mirrar-default/Necklaces/necklace-set-59-necklace/1601108395/necklace-set-59-necklace.png",
+          "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/mirrar-default/Necklaces/necklace-set-59-necklace/1601108395/thumbnail/necklace-set-59-necklace.png"
+        },
+        "height": 141,
+        "is_calibrated": true,
+        "is_uploaded": false,
+        "x_offset": -1,
+        "y_offset": -18,
+        "shine_count": "0",
+        "meta": {
+          "faceWidth": "212.32137945123094",
+          "faceHeight": "211.6436830163995",
+          "model": "1",
+          "scalingFactor": "1.3404099924371966"
+        }
+      }
+    },
+    {
+      "earring": "5130202FQ1BA00",
+      "necklace": "5130202FQ1BA00",
+      "site link": "",
+      "data": {
+        "site_link": "",
+        "picker_value": "View Details",
+        "collection": "Bestsellers"
+      },
+      "inventory": [
+        {
+          "collection": "Bestsellers",
+          "product_code": "5130202FQ1BA00"
+        }
+      ],
+      "set_code": "5130202FQ1BA00",
+      "product_code": "5130202FQ1BA00",
+      "total_price": -1,
+      "collection": "Bestsellers",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "is_calibrated": false,
+      "position": 5,
+      "earrings_data": {
+        "data": {
+          "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Earrings/5130202FQ1BA00/1642361062/5130202FQ1BA00.png",
+          "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Earrings/5130202FQ1BA00/1642361062/thumbnail/5130202FQ1BA00.png",
+          "disable": 0,
+          "picker_value": "View Details",
+          "site_link": "",
+          "collection": "Bestsellers"
+        },
+        "is_calibrated": true,
+        "height": 70,
+        "x_offset": -2,
+        "y_offset": -5,
+        "inventory": [
+          {
+            "product_code": "5130202FQ1BA00",
+            "collection": "Bestsellers",
+            "gender": "Female"
+          }
+        ],
+        "product_code": "5130202FQ1BA00",
+        "is_uploaded": true,
+        "isSetOnly": 1,
+        "shine_count": "0",
+        "meta": {
+          "model": "69"
+        }
+      },
+      "meta": [
+        {
+          "type": "ear",
+          "category": "Earrings",
+          "code_key": "earring",
+          "data_key": "earrings_data"
+        },
+        {
+          "type": "neck",
+          "category": "Necklaces",
+          "code_key": "necklace",
+          "data_key": "necklaces_data"
+        }
+      ],
+      "necklaces_data": {
+        "data": {
+          "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Necklaces/5130202FQ1BA00/1642361111/5130202FQ1BA00.png",
+          "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Necklaces/5130202FQ1BA00/1642361111/thumbnail/5130202FQ1BA00.png",
+          "disable": 0,
+          "picker_value": "View Details",
+          "site_link": "",
+          "collection": "Bestsellers"
+        },
+        "is_calibrated": true,
+        "height": 208,
+        "x_offset": -3,
+        "y_offset": -26,
+        "inventory": [
+          {
+            "product_code": "5130202FQ1BA00",
+            "collection": "Bestsellers",
+            "gender": "Female"
+          }
+        ],
+        "product_code": "5130202FQ1BA00",
+        "is_uploaded": true,
+        "isSetOnly": 1,
+        "shine_count": "0"
+      }
+    },
+    {
+      "earring": "5130202EE1BAP3",
+      "necklace": "5130202EE1BAP3",
+      "site link": "",
+      "data": {
+        "site_link": "",
+        "picker_value": "View Details",
+        "collection": "Bestsellers"
+      },
+      "inventory": [
+        {
+          "collection": "Bestsellers",
+          "product_code": "5130202EE1BAP3"
+        }
+      ],
+      "set_code": "5130202EE1BAP3",
+      "product_code": "5130202EE1BAP3",
+      "total_price": -1,
+      "collection": "Bestsellers",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "is_calibrated": false,
+      "position": 6,
+      "earrings_data": {
+        "data": {
+          "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Earrings/5130202EE1BAP3/1642361062/5130202EE1BAP3.png",
+          "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Earrings/5130202EE1BAP3/1642361062/thumbnail/5130202EE1BAP3.png",
+          "disable": 0,
+          "picker_value": "View Details",
+          "site_link": "",
+          "collection": "Bestsellers"
+        },
+        "is_calibrated": true,
+        "height": 48,
+        "x_offset": -2,
+        "y_offset": -8,
+        "inventory": [
+          {
+            "product_code": "5130202EE1BAP3",
+            "collection": "Bestsellers",
+            "gender": "Female"
+          }
+        ],
+        "product_code": "5130202EE1BAP3",
+        "is_uploaded": true,
+        "isSetOnly": 1,
+        "shine_count": "0",
+        "meta": {
+          "model": "69"
+        }
+      },
+      "meta": [
+        {
+          "type": "ear",
+          "category": "Earrings",
+          "code_key": "earring",
+          "data_key": "earrings_data"
+        },
+        {
+          "type": "neck",
+          "category": "Necklaces",
+          "code_key": "necklace",
+          "data_key": "necklaces_data"
+        }
+      ],
+      "necklaces_data": {
+        "data": {
+          "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Necklaces/5130202EE1BAP3/1642361110/5130202EE1BAP3.png",
+          "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Necklaces/5130202EE1BAP3/1642361110/thumbnail/5130202EE1BAP3.png",
+          "disable": 0,
+          "picker_value": "View Details",
+          "site_link": "",
+          "collection": "Bestsellers"
+        },
+        "is_calibrated": true,
+        "height": 124,
+        "x_offset": -3,
+        "y_offset": -18,
+        "inventory": [
+          {
+            "product_code": "5130202EE1BAP3",
+            "collection": "Bestsellers",
+            "gender": "Female"
+          }
+        ],
+        "product_code": "5130202EE1BAP3",
+        "is_uploaded": true,
+        "isSetOnly": 1,
+        "shine_count": "0"
+      }
+    },
+    {
+      "earring": "5130202EH1BAP3",
+      "necklace": "5130202EH1BAP3",
+      "site link": "",
+      "data": {
+        "site_link": "",
+        "picker_value": "View Details",
+        "collection": "Bestsellers"
+      },
+      "inventory": [
+        {
+          "collection": "Bestsellers",
+          "product_code": "5130202EH1BAP3"
+        }
+      ],
+      "set_code": "5130202EH1BAP3",
+      "product_code": "5130202EH1BAP3",
+      "total_price": -1,
+      "collection": "Bestsellers",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "is_calibrated": false,
+      "position": 10,
+      "earrings_data": {
+        "data": {
+          "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Earrings/5130202EH1BAP3/1642361061/5130202EH1BAP3.png",
+          "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Earrings/5130202EH1BAP3/1642361061/thumbnail/5130202EH1BAP3.png",
+          "disable": 0,
+          "picker_value": "View Details",
+          "site_link": "",
+          "collection": "Bestsellers"
+        },
+        "is_calibrated": true,
+        "height": 70,
+        "x_offset": -3,
+        "y_offset": -6,
+        "inventory": [
+          {
+            "product_code": "5130202EH1BAP3",
+            "collection": "Bestsellers",
+            "gender": "Female"
+          }
+        ],
+        "product_code": "5130202EH1BAP3",
+        "is_uploaded": true,
+        "isSetOnly": 1,
+        "shine_count": "0",
+        "meta": {
+          "model": "69"
+        }
+      },
+      "meta": [
+        {
+          "type": "ear",
+          "category": "Earrings",
+          "code_key": "earring",
+          "data_key": "earrings_data"
+        },
+        {
+          "type": "neck",
+          "category": "Necklaces",
+          "code_key": "necklace",
+          "data_key": "necklaces_data"
+        }
+      ],
+      "necklaces_data": {
+        "data": {
+          "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Necklaces/5130202EH1BAP3/1642361111/5130202EH1BAP3.png",
+          "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Necklaces/5130202EH1BAP3/1642361111/thumbnail/5130202EH1BAP3.png",
+          "disable": 0,
+          "picker_value": "View Details",
+          "site_link": "",
+          "collection": "Bestsellers"
+        },
+        "is_calibrated": true,
+        "height": 125,
+        "x_offset": -3,
+        "y_offset": -14,
+        "inventory": [
+          {
+            "product_code": "5130202EH1BAP3",
+            "collection": "Bestsellers",
+            "gender": "Female"
+          }
+        ],
+        "product_code": "5130202EH1BAP3",
+        "is_uploaded": true,
+        "isSetOnly": 1,
+        "shine_count": "0"
+      }
+    },
+    {
+      "earring": "216-Y2626e",
+      "necklace": "216-Y2626",
+      "data": {
+        "disable": 0
+      },
+      "inventory": [
+        {
+          "product_code": "SET006"
+        }
+      ],
+      "set_code": "SET006",
+      "product_code": "SET006",
+      "total_price": -1,
+      "collection": "",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "is_calibrated": false,
+      "position": 5,
+      "earrings_data": {
+        "data": {
+          "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tryat-home/Earrings/216-Y2626e/1611064516/216-Y2626e.png",
+          "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tryat-home/Earrings/216-Y2626e/1611064516/thumbnail/216-Y2626e.png",
+          "disable": 0
+        },
+        "is_calibrated": true,
+        "is_uploaded": false,
+        "height": 58,
+        "x_offset": 0,
+        "y_offset": 0,
+        "shine_count": "0",
+        "meta": {
+          "model": "1"
+        }
+      },
+      "meta": [
+        {
+          "type": "ear",
+          "category": "Earrings",
+          "code_key": "earring",
+          "data_key": "earrings_data"
+        },
+        {
+          "type": "neck",
+          "category": "Necklaces",
+          "code_key": "necklace",
+          "data_key": "necklaces_data"
+        }
+      ],
+      "necklaces_data": {
+        "data": {
+          "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tryat-home/Necklaces/216-Y2626/1611064566/216-Y2626.png",
+          "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tryat-home/Necklaces/216-Y2626/1611064566/thumbnail/216-Y2626.png",
+          "disable": 0
+        },
+        "is_calibrated": true,
+        "is_uploaded": false,
+        "height": 108,
+        "x_offset": -3.8,
+        "y_offset": -7.8,
+        "shine_count": "0",
+        "meta": {
+          "faceWidth": "224.00767514445312",
+          "faceHeight": "206.21564607355214",
+          "model": "1",
+          "scalingFactor": "1.3060324251324968"
+        }
+      }
+    },
+    {
+      "earring": "Earrings-44868",
+      "necklace": "Necklaces-28238",
+      "data": {
+        "disable": 0
+      },
+      "inventory": [
+        {
+          "product_code": "SET007"
+        }
+      ],
+      "set_code": "SET007",
+      "product_code": "SET007",
+      "total_price": -1,
+      "collection": "",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "is_calibrated": false,
+      "position": 6,
+      "earrings_data": {
+        "data": {
+          "disable": 0,
+          "image_url": "https://s3.ap-south-1.amazonaws.com/mirrar/meghnademo/Earrings/Earrings-44868.png",
+          "location": "",
+          "material_type": "",
+          "picker_value": "View Details",
+          "sub_category": "Bali",
+          "total_price": "23863",
+          "metal_purity_(in_kt)": "18",
+          "metal_type": "Gold"
+        },
+        "height": 36.4,
+        "inventory": [
+          {
+            "product_code": "Earrings-44868",
+            "sub_category": "Short Earring",
+            "total_price": "238630",
+            "metal_purity_(in_kt)": "18",
+            "metal_type": "White Gold",
+            "metal_weight_(in_gms)": "7.44",
+            "diamond_type": "JK SI",
+            "gemstone_color": "Silver",
+            "gemstone_type": "Diamond",
+            "location": "Location_2",
+            "store_name": "Store 2",
+            "diamond_weight_(in_kt)": "0.64",
+            "gemstone_weight_(in_kt)": "4.56, 2.43"
+          }
+        ],
+        "is_uploaded": true,
+        "product_code": "Earrings-44868",
+        "shine_count": "0",
+        "size_multiplier": 1,
+        "x_offset": 0,
+        "y_offset": 0,
+        "is_calibrated": true,
+        "order_key": "2",
+        "meta": {
+          "model": "1"
+        }
+      },
+      "meta": [
+        {
+          "type": "ear",
+          "category": "Earrings",
+          "code_key": "earring",
+          "data_key": "earrings_data"
+        },
+        {
+          "type": "neck",
+          "category": "Necklaces",
+          "code_key": "necklace",
+          "data_key": "necklaces_data"
+        }
+      ],
+      "necklaces_data": {
+        "data": {
+          "disable": 0,
+          "image_url": "https://s3.ap-south-1.amazonaws.com/mirrar/meghnademo/Necklaces/Necklaces-28238.png",
+          "location": "",
+          "material_type": "",
+          "picker_value": "View Details",
+          "sub_category": "",
+          "total_price": "453000",
+          "collection": "Bridal",
+          "metal_purity_(in_kt)": "21",
+          "metal_type": "Gold"
+        },
+        "height": 180,
+        "inventory": [
+          {
+            "product_code": "Necklaces-28238",
+            "collection": "Bridal",
+            "total_price": "453000",
+            "metal_purity_(in_kt)": "21",
+            "metal_type": "Gold",
+            "metal_weight_(in_gms)": "2.314",
+            "diamond_type": "JK SI",
+            "gemstone_color": "White",
+            "gemstone_type": "Diamond",
+            "location": "Location_4",
+            "store_name": "Store 1",
+            "sub-cayegory": "Short Necklace",
+            "diamond_weight_(in_kt)": "0.29",
+            "gemstone_weight_(in_kt)": "1.59"
+          }
+        ],
+        "is_calibrated": true,
+        "is_uploaded": true,
+        "product_code": "Necklaces-28238",
+        "shine_count": "3",
+        "size_multiplier": 1,
+        "x_offset": -2.5,
+        "y_offset": -12.2,
+        "order_key": "1",
+        "meta": {
+          "faceWidth": "273.17133551926514",
+          "faceHeight": "265.4378171057531",
+          "model": "1",
+          "scalingFactor": "1.6811061750031029"
+        }
+      }
+    },
+    {
+      "earring": "Earrings-632",
+      "necklace": "Necklaces-56539",
+      "data": {
+        "disable": 0
+      },
+      "inventory": [
+        {
+          "product_code": "SET008"
+        }
+      ],
+      "set_code": "SET008",
+      "product_code": "SET008",
+      "total_price": -1,
+      "collection": "",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "is_calibrated": false,
+      "position": 7,
+      "earrings_data": {
+        "data": {
+          "disable": 0,
+          "image_url": "https://s3.ap-south-1.amazonaws.com/mirrar/meghnademo/Earrings/Earrings-632.png",
+          "location": "",
+          "material_type": "",
+          "picker_value": "View Details",
+          "sub_category": "Studs",
+          "total_price": "9800",
+          "collection": "Fancy",
+          "metal_purity_(in_kt)": "21",
+          "metal_type": "Yellow, White Gold, Pink Gold",
+          "dangle_points": [
+            {
+              "y": 1,
+              "intensity": 0
+            }
+          ]
+        },
+        "height": 63,
+        "inventory": [
+          {
+            "product_code": "Earrings-632",
+            "sub_category": "Long Earring",
+            "collection": "Fancy",
+            "total_price": "198000",
+            "metal_purity_(in_kt)": "21",
+            "metal_type": "White Gold",
+            "metal_weight_(in_gms)": "4.684, 2.54, 0.05",
+            "diamond_type": "JK SI",
+            "location": "Location_2",
+            "store_name": "Store 3",
+            "diamond_weight_(in_kt)": "0.68"
+          }
+        ],
+        "is_uploaded": true,
+        "product_code": "Earrings-632",
+        "shine_count": "3",
+        "size_multiplier": 1,
+        "x_offset": 0,
+        "y_offset": 0,
+        "is_calibrated": true,
+        "order_key": "3",
+        "meta": {
+          "model": "1"
+        }
+      },
+      "meta": [
+        {
+          "type": "ear",
+          "category": "Earrings",
+          "code_key": "earring",
+          "data_key": "earrings_data"
+        },
+        {
+          "type": "neck",
+          "category": "Necklaces",
+          "code_key": "necklace",
+          "data_key": "necklaces_data"
+        }
+      ],
+      "necklaces_data": {
+        "data": {
+          "disable": 0,
+          "image_url": "https://s3.ap-south-1.amazonaws.com/mirrar/meghnademo/Necklaces/Necklaces-56539.png",
+          "location": "",
+          "material_type": "",
+          "picker_value": "View Details",
+          "sub_category": "",
+          "total_price": "45000",
+          "collection": "Fancy",
+          "metal_purity_(in_kt)": "22",
+          "metal_type": "Gold"
+        },
+        "height": 198,
+        "inventory": [
+          {
+            "product_code": "Necklaces-56539",
+            "collection": "Fancy",
+            "total_price": "450000",
+            "metal_purity_(in_kt)": "22",
+            "metal_type": "White Gold",
+            "metal_weight_(in_gms)": "5.542",
+            "diamond_type": "JK SI",
+            "gemstone_color": "Silver",
+            "gemstone_type": "Silver",
+            "location": "Location_5",
+            "store_name": "Store 2",
+            "sub-cayegory": "Necklace",
+            "diamond_weight_(in_kt)": "1.11",
+            "gemstone_weight_(in_kt)": "3.83"
+          }
+        ],
+        "is_calibrated": true,
+        "is_uploaded": true,
+        "product_code": "Necklaces-56539",
+        "shine_count": "0",
+        "size_multiplier": 1,
+        "x_offset": -2,
+        "y_offset": -22,
+        "order_key": "3",
+        "meta": {
+          "faceWidth": "277.294885466403",
+          "faceHeight": "266.75919424637135",
+          "model": "1",
+          "scalingFactor": "1.689474896893685"
+        }
+      }
+    }
+  ],
+    "meta": {
+    "error_code": "",
+    "message": "Success",
+    "total": 1,
+    "has_more_pages": false,
+    "current_page": 1,
+    "total_record": 8,
+    "sets_info": [
+      {
+        "Sets": {
+          "category": "Sets",
+          "label": "Sets",
+          "type": "set",
+          "sets_info": [
+            {
+              "set_category": "Sets",
+              "category": "Earrings",
+              "type": "ear",
+              "category_singular": "earring",
+              "data_key": "earring_data",
+              "code_key": "earring"
+            },
+            {
+              "set_category": "Sets",
+              "category": "Necklaces",
+              "type": "neck",
+              "category_singular": "necklace",
+              "data_key": "necklace_data",
+              "code_key": "necklace"
+            }
+          ]
+        }
+      }
+    ]
+  },
+    "cat" : "Sets"
+  },
+  {
+    "data": [
+    {
+      "data": {
+        "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/sdm-test33-mirrar/Chains/511920CNZAA00/1620369024/511920CNZAA00.png",
+        "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/sdm-test33-mirrar/Chains/511920CNZAA00/1620369024/thumbnail/511920CNZAA00.png",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Akshayam"
+      },
+      "is_calibrated": true,
+      "height": 224,
+      "x_offset": -4,
+      "y_offset": -10,
+      "inventory": [
+        {
+          "product_code": "511920CNZAA00",
+          "collection": "Akshayam",
+          "gender": "Female"
+        }
+      ],
+      "product_code": "511920CNZAA00",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "meta": {
+        "faceWidth": "192.98754130319793",
+        "faceHeight": "165.42270136005035",
+        "model": "1",
+        "scalingFactor": "1.0476771086136523"
+      },
+      "total_price": -1,
+      "collection": "Akshayam",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 0
+    },
+    {
+      "data": {
+        "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Chains/502621CICAA00/1642059357/502621CICAA00.png",
+        "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Chains/502621CICAA00/1642059357/thumbnail/502621CICAA00.png",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Aveer"
+      },
+      "is_calibrated": true,
+      "height": 224,
+      "x_offset": -4,
+      "y_offset": -10,
+      "inventory": [
+        {
+          "product_code": "502621CICAA00",
+          "collection": "Aveer",
+          "gender": "Male"
+        }
+      ],
+      "product_code": "502621CICAA00",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "meta": {
+        "faceWidth": "186.88763053563417",
+        "faceHeight": "167.74992989089515",
+        "model": "1",
+        "scalingFactor": "1.062416222642336"
+      },
+      "total_price": -1,
+      "collection": "Aveer",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 2
+    },
+    {
+      "data": {
+        "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Chains/502621CIGAA00/1642059357/502621CIGAA00.png",
+        "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Chains/502621CIGAA00/1642059357/thumbnail/502621CIGAA00.png",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Aveer"
+      },
+      "is_calibrated": true,
+      "height": 224,
+      "x_offset": -4,
+      "y_offset": -10,
+      "inventory": [
+        {
+          "product_code": "502621CIGAA00",
+          "collection": "Aveer",
+          "gender": "Male"
+        }
+      ],
+      "product_code": "502621CIGAA00",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "meta": {
+        "faceWidth": "185.42033246631235",
+        "faceHeight": "169.52475772790515",
+        "model": "1",
+        "scalingFactor": "1.0736567989433994"
+      },
+      "total_price": -1,
+      "collection": "Aveer",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 3
+    },
+    {
+      "data": {
+        "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Chains/502621CDPAA00/1642059358/502621CDPAA00.png",
+        "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Chains/502621CDPAA00/1642059358/thumbnail/502621CDPAA00.png",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Aveer"
+      },
+      "is_calibrated": true,
+      "height": 224,
+      "x_offset": -4,
+      "y_offset": -14,
+      "inventory": [
+        {
+          "product_code": "502621CDPAA00",
+          "collection": "Aveer",
+          "gender": "Male"
+        }
+      ],
+      "product_code": "502621CDPAA00",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "meta": {
+        "faceWidth": "190.58538433978578",
+        "faceHeight": "165.12033231400338",
+        "model": "1",
+        "scalingFactor": "1.0457621046553547"
+      },
+      "total_price": -1,
+      "collection": "Aveer",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 4
+    },
+    {
+      "data": {
+        "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Chains/502621CCHAA00/1642059357/502621CCHAA00.png",
+        "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Chains/502621CCHAA00/1642059357/thumbnail/502621CCHAA00.png",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Aveer"
+      },
+      "is_calibrated": true,
+      "height": 224,
+      "x_offset": -4,
+      "y_offset": -10,
+      "inventory": [
+        {
+          "product_code": "502621CCHAA00",
+          "collection": "Aveer",
+          "gender": "Male"
+        }
+      ],
+      "product_code": "502621CCHAA00",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "meta": {
+        "faceWidth": "180.19828075720665",
+        "faceHeight": "162.0168715656238",
+        "model": "1",
+        "scalingFactor": "1.0261068532489506"
+      },
+      "total_price": -1,
+      "collection": "Aveer",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 5
+    },
+    {
+      "data": {
+        "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Chains/502621CEAAA00/1642059360/502621CEAAA00.png",
+        "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Chains/502621CEAAA00/1642059360/thumbnail/502621CEAAA00.png",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Aveer"
+      },
+      "is_calibrated": true,
+      "height": 224,
+      "x_offset": -4,
+      "y_offset": -10,
+      "inventory": [
+        {
+          "product_code": "502621CEAAA00",
+          "collection": "Aveer",
+          "gender": "Male"
+        }
+      ],
+      "product_code": "502621CEAAA00",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "meta": {
+        "faceWidth": "197.87364096665095",
+        "faceHeight": "181.30022461892364",
+        "model": "1",
+        "scalingFactor": "1.1482347559198498"
+      },
+      "total_price": -1,
+      "collection": "Aveer",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 6
+    },
+    {
+      "data": {
+        "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Chains/504025CILAA00/1642059354/504025CILAA00.png",
+        "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Chains/504025CILAA00/1642059354/thumbnail/504025CILAA00.png",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Bestsellers"
+      },
+      "is_calibrated": true,
+      "height": 224,
+      "x_offset": -4,
+      "y_offset": -10,
+      "inventory": [
+        {
+          "product_code": "504025CILAA00",
+          "collection": "Bestsellers",
+          "gender": "Female"
+        }
+      ],
+      "product_code": "504025CILAA00",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "meta": {
+        "faceWidth": "176.0609650944735",
+        "faceHeight": "161.94115455159815",
+        "model": "1",
+        "scalingFactor": "1.0256273121601216"
+      },
+      "total_price": -1,
+      "collection": "Bestsellers",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 7
+    },
+    {
+      "data": {
+        "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Chains/502621CIDAA00/1642059361/502621CIDAA00.png",
+        "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Chains/502621CIDAA00/1642059361/thumbnail/502621CIDAA00.png",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Aveer"
+      },
+      "is_calibrated": true,
+     "height": 224,
+      "x_offset": -4,
+      "y_offset": -10,
+      "inventory": [
+        {
+          "product_code": "502621CIDAA00",
+          "collection": "Aveer",
+          "gender": "Male"
+        }
+      ],
+      "product_code": "502621CIDAA00",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "meta": {
+        "faceWidth": "182.44709916595514",
+        "faceHeight": "166.4352472662945",
+        "model": "1",
+        "scalingFactor": "1.0540898993531984"
+      },
+      "total_price": -1,
+      "collection": "Aveer",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 8
+    },
+    {
+      "data": {
+        "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Chains/502621CHZAA00/1642059360/502621CHZAA00.png",
+        "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Chains/502621CHZAA00/1642059360/thumbnail/502621CHZAA00.png",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Aveer"
+      },
+      "is_calibrated": true,
+      "height": 224,
+      "x_offset": -4,
+      "y_offset": -10,
+      "inventory": [
+        {
+          "product_code": "502621CHZAA00",
+          "collection": "Aveer",
+          "gender": "Male"
+        }
+      ],
+      "product_code": "502621CHZAA00",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "meta": {
+        "faceWidth": "178.4699093178818",
+        "faceHeight": "161.2137171365594",
+        "model": "1",
+        "scalingFactor": "1.021020208531543"
+      },
+      "total_price": -1,
+      "collection": "Aveer",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 9
+    },
+    {
+      "data": {
+        "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Chains/504025CIRAA00/1642059359/504025CIRAA00.png",
+        "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Chains/504025CIRAA00/1642059359/thumbnail/504025CIRAA00.png",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Bestsellers"
+      },
+      "is_calibrated": true,
+      "height": 224,
+      "x_offset": -4,
+      "y_offset": -10,
+      "inventory": [
+        {
+          "product_code": "504025CIRAA00",
+          "collection": "Bestsellers",
+          "gender": "Female"
+        }
+      ],
+      "product_code": "504025CIRAA00",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "meta": {
+        "faceWidth": "191.3872403480484",
+        "faceHeight": "170.89791283129793",
+        "model": "1",
+        "scalingFactor": "1.0823534479315535"
+      },
+      "total_price": -1,
+      "collection": "Bestsellers",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 10
+    },
+    {
+      "data": {
+        "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Chains/502621CISAA00/1642059356/502621CISAA00.png",
+        "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Chains/502621CISAA00/1642059356/thumbnail/502621CISAA00.png",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Aveer"
+      },
+      "is_calibrated": true,
+     "height": 224,
+      "x_offset": -4,
+      "y_offset": -10,
+      "inventory": [
+        {
+          "product_code": "502621CISAA00",
+          "collection": "Aveer",
+          "gender": "Male"
+        }
+      ],
+      "product_code": "502621CISAA00",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "total_price": -1,
+      "collection": "Aveer",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 11
+    },
+    {
+      "data": {
+        "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Chains/504025CIDAA00/1642059353/504025CIDAA00.png",
+        "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Chains/504025CIDAA00/1642059353/thumbnail/504025CIDAA00.png",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Bestsellers"
+      },
+      "is_calibrated": true,
+     "height": 224,
+      "x_offset": -4,
+      "y_offset": -10,
+      "inventory": [
+        {
+          "product_code": "504025CIDAA00",
+          "collection": "Bestsellers",
+          "gender": "Female"
+        }
+      ],
+      "product_code": "504025CIDAA00",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "meta": {
+        "faceWidth": "190.98498336994356",
+        "faceHeight": "167.33876863273295",
+        "model": "1",
+        "scalingFactor": "1.059812201340642"
+      },
+      "total_price": -1,
+      "collection": "Bestsellers",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 12
+    },
+    {
+      "data": {
+        "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Chains/504025CIEAA00/1642059364/504025CIEAA00.png",
+        "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Chains/504025CIEAA00/1642059364/thumbnail/504025CIEAA00.png",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Bestsellers"
+      },
+      "is_calibrated": true,
+      "height": 204,
+      "x_offset": -4,
+      "y_offset": -10,
+      "inventory": [
+        {
+          "product_code": "504025CIEAA00",
+          "collection": "Bestsellers",
+          "gender": "Female"
+        }
+      ],
+      "product_code": "504025CIEAA00",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "meta": {
+        "faceWidth": "191.7852778860123",
+        "faceHeight": "172.28379825382152",
+        "model": "1",
+        "scalingFactor": "1.0911307222742028"
+      },
+      "total_price": -1,
+      "collection": "Bestsellers",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 13
+    },
+    {
+      "data": {
+        "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Chains/51F1D1CPHAA00/1642059362/51F1D1CPHAA00.png",
+        "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Chains/51F1D1CPHAA00/1642059362/thumbnail/51F1D1CPHAA00.png",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Aveer"
+      },
+      "is_calibrated": true,
+     "height": 224,
+      "x_offset": -4,
+      "y_offset": -10,
+      "inventory": [
+        {
+          "product_code": "51F1D1CPHAA00",
+          "collection": "Aveer",
+          "gender": "Male"
+        }
+      ],
+      "product_code": "51F1D1CPHAA00",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "meta": {
+        "faceWidth": "181.0356700117406",
+        "faceHeight": "168.5998021071495",
+        "model": "1",
+        "scalingFactor": "1.0677987466786134"
+      },
+      "total_price": -1,
+      "collection": "Aveer",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 14
+    },
+    {
+      "data": {
+        "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Chains/504025CIHAA00/1642059359/504025CIHAA00.png",
+        "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Chains/504025CIHAA00/1642059359/thumbnail/504025CIHAA00.png",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Bestsellers"
+      },
+      "is_calibrated": true,
+     "height": 224,
+      "x_offset": -4,
+      "y_offset": -10,
+      "inventory": [
+        {
+          "product_code": "504025CIHAA00",
+          "collection": "Bestsellers",
+          "gender": "Female"
+        }
+      ],
+      "product_code": "504025CIHAA00",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "meta": {
+        "faceWidth": "180.08915257964497",
+        "faceHeight": "167.79256554124086",
+        "model": "1",
+        "scalingFactor": "1.0626862484278587"
+      },
+      "total_price": -1,
+      "collection": "Bestsellers",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 15
+    },
+    {
+      "data": {
+        "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Chains/502621CIRAA00/1642059363/502621CIRAA00.png",
+        "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Chains/502621CIRAA00/1642059363/thumbnail/502621CIRAA00.png",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Aveer"
+      },
+      "is_calibrated": true,
+     "height": 224,
+      "x_offset": -4,
+      "y_offset": -10,
+      "inventory": [
+        {
+          "product_code": "502621CIRAA00",
+          "collection": "Aveer",
+          "gender": "Male"
+        }
+      ],
+      "product_code": "502621CIRAA00",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "meta": {
+        "faceWidth": "185.58356904851308",
+        "faceHeight": "172.40485358542284",
+        "model": "1",
+        "scalingFactor": "1.0918974060410112"
+      },
+      "total_price": -1,
+      "collection": "Aveer",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 16
+    },
+    {
+      "data": {
+        "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Chains/504025CMIAA00/1642059366/504025CMIAA00.png",
+        "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Chains/504025CMIAA00/1642059366/thumbnail/504025CMIAA00.png",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Bestsellers"
+      },
+      "is_calibrated": true,
+      "height": 224,
+      "x_offset": -4,
+      "y_offset": -10,
+      "inventory": [
+        {
+          "product_code": "504025CMIAA00",
+          "collection": "Bestsellers",
+          "gender": "Female"
+        }
+      ],
+      "product_code": "504025CMIAA00",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "meta": {
+        "faceWidth": "178.48487070029108",
+        "faceHeight": "166.6595560600553",
+        "model": "1",
+        "scalingFactor": "1.0555105217136838"
+      },
+      "total_price": -1,
+      "collection": "Bestsellers",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 17
+    },
+    {
+      "data": {
+        "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Chains/502621CCGAA00/1642059364/502621CCGAA00.png",
+        "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Chains/502621CCGAA00/1642059364/thumbnail/502621CCGAA00.png",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Aveer"
+      },
+      "is_calibrated": true,
+     "height": 224,
+      "x_offset": -4,
+      "y_offset": -10,
+      "inventory": [
+        {
+          "product_code": "502621CCGAA00",
+          "collection": "Aveer",
+          "gender": "Male"
+        }
+      ],
+      "product_code": "502621CCGAA00",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "meta": {
+        "faceWidth": "190.68929800938878",
+        "faceHeight": "170.202892594808",
+        "model": "1",
+        "scalingFactor": "1.0779516531004505"
+      },
+      "total_price": -1,
+      "collection": "Aveer",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 18
+    },
+    {
+      "data": {
+        "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Chains/502621CIVAA00/1642059367/502621CIVAA00.png",
+        "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/tanishqwebar/Chains/502621CIVAA00/1642059367/thumbnail/502621CIVAA00.png",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Aveer"
+      },
+      "is_calibrated": true,
+      "height": 224,
+      "x_offset": -4,
+      "y_offset": -10,
+      "inventory": [
+        {
+          "product_code": "502621CIVAA00",
+          "collection": "Aveer",
+          "gender": "Male"
+        }
+      ],
+      "product_code": "502621CIVAA00",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "meta": {
+        "faceWidth": "167.21808819028234",
+        "faceHeight": "155.24385243491577",
+        "model": "1",
+        "scalingFactor": "0.9832110654211331"
+      },
+      "total_price": -1,
+      "collection": "Aveer",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 19
+    }
+  ],
+    "meta": {
+    "error_code": "",
+    "message": "Success",
+    "total": 36,
+    "has_more_pages": true,
+    "current_page": 1,
+    "total_record": 718,
+    "sets_info": [
+      {
+        "PendantSets": {
+          "category": "PendantSets",
+          "label": "Pendant Sets",
+          "type": "set",
+          "sets_info": [
+            {
+              "set_category": "PendantSets",
+              "category": "Earrings",
+              "type": "ear",
+              "category_singular": "earring",
+              "data_key": "earring_data",
+              "code_key": "earring"
+            },
+            {
+              "set_category": "PendantSets",
+              "category": "Pendants",
+              "type": "neck",
+              "category_singular": "pendant",
+              "data_key": "pendant_data",
+              "code_key": "pendant"
+            }
+          ]
+        },
+        "NecklaceSets": {
+          "category": "NecklaceSets",
+          "label": "Necklace Sets",
+          "type": "set",
+          "sets_info": [
+            {
+              "set_category": "NecklaceSets",
+              "category": "Earrings",
+              "type": "ear",
+              "category_singular": "earring",
+              "data_key": "earring_data",
+              "code_key": "earring"
+            },
+            {
+              "set_category": "NecklaceSets",
+              "category": "Necklaces",
+              "type": "neck",
+              "category_singular": "necklace",
+              "data_key": "necklace_data",
+              "code_key": "necklace"
+            }
+          ]
+        },
+        "Sets": {
+          "category": "Sets",
+          "label": "Sets",
+          "type": "set",
+          "sets_info": [
+            {
+              "set_category": "Sets",
+              "category": "Earrings",
+              "type": "ear",
+              "category_singular": "earring",
+              "data_key": "earring_data",
+              "code_key": "earring"
+            },
+            {
+              "set_category": "Sets",
+              "category": "Necklaces",
+              "type": "neck",
+              "category_singular": "necklace",
+              "data_key": "necklace_data",
+              "code_key": "necklace"
+            }
+          ]
+        }
+      }
+    ]
+  },
+    "cat" : "Pendantsets" 
+  },
+  {
+    "data": [
+    {
+      "data": {
+        "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/sdm-test30-mirrar/Mangalsutras/503416YGUAA34/1617907167/503416YGUAA34.png",
+        "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/sdm-test30-mirrar/Mangalsutras/503416YGUAA34/1617907167/thumbnail/503416YGUAA34.png",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Bestsellers"
+      },
+      "is_calibrated": true,
+      "height": 215,
+      "x_offset": -3,
+      "y_offset": -5,
+      "inventory": [
+        {
+          "product_code": "503416YGUAA34",
+          "collection": "Bestsellers",
+          "gender": "Female"
+        }
+      ],
+      "product_code": "503416YGUAA34",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "total_price": -1,
+      "collection": "Bestsellers",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 0
+    },
+    {
+      "data": {
+        "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/sdm-test16-mirrar/Mangalsutras/511419YRZAA00/1630675195/511419YRZAA00.png",
+        "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/sdm-test16-mirrar/Mangalsutras/511419YRZAA00/1630675195/thumbnail/511419YRZAA00.png",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Shagun"
+      },
+      "is_calibrated": true,
+      "height": 244,
+      "x_offset": -3,
+      "y_offset": -14,
+      "inventory": [
+        {
+          "product_code": "511419YRZAA00",
+          "collection": "Shagun",
+          "gender": "Female"
+        }
+      ],
+      "product_code": "511419YRZAA00",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "meta": {
+        "faceWidth": "214.79702527173106",
+        "faceHeight": "197.83790670112853",
+        "model": "1",
+        "scalingFactor": "1.2529734091071472"
+      },
+      "total_price": -1,
+      "collection": "Shagun",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 3
+    },
+    {
+      "data": {
+        "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/sdm-test16-mirrar/Mangalsutras/504007YJEAA32/1630675187/504007YJEAA32.png",
+        "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/sdm-test16-mirrar/Mangalsutras/504007YJEAA32/1630675187/thumbnail/504007YJEAA32.png",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Classic"
+      },
+      "is_calibrated": true,
+      "height": 244,
+      "x_offset": -3,
+      "y_offset": -14,
+      "inventory": [
+        {
+          "product_code": "504007YJEAA32",
+          "collection": "Classic",
+          "gender": "Female"
+        }
+      ],
+      "product_code": "504007YJEAA32",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "total_price": -1,
+      "collection": "Classic",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 5
+    },
+    
+    {
+      "data": {
+        "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/sdm-test16-mirrar/Mangalsutras/502614YFCAA29/1630675182/502614YFCAA29.png",
+        "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/sdm-test16-mirrar/Mangalsutras/502614YFCAA29/1630675182/thumbnail/502614YFCAA29.png",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Bestsellers"
+      },
+      "is_calibrated": true,
+      "height": 244,
+      "x_offset": -3,
+      "y_offset": -17,
+      "inventory": [
+        {
+          "product_code": "502614YFCAA29",
+          "collection": "Bestsellers",
+          "gender": "Female"
+        }
+      ],
+      "product_code": "502614YFCAA29",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "total_price": -1,
+      "collection": "Bestsellers",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 16
+    }
+  ],
+    "meta": {
+    "error_code": "",
+    "message": "Success",
+    "total": 1,
+    "has_more_pages": true,
+    "current_page": 1,
+    "total_record": 20,
+    "sets_info": [
+      {
+        "PendantSets": {
+          "category": "PendantSets",
+          "label": "Pendant Sets",
+          "type": "set",
+          "sets_info": [
+            {
+              "set_category": "PendantSets",
+              "category": "Earrings",
+              "type": "ear",
+              "category_singular": "earring",
+              "data_key": "earring_data",
+              "code_key": "earring"
+            },
+            {
+              "set_category": "PendantSets",
+              "category": "Pendants",
+              "type": "neck",
+              "category_singular": "pendant",
+              "data_key": "pendant_data",
+              "code_key": "pendant"
+            }
+          ]
+        },
+        "NecklaceSets": {
+          "category": "NecklaceSets",
+          "label": "Necklace Sets",
+          "type": "set",
+          "sets_info": [
+            {
+              "set_category": "NecklaceSets",
+              "category": "Earrings",
+              "type": "ear",
+              "category_singular": "earring",
+              "data_key": "earring_data",
+              "code_key": "earring"
+            },
+            {
+              "set_category": "NecklaceSets",
+              "category": "Necklaces",
+              "type": "neck",
+              "category_singular": "necklace",
+              "data_key": "necklace_data",
+              "code_key": "necklace"
+            }
+          ]
+        },
+        "Sets": {
+          "category": "Sets",
+          "label": "Sets",
+          "type": "set",
+          "sets_info": [
+            {
+              "set_category": "Sets",
+              "category": "Earrings",
+              "type": "ear",
+              "category_singular": "earring",
+              "data_key": "earring_data",
+              "code_key": "earring"
+            },
+            {
+              "set_category": "Sets",
+              "category": "Necklaces",
+              "type": "neck",
+              "category_singular": "necklace",
+              "data_key": "necklace_data",
+              "code_key": "necklace"
+            }
+          ]
+        }
+      }
+    ]
+  },
+    "cat" : "Mangalsutras" 
+  },
+  {
+    "data": [
+     {
+      "data": {
+        "image_url": "https://api.textronic.in/images/Textronics/Chain/image_url/TDS-Chain-01.png",
+        "thumbnail_url": "https://api.textronic.in/images/Textronics/Chain/image_url/TDS-Chain-01.png",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Akshayam"
+      },
+      "is_calibrated": true,
+      "height": 180,
+      "x_offset": -5.5,
+      "y_offset": -2,
+      "inventory": [
+        {
+          "product_code": "TDS-Chain-01.png",
+          "collection": "Akshayam",
+          "gender": "Female"
+        }
+      ],
+      "product_code": "TDS-Chain-01.png",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "meta": {
+        "faceWidth": "192.98754130319793",
+        "faceHeight": "165.42270136005035",
+        "model": "1",
+        "scalingFactor": "1.0476771086136523"
+      },
+      "total_price": -1,
+      "collection": "Akshayam",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 0
+    },
+    {
+      "data": {
+        "image_url": "https://api.textronic.in/images/Textronics/Chain/image_url/TDS-Chain-02.png",
+        "thumbnail_url": "https://api.textronic.in/images/Textronics/Chain/image_url/TDS-Chain-02.png",
+        "disable": 0,
+        "picker_value": "View Details",
+        "site_link": "",
+        "collection": "Aveer"
+      },
+      "is_calibrated": true,
+      "height": 170,
+      "x_offset":-5,
+      "y_offset": -3,
+      "inventory": [
+        {
+          "product_code": "TDS-Chain-02.png",
+          "collection": "Aveer",
+          "gender": "Male"
+        }
+      ],
+      "product_code": "TDS-Chain-02.png",
+      "is_uploaded": true,
+      "shine_count": "0",
+      "meta": {
+        "faceWidth": "186.88763053563417",
+        "faceHeight": "167.74992989089515",
+        "model": "1",
+        "scalingFactor": "1.062416222642336"
+      },
+      "total_price": -1,
+      "collection": "Aveer",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 2
+    }
+  ],
+    "meta": {
+    "error_code": "",
+    "message": "Success",
+    "total": 1,
+    "has_more_pages": true,
+    "current_page": 1,
+    "total_record": 20,
+    "sets_info": [
+      {
+        "PendantSets": {
+          "category": "PendantSets",
+          "label": "Pendant Sets",
+          "type": "set",
+          "sets_info": [
+            {
+              "set_category": "PendantSets",
+              "category": "Earrings",
+              "type": "ear",
+              "category_singular": "earring",
+              "data_key": "earring_data",
+              "code_key": "earring"
+            },
+            {
+              "set_category": "PendantSets",
+              "category": "Pendants",
+              "type": "neck",
+              "category_singular": "pendant",
+              "data_key": "pendant_data",
+              "code_key": "pendant"
+            }
+          ]
+        },
+        "NecklaceSets": {
+          "category": "NecklaceSets",
+          "label": "Necklace Sets",
+          "type": "set",
+          "sets_info": [
+            {
+              "set_category": "NecklaceSets",
+              "category": "Earrings",
+              "type": "ear",
+              "category_singular": "earring",
+              "data_key": "earring_data",
+              "code_key": "earring"
+            },
+            {
+              "set_category": "NecklaceSets",
+              "category": "Necklaces",
+              "type": "neck",
+              "category_singular": "necklace",
+              "data_key": "necklace_data",
+              "code_key": "necklace"
+            }
+          ]
+        },
+        "Sets": {
+          "category": "Sets",
+          "label": "Sets",
+          "type": "set",
+          "sets_info": [
+            {
+              "set_category": "Sets",
+              "category": "Earrings",
+              "type": "ear",
+              "category_singular": "earring",
+              "data_key": "earring_data",
+              "code_key": "earring"
+            },
+            {
+              "set_category": "Sets",
+              "category": "Necklaces",
+              "type": "neck",
+              "category_singular": "necklace",
+              "data_key": "necklace_data",
+              "code_key": "necklace"
+            }
+          ]
+        }
+      }
+    ]
+  },
+    "cat" : "Chains" 
+  },
+  {
+    "data": [
+    {
+      "data": {
+        "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/bhima-webar/Kada/KA05/1658813971/KA05.png",
+        "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/bhima-webar/Kada/KA05/1658813971/thumbnail/KA05.png",
+        "disable": 0,
+        "picker_value": "TryOn Jewellery",
+        "site_link": ""
+      },
+      "is_calibrated": true,
+      "is_uploaded": true,
+      "height": 40,
+      "x_offset": 0,
+      "y_offset": 0,
+      "inventory": [
+        {
+          "product_code": "KA05"
+        }
+      ],
+      "product_code": "KA05",
+      "shine_count": "0",
+      "meta": {
+        "model": "3"
+      },
+      "total_price": -1,
+      "collection": "",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 1
+    },
+    {
+      "data": {
+        "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/bhima-webar/Kada/KA08/1658813972/KA08.png",
+        "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/bhima-webar/Kada/KA08/1658813972/thumbnail/KA08.png",
+        "disable": 0,
+        "picker_value": "TryOn Jewellery",
+        "site_link": ""
+      },
+      "is_calibrated": true,
+      "is_uploaded": true,
+      "height": 40,
+      "x_offset": 0,
+      "y_offset": 0,
+      "inventory": [
+        {
+          "product_code": "KA08"
+        }
+      ],
+      "product_code": "KA08",
+      "shine_count": "0",
+      "meta": {
+        "model": "3"
+      },
+      "total_price": -1,
+      "collection": "",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 2
+    },
+    {
+      "data": {
+        "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/bhima-webar/Kada/KA10/1658813973/KA10.png",
+        "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/bhima-webar/Kada/KA10/1658813973/thumbnail/KA10.png",
+        "disable": 0,
+        "picker_value": "TryOn Jewellery",
+        "site_link": ""
+      },
+      "is_calibrated": true,
+      "is_uploaded": true,
+      "height": 40,
+      "x_offset": 0,
+      "y_offset": 0,
+      "inventory": [
+        {
+          "product_code": "KA10"
+        }
+      ],
+      "product_code": "KA10",
+      "shine_count": "0",
+      "meta": {
+        "model": "3"
+      },
+      "total_price": -1,
+      "collection": "",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 3
+    },
+    {
+      "data": {
+        "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/bhima-webar/Kada/KA04/1658813973/KA04.png",
+        "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/bhima-webar/Kada/KA04/1658813973/thumbnail/KA04.png",
+        "disable": 0,
+        "picker_value": "TryOn Jewellery",
+        "site_link": ""
+      },
+      "is_calibrated": true,
+      "is_uploaded": true,
+      "height": 40,
+      "x_offset": 0,
+      "y_offset": 0,
+      "inventory": [
+        {
+          "product_code": "KA04"
+        }
+      ],
+      "product_code": "KA04",
+      "shine_count": "0",
+      "meta": {
+        "model": "3"
+      },
+      "total_price": -1,
+      "collection": "",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 4
+    },
+    {
+      "data": {
+        "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/bhima-webar/Kada/KA07/1658813974/KA07.png",
+        "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/bhima-webar/Kada/KA07/1658813974/thumbnail/KA07.png",
+        "disable": 0,
+        "picker_value": "TryOn Jewellery",
+        "site_link": ""
+      },
+      "is_calibrated": true,
+      "is_uploaded": true,
+      "height": 40,
+      "x_offset": 0,
+      "y_offset": 0,
+      "inventory": [
+        {
+          "product_code": "KA07"
+        }
+      ],
+      "product_code": "KA07",
+      "shine_count": "0",
+      "meta": {
+        "model": "3"
+      },
+      "total_price": -1,
+      "collection": "",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 5
+    },
+    {
+      "data": {
+        "image_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/bhima-webar/Kada/KA02/1658813974/KA02.png",
+        "thumbnail_url": "https://mirrar-medialibrary.s3.ap-south-1.amazonaws.com/bhima-webar/Kada/KA02/1658813974/thumbnail/KA02.png",
+        "disable": 0,
+        "picker_value": "TryOn Jewellery",
+        "site_link": ""
+      },
+      "is_calibrated": true,
+      "is_uploaded": true,
+      "height": 40,
+      "x_offset": 0,
+      "y_offset": 0,
+      "inventory": [
+        {
+          "product_code": "KA02"
+        }
+      ],
+      "product_code": "KA02",
+      "shine_count": "0",
+      "meta": {
+        "model": "3"
+      },
+      "total_price": -1,
+      "collection": "",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 6
+    }
+  ],
+    "meta": {
+    "error_code": "",
+    "message": "Success",
+    "total": 1,
+    "has_more_pages": false,
+    "current_page": 1,
+    "total_record": 10,
+    "sets_info": [
+      {
+        "Sets": {
+          "category": "Sets",
+          "label": "Sets",
+          "type": "set",
+          "sets_info": [
+            {
+              "set_category": "Sets",
+              "category": "Earrings",
+              "type": "ear",
+              "category_singular": "earring",
+              "data_key": "earring_data",
+              "code_key": "earring"
+            },
+            {
+              "set_category": "Sets",
+              "category": "Necklaces",
+              "type": "neck",
+              "category_singular": "necklace",
+              "data_key": "necklace_data",
+              "code_key": "necklace"
+            }
+          ]
+        }
+      }
+    ]
+  },   
+    "cat":"Kada"   
+  },
+  {
+      "data":[
+        {
+            "data": {
+                "image_url": "https://mirrar.s3.ap-south-1.amazonaws.com/3d-demo/SunGlasses/SunGlasses.png",
+                "thumbnail_url": "https://mirrar.s3.ap-south-1.amazonaws.com/3d-demo/SunGlasses/SunGlasses.png",
+                "fbx_url": "https://mirrar.s3.ap-south-1.amazonaws.com/3d-demo/SunGlasses/SunGlasses.glb",
+                "disable": 0
+            },
+            "is_calibrated": true,
+            "is_uploaded": false,
+            "height": 40,
+            "x_offset": 0,
+            "y_offset": 0,
+            "shine_count": "0",
+            "product_code": "SunGlasses",
+            "total_price": -1,
+            "collection": "",
+            "brand_id": "",
+            "disable": 0,
+            "camera_mode_enabled": 1,
+            "gallery_mode_enabled": 1,
+            "studio_mode_enabled": 1,
+            "isSetOnly": 0,
+            "order_key": "1",
+            "position": 2
+        },
+        {
+            "data": {
+                "image_url": "https://mirrar.s3.ap-south-1.amazonaws.com/3d-demo/IRA171MB54/IRA171MB54.png",
+                "thumbnail_url": "https://mirrar.s3.ap-south-1.amazonaws.com/3d-demo/IRA171MB54/IRA171MB54.png",
+                "fbx_url": "https://mirrar.s3.ap-south-1.amazonaws.com/3d-demo/IRA171MB54/IRA171MB54.glb",
+                "disable": 0
+            },
+            "is_calibrated": true,
+            "is_uploaded": false,
+            "height": 40,
+            "x_offset": 0,
+            "y_offset": 0,
+            "shine_count": "0",
+            "meta": {
+                "model": "1"
+            },
+            "product_code": "IRA171MB54",
+            "total_price": -1,
+            "collection": "",
+            "brand_id": "",
+            "disable": 0,
+            "camera_mode_enabled": 1,
+            "gallery_mode_enabled": 1,
+            "studio_mode_enabled": 1,
+            "isSetOnly": 0,
+            "order_key": "1",
+            "position": 5
+        },
+        {
+            "data": {
+                "image_url": "https://mirrar.s3.ap-south-1.amazonaws.com/3d-demo/FBU329BL54/FBU329BL54.png",
+                "thumbnail_url": "https://mirrar.s3.ap-south-1.amazonaws.com/3d-demo/FBU329BL54/FBU329BL54.png",
+                "fbx_url": "https://mirrar.s3.ap-south-1.amazonaws.com/3d-demo/FBU329BL54/FBU329BL54.glb",
+                "disable": 0
+            },
+            "is_calibrated": true,
+            "is_uploaded": false,
+            "height": 40,
+            "x_offset": 0,
+            "y_offset": 0,
+            "shine_count": "0",
+            "product_code": "FBU329BL54",
+            "total_price": -1,
+            "collection": "",
+            "brand_id": "",
+            "disable": 0,
+            "camera_mode_enabled": 1,
+            "gallery_mode_enabled": 1,
+            "studio_mode_enabled": 1,
+            "isSetOnly": 0,
+            "order_key": "1",
+            "position": 4
+        },
+        {
+            "data": {
+                "image_url": "https://mirrar.s3.ap-south-1.amazonaws.com/3d-demo/GiorgioArmani6039Sunglass/GiorgioArmani6039Sunglass.png",
+                "thumbnail_url": "https://mirrar.s3.ap-south-1.amazonaws.com/3d-demo/GiorgioArmani6039Sunglass/GiorgioArmani6039Sunglass.png",
+                "fbx_url": "https://mirrar.s3.ap-south-1.amazonaws.com/3d-demo/GiorgioArmani6039Sunglass/GiorgioArmani6039Sunglass.glb",
+                "disable": 0
+            },
+            "is_calibrated": true,
+            "is_uploaded": false,
+            "height": 40,
+            "x_offset": 0,
+            "y_offset": 0,
+            "shine_count": "0",
+            "product_code": "GiorgioArmani6039Sunglass",
+            "total_price": -1,
+            "collection": "",
+            "brand_id": "",
+            "disable": 0,
+            "camera_mode_enabled": 1,
+            "gallery_mode_enabled": 1,
+            "studio_mode_enabled": 1,
+            "isSetOnly": 0,
+            "order_key": "1",
+            "position": 3
+        },
+        {
+            "data": {
+                "image_url": "https://mirrar.s3.ap-south-1.amazonaws.com/3d-demo/RAYBAN_ANDYFull_Rim_SquareSunglasses/RAYBAN_ANDYFull_Rim_SquareSunglasses.png",
+                "thumbnail_url": "https://mirrar.s3.ap-south-1.amazonaws.com/3d-demo/RAYBAN_ANDYFull_Rim_SquareSunglasses/RAYBAN_ANDYFull_Rim_SquareSunglasses.png",
+                "fbx_url": "https://mirrar.s3.ap-south-1.amazonaws.com/3d-demo/RAYBAN_ANDYFull_Rim_SquareSunglasses/RAYBAN_ANDYFull_Rim_SquareSunglasses.glb",
+                "disable": 0
+            },
+            "is_calibrated": true,
+            "is_uploaded": false,
+            "height": 40,
+            "x_offset": 0,
+            "y_offset": 0,
+            "shine_count": "0",
+            "product_code": "RAYBAN_ANDYFull_Rim_SquareSunglasses",
+            "total_price": -1,
+            "collection": "",
+            "brand_id": "",
+            "disable": 0,
+            "camera_mode_enabled": 1,
+            "gallery_mode_enabled": 1,
+            "studio_mode_enabled": 1,
+            "isSetOnly": 0,
+            "order_key": "1",
+            "position": 1
+        },
+        {
+            "data": {
+                "image_url": "https://mirrar.s3.ap-south-1.amazonaws.com/3d-demo/PradaSPR50TSunglass/PradaSPR50TSunglass.png",
+                "thumbnail_url": "https://mirrar.s3.ap-south-1.amazonaws.com/3d-demo/PradaSPR50TSunglass/PradaSPR50TSunglass.png",
+                "fbx_url": "https://mirrar.s3.ap-south-1.amazonaws.com/3d-demo/PradaSPR50TSunglass/PradaSPR50TSunglass.glb",
+                "disable": 0
+            },
+            "is_calibrated": true,
+            "is_uploaded": false,
+            "height": 40,
+            "x_offset": 0,
+            "y_offset": 0,
+            "shine_count": "0",
+            "meta": {
+                "faceWidth": "137.47372436523438",
+                "faceHeight": "136.87283325195312",
+                "model": "1",
+                "scalingFactor": "1.140606943766276"
+            },
+            "product_code": "PradaSPR50TSunglass",
+            "total_price": -1,
+            "collection": "",
+            "brand_id": "",
+            "disable": 0,
+            "camera_mode_enabled": 1,
+            "gallery_mode_enabled": 1,
+            "studio_mode_enabled": 1,
+            "isSetOnly": 0,
+            "order_key": "1",
+            "position": 0
+        },
+          {
+      "data": {
+        "image_url": "https://api.textronic.in/images/Textronics/goggle/goggle.png",
+        "thumbnail_url": "https://api.textronic.in/images/Textronics/goggle/goggle.png",
+        "disable": 0,
+        "picker_value": "TryOn Jewellery",
+        "site_link": ""
+      },
+      "is_calibrated": true,
+      "is_uploaded": true,
+      "height": 38,
+      "x_offset": 0,
+      "y_offset": 0,
+      "inventory": [
+        {
+          "product_code": "test_eye"
+        }
+      ],
+      "product_code": "test_eye",
+      "shine_count": "0",
+      "meta": {
+        "model": "1"
+      },
+      "total_price": -1,
+      "collection": "",
+      "brand_id": "",
+      "disable": 0,
+      "camera_mode_enabled": 1,
+      "gallery_mode_enabled": 1,
+      "studio_mode_enabled": 1,
+      "isSetOnly": 0,
+      "order_key": "1",
+      "position": 0
+    }
+    ],
+      "meta":{
+        "error_code": "",
+        "message": "Success",
+        "total": 1,
+        "has_more_pages": false,
+        "current_page": 1,
+        "total_record": 10  
+     },
+      "cat":"Eyewear"
+      
+  }
+]

@@ -1,0 +1,39 @@
+
+  {
+    "meta":{"message":"Success","code":200},
+    "data":[
+        {
+            "category": "Chains",
+            "label": "Chains",
+            "type":"neck",
+            "sequence": 5,
+            "sets_info":[],
+            "active_product_count":20
+      },
+        {
+                  "category":"Sets",
+                  "label":"Sets",
+                  "type":"set",
+                  "sequence":7,
+                  "sets_info":[
+                    {
+                      "set_category":"Sets",
+                      "category":"Earrings",
+                      "type":"ear",
+                      "category_singular":"earring",
+                      "data_key":"earring_data",
+                      "code_key":"earring"
+                    },
+                    {
+                        "set_category":"Sets",
+                        "category":"Necklaces",
+                        "type":"neck",
+                        "category_singular":"necklace",
+                        "data_key":"necklace_data",
+                        "code_key":"necklace"
+                    }
+                      ],
+                  "active_product_count":30
+                }
+      ]
+  }
