@@ -92,13 +92,13 @@ if (!isset($_SESSION['user'])) {
 
 				<ul class="sidebar-menu">
 
-					<li class="treeview <?php if ($cur_page == 'index.php') {
+					<!-- <li class="treeview <?php if ($cur_page == 'index.php') {
 											echo 'active';
 										} ?>">
 						<a href="index.php">
 							<i class="fa fa-dashboard"></i> <span>Dashboard</span>
 						</a>
-					</li>
+					</li> -->
 
 					<li class="treeview <?php if (($cur_page == 'country.php') || ($cur_page == 'country-add.php') || ($cur_page == 'country-edit.php') || ($cur_page == 'manage-category.php') || ($cur_page == 'manage-category-add.php') || ($cur_page == 'manage-category-edit.php') || ($cur_page == 'category-type.php') || ($cur_page == 'category-type-add.php') || ($cur_page == 'category-type-edit.php') || ($cur_page == 'Category-List.php') || ($cur_page == 'Category-List-add.php') || ($cur_page == 'Category-List-edit.php')) {
 											echo 'active';
@@ -134,13 +134,13 @@ if (!isset($_SESSION['user'])) {
 						</a>
 					</li>
 
-					<li class="treeview <?php if (($cur_page == 'customer.php') || ($cur_page == 'customer-add.php') || ($cur_page == 'customer-edit.php')) {
+					<!-- <li class="treeview <?php if (($cur_page == 'customer.php') || ($cur_page == 'customer-add.php') || ($cur_page == 'customer-edit.php')) {
 											echo 'active';
 										} ?>">
 						<a href="customer.php">
 							<i class="fa fa-user-plus"></i> <span>Customer Management</span>
 						</a>
-					</li>
+					</li> -->
 
 				</ul>
 			</section>

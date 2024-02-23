@@ -130,6 +130,9 @@ $total_customers = $statement->rowCount();
 			</div>
 		</div>
 
+		<div class="">Customer Login </div>
+		<div class="pravesh">Pravesh</div>
+
 		<!-- <div class="col-lg-3 col-xs-6">
 			<div class="small-box bg-yellow">
 				<div class="inner">
@@ -154,7 +157,7 @@ $total_customers = $statement->rowCount();
 			</div>
 		</div> -->
 
-		<!-- <div class="col-lg-3 col-xs-6">
+		<div class="col-lg-3 col-xs-6">
 			<div class="small-box bg-olive">
 				<div class="inner">
 					<h3><?php echo $total_top_category; ?></h3>
@@ -164,9 +167,9 @@ $total_customers = $statement->rowCount();
 					<i class="ionicons ion-arrow-up-b"></i>
 				</div>
 			</div>
-		</div> -->
+		</div>
 
-		<!-- <div class="col-lg-3 col-xs-6">
+		<div class="col-lg-3 col-xs-6">
 			<div class="small-box bg-blue">
 				<div class="inner">
 					<h3><?php echo $total_mid_category; ?></h3>
@@ -176,13 +179,13 @@ $total_customers = $statement->rowCount();
 					<i class="ionicons ion-android-menu"></i>
 				</div>
 			</div>
-		</div> -->
+		</div>
 
 		<div class="col-lg-3 col-xs-6">
 			<div class="small-box bg-maroon">
 				<div class="inner">
 					<h3><?php echo $total_end_category; ?></h3>
-					<p>Categories</p>
+					<p>End Categories</p>
 				</div>
 				<div class="icon">
 					<i class="ionicons ion-arrow-down-b"></i>

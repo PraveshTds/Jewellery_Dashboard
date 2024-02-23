@@ -32,8 +32,8 @@
 								<th width="60">Old Price</th>
 								<th width="60">(C) Price</th>
 								<th width="60">Quantity</th>
-								<th>Featured</th>
-								<th>Active</th>
+								<th>Featured?</th>
+								<th>Active?</th>
 								<th>Category</th>
 								<th width="80">Action</th>
 							</tr>

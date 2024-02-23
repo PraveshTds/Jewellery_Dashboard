@@ -2,10 +2,10 @@
 
 <section class="content-header">
 	<div class="content-header-left">
-		<h1>Manage Category</h1>
+		<h1>Manage Type</h1>
 	</div>
 	<div class="content-header-right">
-		<a href="manage-category-add.php" class="btn btn-primary btn-sm">Add New</a>
+		<a href="category-type-add.php" class="btn btn-primary btn-sm">Add New</a>
 	</div>
 </section>
 
@@ -24,14 +24,18 @@
 			    <tr>
 			        <th>#</th>
 			        <th>Category Name</th>
-                    <th>Show on Menu</th>
+                    <th> Type </th>
 			        <th>Action</th>
 			    </tr>
 			</thead>
             <tbody>
             	<?php
             	$i=0;
-            	$statement = $pdo->prepare("SELECT * FROM tbl_top_category ORDER BY tcat_id DESC");
+            	$statement = $pdo->prepare("SELECT * 
+                                    FROM tbl_mid_category t1
+                                    JOIN tbl_top_category t2
+                                    ON t1.tcat_id = t2.tcat_id
+                                    ORDER BY t1.mcat_id DESC");
             	$statement->execute();
             	$result = $statement->fetchAll(PDO::FETCH_ASSOC);							
             	foreach ($result as $row) {
@@ -39,19 +43,11 @@
             		?>
 					<tr>
 	                    <td><?php echo $i; ?></td>
-	                    <td><?php echo $row['tcat_name']; ?></td>
-                        <td>
-                            <?php 
-                                if($row['show_on_menu'] == 1) {
-                                    echo 'Yes';
-                                } else {
-                                    echo 'No';
-                                }
-                            ?>
-                        </td>
+	                    <td><?php echo $row['mcat_name']; ?></td>
+                        <td><?php echo $row['tcat_name']; ?></td>
 	                    <td>
-	                        <a href="manage-category-edit.php?id=<?php echo $row['tcat_id']; ?>" class="btn btn-primary btn-xs">Edit</a>
-	                        <a href="#" class="btn btn-danger btn-xs" data-href="manage-category-delete.php?id=<?php echo $row['tcat_id']; ?>" data-toggle="modal" data-target="#confirm-delete">Delete</a>
+	                        <a href="category-type-edit.php?id=<?php echo $row['mcat_id']; ?>" class="btn btn-primary btn-xs">Edit</a>
+	                        <a href="#" class="btn btn-danger btn-xs" data-href="category-type-delete.php?id=<?php echo $row['mcat_id']; ?>" data-toggle="modal" data-target="#confirm-delete">Delete</a>
 	                    </td>
 	                </tr>
             		<?php
@@ -75,7 +71,7 @@
             </div>
             <div class="modal-body">
                 <p>Are you sure want to delete this item?</p>
-                <p style="color:red;">Be careful! All products, mid level categories and end level categories under this top lelvel category will be deleted from all the tables like order table, payment table, size table, color table, rating table etc.</p>
+                <p style="color:red;">Be careful! All products and end level categories under this mid level category will be deleted from all the tables like order table, payment table, size table, color table, rating table etc.</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>

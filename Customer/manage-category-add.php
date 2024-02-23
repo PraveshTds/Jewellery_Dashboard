@@ -66,13 +66,13 @@ if(isset($_POST['form1'])) {
 				<div class="box box-info">
 					<div class="box-body">
 						<div class="form-group">
-							<label for="" class="col-sm-2 control-label">Category <span>*</span></label>
+							<label for="" class="col-sm-2 control-label">Top Category Name <span>*</span></label>
 							<div class="col-sm-4">
 								<input type="text" class="form-control" name="tcat_name">
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="" class="col-sm-2 control-label">Show on Menu <span>*</span></label>
+							<label for="" class="col-sm-2 control-label">Show on Menu? <span>*</span></label>
 							<div class="col-sm-4">
 								<select name="show_on_menu" class="form-control" style="width:auto;">
 									<option value="0">No</option>

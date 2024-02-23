@@ -24,7 +24,7 @@
 			    <tr>
 			        <th>#</th>
 			        <th>Category Name</th>
-                    <th>Show on Menu</th>
+                    <th>Show on Menu?</th>
 			        <th>Action</th>
 			    </tr>
 			</thead>
