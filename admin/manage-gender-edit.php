@@ -4,22 +4,34 @@
 if(isset($_POST['form1'])) {
 	$valid = 1;
 
-    if(empty($_POST['tcat_id'])) {
+    if(empty($_POST['tcat_name'])) {
         $valid = 0;
-        $error_message .= "You must have to select a top level category<br>";
-    }
+        $error_message .= "Gender can not be empty<br>";
+    } else {
+		// Duplicate Top Category checking
+    	// current Top Category name that is in the database
+    	$statement = $pdo->prepare("SELECT * FROM tbl_top_category WHERE tcat_id=?");
+		$statement->execute(array($_REQUEST['id']));
+		$result = $statement->fetchAll(PDO::FETCH_ASSOC);
+		foreach($result as $row) {
+			$current_tcat_name = $row['tcat_name'];
+		}
 
-    if(empty($_POST['mcat_name'])) {
-        $valid = 0;
-        $error_message .= "Mid Level Category Name can not be empty<br>";
+		$statement = $pdo->prepare("SELECT * FROM tbl_top_category WHERE tcat_name=? and tcat_name!=?");
+    	$statement->execute(array($_POST['tcat_name'],$current_tcat_name));
+    	$total = $statement->rowCount();							
+    	if($total) {
+    		$valid = 0;
+        	$error_message .= 'Gender already exists<br>';
+    	}
     }
 
     if($valid == 1) {    	
 		// updating into the database
-		$statement = $pdo->prepare("UPDATE tbl_mid_category SET mcat_name=?,tcat_id=? WHERE mcat_id=?");
-		$statement->execute(array($_POST['mcat_name'],$_POST['tcat_id'],$_REQUEST['id']));
+		$statement = $pdo->prepare("UPDATE tbl_top_category SET tcat_name=?,show_on_menu=? WHERE tcat_id=?");
+		$statement->execute(array($_POST['tcat_name'],$_POST['show_on_menu'],$_REQUEST['id']));
 
-    	$success_message = 'Mid Level Category is updated successfully.';
+    	$success_message = 'Gender is updated successfully.';
     }
 }
 ?>
@@ -30,7 +42,7 @@ if(!isset($_REQUEST['id'])) {
 	exit;
 } else {
 	// Check the id is valid or not
-	$statement = $pdo->prepare("SELECT * FROM tbl_mid_category WHERE mcat_id=?");
+	$statement = $pdo->prepare("SELECT * FROM tbl_top_category WHERE tcat_id=?");
 	$statement->execute(array($_REQUEST['id']));
 	$total = $statement->rowCount();
 	$result = $statement->fetchAll(PDO::FETCH_ASSOC);
@@ -43,18 +55,18 @@ if(!isset($_REQUEST['id'])) {
 
 <section class="content-header">
 	<div class="content-header-left">
-		<h1>Edit Type</h1>
+		<h1>Edit Gender </h1>
 	</div>
 	<div class="content-header-right">
-		<a href="category-type.php" class="btn btn-primary btn-sm">View All</a>
+		<a href="manage-gender.php" class="btn btn-primary btn-sm">View All</a>
 	</div>
 </section>
 
 
 <?php							
 foreach ($result as $row) {
-	$mcat_name = $row['mcat_name'];
-    $tcat_id = $row['tcat_id'];
+	$tcat_name = $row['tcat_name'];
+    $show_on_menu = $row['show_on_menu'];
 }
 ?>
 
@@ -85,31 +97,22 @@ foreach ($result as $row) {
 
             <div class="box-body">
                 <div class="form-group">
-                    <label for="" class="col-sm-3 control-label"> Category Name <span>*</span></label>
+                    <label for="" class="col-sm-2 control-label">Gender<span>*</span></label>
                     <div class="col-sm-4">
-                        <select name="tcat_id" class="form-control select2">
-                            <option value="">Select Category Name</option>
-                            <?php
-                            $statement = $pdo->prepare("SELECT * FROM tbl_top_category ORDER BY tcat_name ASC");
-                            $statement->execute();
-                            $result = $statement->fetchAll(PDO::FETCH_ASSOC);   
-                            foreach ($result as $row) {
-                                ?>
-                                <option value="<?php echo $row['tcat_id']; ?>" <?php if($row['tcat_id'] == $tcat_id){echo 'selected';} ?>><?php echo $row['tcat_name']; ?></option>
-                                <?php
-                            }
-                            ?>
+                        <input type="text" class="form-control" name="tcat_name" value="<?php echo $tcat_name; ?>">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">Show on Menu <span>*</span></label>
+                    <div class="col-sm-4">
+                        <select name="show_on_menu" class="form-control" style="width:auto;">
+                            <option value="0" <?php if($show_on_menu == 0) {echo 'selected';} ?>>No</option>
+                            <option value="1" <?php if($show_on_menu == 1) {echo 'selected';} ?>>Yes</option>
                         </select>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="" class="col-sm-3 control-label">Mid Level Category Name <span>*</span></label>
-                    <div class="col-sm-4">
-                        <input type="text" class="form-control" name="mcat_name" value="<?php echo $mcat_name; ?>">
-                    </div>
-                </div>
-                <div class="form-group">
-                	<label for="" class="col-sm-3 control-label"></label>
+                	<label for="" class="col-sm-2 control-label"></label>
                     <div class="col-sm-6">
                       <button type="submit" class="btn btn-success pull-left" name="form1">Update</button>
                     </div>

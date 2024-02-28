@@ -6,30 +6,26 @@ if (isset($_POST['form1'])) {
 
 	if (empty($_POST['tcat_id'])) {
 		$valid = 0;
-		$error_message .= "You must have to select a top level category<br>";
+		$error_message .= "You must have to select Gender<br>";
 	}
 
 	if (empty($_POST['mcat_id'])) {
 		$valid = 0;
-		$error_message .= "You must have to select a mid level category<br>";
+		$error_message .= "You must have to select category type<br>";
 	}
 
 	if (empty($_POST['ecat_name'])) {
 		$valid = 0;
-		$error_message .= "End level category name can not be empty<br>";
+		$error_message .= "Category name can not be empty<br>";
 	}
 
 	if ($valid == 1) {
 
 		//Saving data into the main table tbl_end_category
-		$statement = $pdo->prepare("INSERT INTO tbl_end_category (ecat_name,mcat_id) VALUES (?,?)");
-		$statement->execute(array($_POST['ecat_name'], $_POST['mcat_id']));
+		$statement = $pdo->prepare("INSERT INTO tbl_end_category (ecat_name,mcat_id,sequence,active_product_count,customer) VALUES (?,?,?,?,?)");
+		$statement->execute(array($_POST['ecat_name'], $_POST['mcat_id'], $_POST['sequence'], $_POST['active_product_count'], $_POST['customer']));
 
-		// appendind category data json when created category is getting created 
-		// $jsonData = file_get_contents('cat_data.json'); // Getting the contents from the JSON file
-		// $jsonData = json_decode($jsonData, true); // Decoding JSON data
-
-		$success_message = 'End Level Category is added successfully.';
+		$success_message = 'Category is added successfully.';
 	}
 }
 ?>
@@ -70,10 +66,10 @@ if (isset($_POST['form1'])) {
 				<div class="box box-info">
 					<div class="box-body">
 						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Category Name<span>*</span></label>
+							<label for="" class="col-sm-3 control-label">Gender<span>*</span></label>
 							<div class="col-sm-4">
 								<select name="tcat_id" class="form-control select2 top-cat">
-									<option value="">Category Name</option>
+									<option value="">Gender</option>
 									<?php
 									$statement = $pdo->prepare("SELECT * FROM tbl_top_category ORDER BY tcat_name ASC");
 									$statement->execute();
@@ -96,9 +92,40 @@ if (isset($_POST['form1'])) {
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Label<span>*</span></label>
+							<label for="" class="col-sm-3 control-label">Category<span>*</span></label>
 							<div class="col-sm-4">
 								<input type="text" class="form-control" name="ecat_name">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="" class="col-sm-3 control-label">sequence<span>*</span></label>
+							<div class="col-sm-4">
+								<input type="text" class="form-control" name="sequence">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="" class="col-sm-3 control-label">active_product_count<span>*</span></label>
+							<div class="col-sm-4">
+								<input type="text" class="form-control" name="active_product_count">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="" class="col-sm-3 control-label">Customer<span>*</span></label>
+							<div class="col-sm-4">
+								<select name="customer" class="form-control">
+									<option value="">Customer</option>
+									<?php
+									$statement = $pdo->prepare("SELECT * FROM tbl_user WHERE role = 'customer'");
+									$statement->execute();
+									$result = $statement->fetchAll(PDO::FETCH_ASSOC);
+									foreach ($result as $row) {
+									?>
+										<option value="<?php echo $row['id']; ?>"><?php echo $row['full_name']; ?></option>
+									<?php
+									}
+									?>
+								</select>
 							</div>
 						</div>
 
@@ -108,6 +135,7 @@ if (isset($_POST['form1'])) {
 								<button type="submit" class="btn btn-success pull-left" name="form1">Submit</button>
 							</div>
 						</div>
+
 					</div>
 				</div>
 

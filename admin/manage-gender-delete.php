@@ -7,7 +7,7 @@ if(!isset($_REQUEST['id'])) {
 	exit;
 } else {
 	// Check the id is valid or not
-	$statement = $pdo->prepare("SELECT * FROM tbl_mid_category WHERE mcat_id=?");
+	$statement = $pdo->prepare("SELECT * FROM tbl_top_category WHERE tcat_id=?");
 	$statement->execute(array($_REQUEST['id']));
 	$total = $statement->rowCount();
 	if( $total == 0 ) {
@@ -17,12 +17,15 @@ if(!isset($_REQUEST['id'])) {
 }
 ?>
 
-<?php
-
-	// Getting all ecat ids
-	$statement = $pdo->prepare("SELECT * FROM tbl_end_category WHERE mcat_id=?");
+<?php	
+	$statement = $pdo->prepare("SELECT * 
+							FROM tbl_top_category t1
+							JOIN tbl_mid_category t2
+							ON t1.tcat_id = t2.tcat_id
+							JOIN tbl_end_category t3
+							ON t2.mcat_id = t3.mcat_id
+							WHERE t1.tcat_id=?");
 	$statement->execute(array($_REQUEST['id']));
-	$total = $statement->rowCount();
 	$result = $statement->fetchAll(PDO::FETCH_ASSOC);							
 	foreach ($result as $row) {
 		$ecat_ids[] = $row['ecat_id'];
@@ -86,8 +89,12 @@ if(!isset($_REQUEST['id'])) {
 	}
 
 	// Delete from tbl_mid_category
-	$statement = $pdo->prepare("DELETE FROM tbl_mid_category WHERE mcat_id=?");
+	$statement = $pdo->prepare("DELETE FROM tbl_mid_category WHERE tcat_id=?");
 	$statement->execute(array($_REQUEST['id']));
 
-	header('location: category-type.php');
+	// Delete from tbl_top_category
+	$statement = $pdo->prepare("DELETE FROM tbl_top_category WHERE tcat_id=?");
+	$statement->execute(array($_REQUEST['id']));
+
+	header('location: manage-gender.php');
 ?>

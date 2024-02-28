@@ -6,17 +6,17 @@ if(isset($_POST['form1'])) {
 
     if(empty($_POST['tcat_id'])) {
         $valid = 0;
-        $error_message .= "You must have to select a top level category<br>";
+        $error_message .= "You must have to select gender<br>";
     }
 
     if(empty($_POST['mcat_id'])) {
         $valid = 0;
-        $error_message .= "You must have to select a mid level category<br>";
+        $error_message .= "You must have to select category type<br>";
     }
 
     if(empty($_POST['ecat_id'])) { //not required its end-level-category
         $valid = 0;
-        $error_message .= "You must have to select an end level category<br>";
+        $error_message .= "You must have to select category<br>";
     }
 
     if(empty($_POST['p_name'])) { // check db names and changes for name -> price
@@ -217,14 +217,14 @@ if(isset($_POST['form1'])) {
 								</select>
 							</div>
 						</div>
-						<!-- <div class="form-group">
-							<label for="" class="col-sm-3 control-label">End Level Category Name <span>*</span></label>
+						<div class="form-group">
+							<label for="" class="col-sm-3 control-label">Category Name <span>*</span></label>
 							<div class="col-sm-4">
 								<select name="ecat_id" class="form-control select2 end-cat">
-									<option value="">Select End Level Category</option>
+									<option value="">Select Category</option>
 								</select>
 							</div>
-						</div> -->
+						</div>
 						<hr>
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label">Product Name <span>*</span></label>
@@ -431,12 +431,7 @@ if(isset($_POST['form1'])) {
 								<input type="text" name="p_old_price" class="form-control">
 							</div>
 						</div>
-						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Current Price <span>*</span><br><span style="font-size:10px;font-weight:normal;">(In USD)</span></label>
-							<div class="col-sm-4">
-								<input type="text" name="p_current_price" class="form-control">
-							</div>
-						</div>	
+						
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label">Quantity <span>*</span></label>
 							<div class="col-sm-4">
@@ -493,6 +488,12 @@ if(isset($_POST['form1'])) {
 							</div>
 						</div> -->
 						<!-- commented above manisha -->
+						<div class="form-group">
+							<label for="" class="col-sm-3 control-label">Current Price <span>*</span><br><span style="font-size:10px;font-weight:normal;">(In USD)</span></label>
+							<div class="col-sm-4">
+								<input type="text" name="p_current_price" class="form-control">
+							</div>
+						</div>	
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label">Details</label>
 							<div class="col-sm-8">

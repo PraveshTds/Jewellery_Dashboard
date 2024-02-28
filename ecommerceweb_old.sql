@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 23, 2024 at 10:01 AM
+-- Generation Time: Feb 20, 2024 at 07:24 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -301,6 +301,22 @@ CREATE TABLE `tbl_customer` (
   `cust_city` varchar(100) NOT NULL,
   `cust_state` varchar(100) NOT NULL,
   `cust_zip` varchar(30) NOT NULL,
+  `cust_b_name` varchar(100) NOT NULL,
+  `cust_b_cname` varchar(100) NOT NULL,
+  `cust_b_phone` varchar(50) NOT NULL,
+  `cust_b_country` int(11) NOT NULL,
+  `cust_b_address` text NOT NULL,
+  `cust_b_city` varchar(100) NOT NULL,
+  `cust_b_state` varchar(100) NOT NULL,
+  `cust_b_zip` varchar(30) NOT NULL,
+  `cust_s_name` varchar(100) NOT NULL,
+  `cust_s_cname` varchar(100) NOT NULL,
+  `cust_s_phone` varchar(50) NOT NULL,
+  `cust_s_country` int(11) NOT NULL,
+  `cust_s_address` text NOT NULL,
+  `cust_s_city` varchar(100) NOT NULL,
+  `cust_s_state` varchar(100) NOT NULL,
+  `cust_s_zip` varchar(30) NOT NULL,
   `cust_password` varchar(100) NOT NULL,
   `cust_token` varchar(255) NOT NULL,
   `cust_datetime` varchar(100) NOT NULL,
@@ -312,8 +328,10 @@ CREATE TABLE `tbl_customer` (
 -- Dumping data for table `tbl_customer`
 --
 
-INSERT INTO `tbl_customer` (`cust_id`, `cust_name`, `cust_cname`, `cust_email`, `cust_phone`, `cust_country`, `cust_address`, `cust_city`, `cust_state`, `cust_zip`, `cust_password`, `cust_token`, `cust_datetime`, `cust_timestamp`, `cust_status`) VALUES
-(14, 'Test', 'TDS', 'abcd@gmail.com', '9654321234', 99, 'Testing customer login', 'Thane', 'Maharashtra', '400001', '1234', '034b437570502cacc425465cbc82023b', '2024-02-14 09:48:43', '1707976125', 1);
+INSERT INTO `tbl_customer` (`cust_id`, `cust_name`, `cust_cname`, `cust_email`, `cust_phone`, `cust_country`, `cust_address`, `cust_city`, `cust_state`, `cust_zip`, `cust_b_name`, `cust_b_cname`, `cust_b_phone`, `cust_b_country`, `cust_b_address`, `cust_b_city`, `cust_b_state`, `cust_b_zip`, `cust_s_name`, `cust_s_cname`, `cust_s_phone`, `cust_s_country`, `cust_s_address`, `cust_s_city`, `cust_s_state`, `cust_s_zip`, `cust_password`, `cust_token`, `cust_datetime`, `cust_timestamp`, `cust_status`) VALUES
+(14, 'Test', 'TDS', 'abcd@gmail.com', '9654321234', 99, 'Testing customer login', 'Thane', 'Maharashtra', '400001', '', '', '', 0, '', '', '', '', '', '', '', 0, '', '', '', '', '1234', '034b437570502cacc425465cbc82023b', '2024-02-14 09:48:43', '1707976125', 1),
+(15, 'Test', 'TDS', 'test@mail.com', '9654321234', 99, 'Testing ', 'Thane', 'Maharashtra', '400001', '', '', '', 0, '', '', '', '', '', '', '', 0, '', '', '', '', '81dc9bdb52d04dc20036dbd8313ed055', '6bcb542534ee7c8a7958ff24ca2bae4a', '2024-02-16 09:59:54', '1708149595', 1),
+(16, 'Pravesh', 'TDs', 'pravesh@gmail.com', '1425362154', 99, 'Testing', 'Thane', 'maharashtra', '400001', '', '', '', 0, '', '', '', '', '', '', '', 0, '', '', '', '', '81dc9bdb52d04dc20036dbd8313ed055', '86ab629dc91e218a3a96b0dab9756b41', '2024-02-19 10:09:59', '1708409399', 1);
 
 -- --------------------------------------------------------
 
@@ -338,16 +356,15 @@ CREATE TABLE `tbl_customer_message` (
 CREATE TABLE `tbl_end_category` (
   `ecat_id` int(11) NOT NULL,
   `ecat_name` varchar(255) NOT NULL,
-  `mcat_id` int(11) NOT NULL,
-  `cust_id` int(11) NOT NULL
+  `mcat_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_end_category`
 --
 
-INSERT INTO `tbl_end_category` (`ecat_id`, `ecat_name`, `mcat_id`,`cust_id`) VALUES
-(86, 'Ear Rings', 29,14);
+INSERT INTO `tbl_end_category` (`ecat_id`, `ecat_name`, `mcat_id`) VALUES
+(80, 'Mangalsutras_01', 24);
 
 -- --------------------------------------------------------
 
@@ -366,8 +383,13 @@ CREATE TABLE `tbl_mid_category` (
 --
 
 INSERT INTO `tbl_mid_category` (`mcat_id`, `mcat_name`, `tcat_id`) VALUES
-(28, 'Neck', 23),
-(29, 'Ears', 23);
+(18, 'Earrings', 10),
+(21, 'fingers', 12),
+(23, 'neck', 16),
+(24, 'neck', 9),
+(25, 'Ear', 7),
+(26, 'set', 8),
+(27, 'Rings', 7);
 
 -- --------------------------------------------------------
 
@@ -441,6 +463,13 @@ CREATE TABLE `tbl_product` (
   `p_is_active` int(1) NOT NULL,
   `ecat_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_product`
+--
+
+INSERT INTO `tbl_product` (`p_id`, `p_name`, `p_old_price`, `p_current_price`, `p_qty`, `p_featured_photo`, `p_description`, `p_short_description`, `p_feature`, `p_condition`, `p_return_policy`, `p_total_view`, `p_is_featured`, `p_is_active`, `ecat_id`) VALUES
+(103, 'Mangalsutras', '', '1000', 1, 'product-featured-103.png', '', '', '', '', '', 0, 0, 0, 80);
 
 -- --------------------------------------------------------
 
@@ -650,8 +679,16 @@ CREATE TABLE `tbl_top_category` (
 --
 
 INSERT INTO `tbl_top_category` (`tcat_id`, `tcat_name`, `show_on_menu`) VALUES
-(23, 'Men', 1),
-(24, 'Women', 1);
+(7, 'Earrings', 1),
+(8, 'Sets', 1),
+(9, 'Mangalsutras', 1),
+(10, 'Chain', 1),
+(11, 'Necklace', 1),
+(12, 'Rings', 0),
+(13, 'Maagtika', 0),
+(15, 'Kada', 0),
+(16, 'Pendants', 0),
+(21, 'Watch', 1);
 
 -- --------------------------------------------------------
 
@@ -667,18 +704,17 @@ CREATE TABLE `tbl_user` (
   `password` varchar(255) NOT NULL,
   `photo` varchar(255) NOT NULL,
   `role` varchar(30) NOT NULL,
-  `status` varchar(10) NOT NULL,
-  `customer_id` int(11) NOT NULL
+  `status` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_user`
 --
 
-INSERT INTO `tbl_user` (`id`, `full_name`, `email`, `phone`, `password`, `photo`, `role`, `status`, `customer_id`) VALUES
-(1, 'Administrator', 'admin@mail.com', '7777777777', '81dc9bdb52d04dc20036dbd8313ed055', 'user-1.png', 'Super Admin', 'Active', 15),
-(2, 'Christine', 'christine@mail.com', '4444444444', '81dc9bdb52d04dc20036dbd8313ed055', 'user-13.jpg', 'Admin', 'Active', 0),
-(3, 'Test', 'abcd@gmail.com', '1425361420', '81dc9bdb52d04dc20036dbd8313ed055', 'user-1.png', 'customer', 'Active', 10);
+INSERT INTO `tbl_user` (`id`, `full_name`, `email`, `phone`, `password`, `photo`, `role`, `status`) VALUES
+(1, 'Administrator', 'admin@mail.com', '7777777777', '81dc9bdb52d04dc20036dbd8313ed055', 'user-1.png', 'Super Admin', 'Active'),
+(2, 'Christine', 'christine@mail.com', '4444444444', '81dc9bdb52d04dc20036dbd8313ed055', 'user-13.jpg', 'Admin', 'Active'),
+(3, 'Testing', 'test@mail.com', '1425361425', '81dc9bdb52d04dc20036dbd8313ed055', 'photo.png', 'Admin', 'Active');
 
 --
 -- Indexes for dumped tables
@@ -776,7 +812,7 @@ ALTER TABLE `tbl_country`
 -- AUTO_INCREMENT for table `tbl_customer`
 --
 ALTER TABLE `tbl_customer`
-  MODIFY `cust_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `cust_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `tbl_customer_message`
@@ -788,13 +824,13 @@ ALTER TABLE `tbl_customer_message`
 -- AUTO_INCREMENT for table `tbl_end_category`
 --
 ALTER TABLE `tbl_end_category`
-  MODIFY `ecat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
+  MODIFY `ecat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=85;
 
 --
 -- AUTO_INCREMENT for table `tbl_mid_category`
 --
 ALTER TABLE `tbl_mid_category`
-  MODIFY `mcat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `mcat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `tbl_payment`
@@ -836,13 +872,13 @@ ALTER TABLE `tbl_size`
 -- AUTO_INCREMENT for table `tbl_top_category`
 --
 ALTER TABLE `tbl_top_category`
-  MODIFY `tcat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `tcat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

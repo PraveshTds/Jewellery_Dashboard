@@ -16,6 +16,7 @@ if (isset($_POST['form1'])) {
 		$email = strip_tags($_POST['email']);
 		$password = strip_tags($_POST['password']);
 
+		// $statement = $pdo->prepare("SELECT * FROM tbl_customer WHERE email=? AND status=?");
 		$statement = $pdo->prepare("SELECT * FROM tbl_user WHERE email=? AND status=?");
 		$statement->execute(array($email, 'Active'));
 		$total = $statement->rowCount();
@@ -32,6 +33,7 @@ if (isset($_POST['form1'])) {
 				$error_message .= 'Password does not match<br>';
 			} else {
 				if ($role == 'customer' || $role == "Customer") {
+					$cust_id = $row['id'];
 					$_SESSION['user'] = $row;
 					header('Location: customer/index.php');
 				} else {

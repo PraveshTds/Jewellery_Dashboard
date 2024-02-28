@@ -4,15 +4,15 @@
 if(isset($_POST['form1'])) {
 	$valid = 1;
 
-    if(empty($_POST['tcat_id'])) {
-        $valid = 0;
-        $error_message .= "You must have to select a top level category<br>";
-    }
+    // if(empty($_POST['tcat_id'])) {
+    //     $valid = 0;
+    //     $error_message .= "You must have to select a top level category<br>";
+    // }
 
-    if(empty($_POST['mcat_id'])) {
-        $valid = 0;
-        $error_message .= "You must have to select a mid level category<br>";
-    }
+    // if(empty($_POST['mcat_id'])) {
+    //     $valid = 0;
+    //     $error_message .= "You must have to select a mid level category<br>";
+    // }
 
     if(empty($_POST['ecat_id'])) { //not required its end-level-category
         $valid = 0;
@@ -197,19 +197,20 @@ if(isset($_POST['form1'])) {
 								<select name="tcat_id" class="form-control select2 top-cat">
 									<option value="">Select Category Name</option>
 									<?php
-									$statement = $pdo->prepare("SELECT * FROM tbl_top_category ORDER BY tcat_name ASC");
-									$statement->execute();
+									$customer = $_SESSION['user']['id'];
+									$statement = $pdo->prepare("SELECT * FROM tbl_end_category where customer=?");
+									$statement->execute(array($customer));
 									$result = $statement->fetchAll(PDO::FETCH_ASSOC);	
 									foreach ($result as $row) {
 										?>
-										<option value="<?php echo $row['tcat_id']; ?>"><?php echo $row['tcat_name']; ?></option>
+										<option value="<?php echo $row['ecat_id']; ?>"><?php echo $row['ecat_name']; ?></option>
 										<?php
 									}
 									?>
 								</select>
 							</div>
 						</div>
-						<div class="form-group">
+						<!-- <div class="form-group">
 							<label for="" class="col-sm-3 control-label">Type<span>*</span></label>
 							<div class="col-sm-4">
 								<select name="mcat_id" class="form-control select2 mid-cat">
@@ -217,7 +218,7 @@ if(isset($_POST['form1'])) {
 								</select>
 							</div>
 						</div>
-						<!-- <div class="form-group">
+						<div class="form-group">
 							<label for="" class="col-sm-3 control-label">End Level Category Name <span>*</span></label>
 							<div class="col-sm-4">
 								<select name="ecat_id" class="form-control select2 end-cat">

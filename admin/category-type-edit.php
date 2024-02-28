@@ -6,12 +6,12 @@ if(isset($_POST['form1'])) {
 
     if(empty($_POST['tcat_id'])) {
         $valid = 0;
-        $error_message .= "You must have to select a top level category<br>";
+        $error_message .= "You must have to select Gender<br>";
     }
 
     if(empty($_POST['mcat_name'])) {
         $valid = 0;
-        $error_message .= "Mid Level Category Name can not be empty<br>";
+        $error_message .= "Category type can not be empty<br>";
     }
 
     if($valid == 1) {    	
@@ -19,7 +19,7 @@ if(isset($_POST['form1'])) {
 		$statement = $pdo->prepare("UPDATE tbl_mid_category SET mcat_name=?,tcat_id=? WHERE mcat_id=?");
 		$statement->execute(array($_POST['mcat_name'],$_POST['tcat_id'],$_REQUEST['id']));
 
-    	$success_message = 'Mid Level Category is updated successfully.';
+    	$success_message = 'Category type is updated successfully.';
     }
 }
 ?>
@@ -85,10 +85,10 @@ foreach ($result as $row) {
 
             <div class="box-body">
                 <div class="form-group">
-                    <label for="" class="col-sm-3 control-label"> Category Name <span>*</span></label>
+                    <label for="" class="col-sm-3 control-label"> Gender <span>*</span></label>
                     <div class="col-sm-4">
                         <select name="tcat_id" class="form-control select2">
-                            <option value="">Select Category Name</option>
+                            <option value="">Select Gender</option>
                             <?php
                             $statement = $pdo->prepare("SELECT * FROM tbl_top_category ORDER BY tcat_name ASC");
                             $statement->execute();
@@ -103,7 +103,7 @@ foreach ($result as $row) {
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="" class="col-sm-3 control-label">Mid Level Category Name <span>*</span></label>
+                    <label for="" class="col-sm-3 control-label">Category type<span>*</span></label>
                     <div class="col-sm-4">
                         <input type="text" class="form-control" name="mcat_name" value="<?php echo $mcat_name; ?>">
                     </div>

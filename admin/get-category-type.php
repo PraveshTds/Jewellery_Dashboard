@@ -1,5 +1,5 @@
 <?php
-include 'inc/config.php';
+include '../inc/config.php';
 if($_POST['id'])
 {
 	$id = $_POST['id'];

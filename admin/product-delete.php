@@ -35,7 +35,6 @@ if(!isset($_REQUEST['id'])) {
 		unlink('../assets/uploads/product_photos/'.$photo);
 	}
 
-
 	// Delete from tbl_photo
 	$statement = $pdo->prepare("DELETE FROM tbl_product WHERE p_id=?");
 	$statement->execute(array($_REQUEST['id']));

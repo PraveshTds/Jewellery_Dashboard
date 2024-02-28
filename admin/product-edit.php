@@ -6,17 +6,17 @@ if (isset($_POST['form1'])) {
 
 	if (empty($_POST['tcat_id'])) {
 		$valid = 0;
-		$error_message .= "You must have to select a top level category<br>";
+		$error_message .= "You must have to select gender<br>";
 	}
 
 	if (empty($_POST['mcat_id'])) {
 		$valid = 0;
-		$error_message .= "You must have to select a mid level category<br>";
+		$error_message .= "You must have to select Category type<br>";
 	}
 
 	if (empty($_POST['ecat_id'])) {
 		$valid = 0;
-		$error_message .= "You must have to select an end level category<br>";
+		$error_message .= "You must have to select Category<br>";
 	}
 
 	if (empty($_POST['p_name'])) {

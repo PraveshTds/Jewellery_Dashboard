@@ -23,9 +23,11 @@
 			<thead>
 			    <tr>
 			        <th>#</th>
-                    <th>Category Name</th>
-                    <th>Type</th>
-			        <th>Label</th>
+                    <th>Gender</th>
+                    <th>Category Type</th>
+			        <th>Category Name</th>
+			        <th>Sequence</th>
+			        <th>active_product_count</th>
                    
                     <!-- <th>Top Level Category Name</th> -->
 			        <th>Action</th>
@@ -52,6 +54,8 @@
                         <td><?php echo $row['tcat_name']; ?></td>                   
                         <td><?php echo $row['mcat_name']; ?></td>
                         <td><?php echo $row['ecat_name']; ?></td>
+                        <td><?php echo $row['sequence']; ?></td>
+                        <td><?php echo $row['active_product_count']; ?></td>
 	                    <td>
 	                        <a href="Category-List-edit.php?id=<?php echo $row['ecat_id']; ?>" class="btn btn-primary btn-xs">Edit</a>
 	                        <a href="#" class="btn btn-danger btn-xs" data-href="Category-List-delete.php?id=<?php echo $row['ecat_id']; ?>" data-toggle="modal" data-target="#confirm-delete">Delete</a>

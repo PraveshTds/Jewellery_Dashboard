@@ -100,7 +100,7 @@ if (!isset($_SESSION['user'])) {
 						</a>
 					</li>
 
-					<li class="treeview <?php if (($cur_page == 'country.php') || ($cur_page == 'country-add.php') || ($cur_page == 'country-edit.php') || ($cur_page == 'manage-category.php') || ($cur_page == 'manage-category-add.php') || ($cur_page == 'manage-category-edit.php') || ($cur_page == 'category-type.php') || ($cur_page == 'category-type-add.php') || ($cur_page == 'category-type-edit.php') || ($cur_page == 'Category-List.php') || ($cur_page == 'Category-List-add.php') || ($cur_page == 'Category-List-edit.php')) {
+					<li class="treeview <?php if (($cur_page == 'country.php') || ($cur_page == 'country-add.php') || ($cur_page == 'country-edit.php') || ($cur_page == 'manage-gender.php') || ($cur_page == 'manage-gender-add.php') || ($cur_page == 'manage-gender-edit.php') || ($cur_page == 'category-type.php') || ($cur_page == 'category-type-add.php') || ($cur_page == 'category-type-edit.php') || ($cur_page == 'Category-List.php') || ($cur_page == 'Category-List-add.php') || ($cur_page == 'Category-List-edit.php')) {
 											echo 'active';
 										} ?>">
 						<a href="#">
@@ -111,18 +111,15 @@ if (!isset($_SESSION['user'])) {
 							</span>
 						</a>
 						<ul class="treeview-menu">
-							<!--
-                            <li><a href="country.php"><i class="fa fa-circle-o"></i> Country</a></li> -->
-							<li><a href="manage-category.php"><i class="fa fa-circle-o"></i>Manage Category</a></li>
-							<li><a href="category-type.php"><i class="fa fa-circle-o"></i>Manage Type</a></li>
-							<!-- <li><a href="Category-List.php"><i class="fa fa-circle-o"></i>Category List</a></li> -->
+							<li><a href="manage-gender.php"><i class="fa fa-circle-o"></i>Manage Gender</a></li>
+							<li><a href="category-type.php"><i class="fa fa-circle-o"></i>Manage Category Type</a></li>
 						</ul>
 					</li>
 					<li class="treeview <?php if (($cur_page == 'product.php') || ($cur_page == 'product-add.php') || ($cur_page == 'product-edit.php')) {
 											echo 'active';
 										} ?>">
 						<a href="Category-List.php">
-							<i class="fa fa-shopping-bag"></i> <span>Category List</span>
+							<i class="fa fa-shopping-bag"></i> <span>Category</span>
 						</a>
 					</li>
 

@@ -6,7 +6,7 @@ if(isset($_POST['form1'])) {
 
     if(empty($_POST['tcat_name'])) {
         $valid = 0;
-        $error_message .= "Top Category Name can not be empty<br>";
+        $error_message .= "Gender can not be empty<br>";
     } else {
     	// Duplicate Category checking
     	$statement = $pdo->prepare("SELECT * FROM tbl_top_category WHERE tcat_name=?");
@@ -15,7 +15,7 @@ if(isset($_POST['form1'])) {
     	if($total)
     	{
     		$valid = 0;
-        	$error_message .= "Top Category Name already exists<br>";
+        	$error_message .= "Gender already exists<br>";
     	}
     }
 
@@ -25,17 +25,17 @@ if(isset($_POST['form1'])) {
 		$statement = $pdo->prepare("INSERT INTO tbl_top_category (tcat_name,show_on_menu) VALUES (?,?)");
 		$statement->execute(array($_POST['tcat_name'],$_POST['show_on_menu']));
 	
-    	$success_message = 'Top Category is added successfully.';
+    	$success_message = 'Gender is added successfully.';
     }
 }
 ?>
 
 <section class="content-header">
 	<div class="content-header-left">
-		<h1>Add Top Level Category</h1>
+		<h1>Add Gender</h1>
 	</div>
 	<div class="content-header-right">
-		<a href="manage-category.php" class="btn btn-primary btn-sm">View All</a>
+		<a href="manage-gender.php" class="btn btn-primary btn-sm">View All</a>
 	</div>
 </section>
 
@@ -66,7 +66,7 @@ if(isset($_POST['form1'])) {
 				<div class="box box-info">
 					<div class="box-body">
 						<div class="form-group">
-							<label for="" class="col-sm-2 control-label">Category <span>*</span></label>
+							<label for="" class="col-sm-2 control-label">Gender <span>*</span></label>
 							<div class="col-sm-4">
 								<input type="text" class="form-control" name="tcat_name">
 							</div>

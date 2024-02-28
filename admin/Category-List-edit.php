@@ -6,17 +6,17 @@ if(isset($_POST['form1'])) {
 
     if(empty($_POST['tcat_id'])) {
         $valid = 0;
-        $error_message .= "You must have to select a top level category<br>";
+        $error_message .= "You must have to select Gender<br>";
     }
 
     if(empty($_POST['mcat_id'])) {
         $valid = 0;
-        $error_message .= "You must have to select a mid level category<br>";
+        $error_message .= "You must have to select category type<br>";
     }
 
     if(empty($_POST['ecat_name'])) {
         $valid = 0;
-        $error_message .= "End level category name can not be empty<br>";
+        $error_message .= "Category name can not be empty<br>";
     }
 
     if($valid == 1) {    	
@@ -24,7 +24,7 @@ if(isset($_POST['form1'])) {
 		$statement = $pdo->prepare("UPDATE tbl_end_category SET ecat_name=?,mcat_id=? WHERE ecat_id=?");
 		$statement->execute(array($_POST['ecat_name'],$_POST['mcat_id'],$_REQUEST['id']));
 
-    	$success_message = 'End Level Category is updated successfully.';
+    	$success_message = 'Category is updated successfully.';
     }
 }
 ?>
@@ -97,7 +97,7 @@ foreach ($result as $row) {
 
             <div class="box-body">
                 <div class="form-group">
-                    <label for="" class="col-sm-3 control-label">Category Name <span>*</span></label>
+                    <label for="" class="col-sm-3 control-label">Gender <span>*</span></label>
                     <div class="col-sm-4">
                         <select name="tcat_id" class="form-control select2 top-cat">
                             <option value="">Select Category</option>
@@ -115,7 +115,7 @@ foreach ($result as $row) {
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="" class="col-sm-3 control-label">Type<span>*</span></label>
+                    <label for="" class="col-sm-3 control-label">Category Type<span>*</span></label>
                     <div class="col-sm-4">
                         <select name="mcat_id" class="form-control select2 mid-cat">
                             <option value="">Select Type</option>
@@ -133,7 +133,7 @@ foreach ($result as $row) {
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="" class="col-sm-3 control-label">label<span>*</span></label>
+                    <label for="" class="col-sm-3 control-label">Category Name<span>*</span></label>
                     <div class="col-sm-4">
                         <input type="text" class="form-control" name="ecat_name" value="<?php echo $ecat_name; ?>">
                     </div>
