@@ -4,27 +4,27 @@
 	<div class="content-header-left">
 		<h1>View Products</h1>
 	</div>
-	<div class="content-header-right">
+	<!-- <div class="content-header-right">
 		<a href="product-add.php" class="btn btn-primary btn-sm">Add Product</a>
-	</div>
+	</div> -->
 </section>
 
 <section class="content">
 	<div class="row">
 		<div class="col-md-12">
 			<div class="box box-info">
-				<div class="cat_type">
-			<label for="cars">Select Customer</label>
-			<select name="cars" id="cars">
-            <option value="volvo">indyverse</option>
-            <option value="saab">Tanishq</option>
-            <option value="mercedes">Kalyan jewel</option>
-			</select>
-			<button>Show</button>
-				</div>
+				<!-- <div class="cat_type">
+					<label for="cars">Select Customer</label>
+					<select name="cars" id="cars">
+						<option value="volvo">indyverse</option>
+						<option value="saab">Tanishq</option>
+						<option value="mercedes">Kalyan jewel</option>
+					</select>
+					<button>Show</button>
+				</div> -->
 				<div class="box-body table-responsive">
 					<table id="example1" class="table table-bordered table-hover table-striped">
-					<thead class="thead-dark">
+						<thead class="thead-dark">
 							<tr>
 								<th width="10">#</th>
 								<th>Photo</th>
@@ -40,7 +40,7 @@
 						</thead>
 						<tbody>
 							<?php
-							$i=0;
+							$i = 0;
 							$statement = $pdo->prepare("SELECT
 														
 														t1.p_id,
@@ -51,31 +51,31 @@
 														t1.p_featured_photo,
 														t1.p_is_featured,
 														t1.p_is_active,
-														t1.ecat_id,
+														t1.cat_id,
 
-														t2.ecat_id,
-														t2.ecat_name,
+														t2.cat_id,
+														t2.cat_name,
 
-														t3.mcat_id,
-														t3.mcat_name,
+														t3.ctype_id,
+														t3.ctype_name,
 
-														t4.tcat_id,
-														t4.tcat_name
+														t4.gender_id,
+														t4.gender_name
 
 							                           	FROM tbl_product t1
-							                           	JOIN tbl_end_category t2
-							                           	ON t1.ecat_id = t2.ecat_id
-							                           	JOIN tbl_mid_category t3
-							                           	ON t2.mcat_id = t3.mcat_id
-							                           	JOIN tbl_top_category t4
-							                           	ON t3.tcat_id = t4.tcat_id
+							                           	JOIN tbl_category t2
+							                           	ON t1.cat_id = t2.cat_id
+							                           	JOIN tbl_category_type t3
+							                           	ON t2.ctype_id = t3.ctype_id
+							                           	JOIN tbl_gender t4
+							                           	ON t3.gender_id = t4.gender_id
 							                           	ORDER BY t1.p_id DESC
 							                           	");
 							$statement->execute();
 							$result = $statement->fetchAll(PDO::FETCH_ASSOC);
 							foreach ($result as $row) {
 								$i++;
-								?>
+							?>
 								<tr>
 									<td><?php echo $i; ?></td>
 									<td style="width:82px;"><img src="../assets/uploads/<?php echo $row['p_featured_photo']; ?>" alt="<?php echo $row['p_name']; ?>" style="width:80px;"></td>
@@ -84,20 +84,28 @@
 									<td>$<?php echo $row['p_current_price']; ?></td>
 									<td><?php echo $row['p_qty']; ?></td>
 									<td>
-										<?php if($row['p_is_featured'] == 1) {echo '<span class="badge badge-success" style="background-color:green;">Yes</span>';} else {echo '<span class="badge badge-success" style="background-color:red;">No</span>';} ?>
+										<?php if ($row['p_is_featured'] == 1) {
+											echo '<span class="badge badge-success" style="background-color:green;">Yes</span>';
+										} else {
+											echo '<span class="badge badge-success" style="background-color:red;">No</span>';
+										} ?>
 									</td>
 									<td>
-										<?php if($row['p_is_active'] == 1) {echo '<span class="badge badge-success" style="background-color:green;">Yes</span>';} else {echo '<span class="badge badge-danger" style="background-color:red;">No</span>';} ?>
+										<?php if ($row['p_is_active'] == 1) {
+											echo '<span class="badge badge-success" style="background-color:green;">Yes</span>';
+										} else {
+											echo '<span class="badge badge-danger" style="background-color:red;">No</span>';
+										} ?>
 									</td>
-									<td><?php echo $row['tcat_name']; ?><br><?php echo $row['mcat_name']; ?><br><?php echo $row['ecat_name']; ?></td>
-									<td>										
+									<td><?php echo $row['gender_name']; ?><br><?php echo $row['ctype_name']; ?><br><?php echo $row['cat_name']; ?></td>
+									<td>
 										<a href="product-edit.php?id=<?php echo $row['p_id']; ?>" class="btn btn-primary btn-xs">Edit</a>
-										<a href="#" class="btn btn-danger btn-xs" data-href="product-delete.php?id=<?php echo $row['p_id']; ?>" data-toggle="modal" data-target="#confirm-delete">Delete</a>  
+										<a href="#" class="btn btn-danger btn-xs" data-href="product-delete.php?id=<?php echo $row['p_id']; ?>" data-toggle="modal" data-target="#confirm-delete">Delete</a>
 									</td>
 								</tr>
-								<?php
+							<?php
 							}
-							?>							
+							?>
 						</tbody>
 					</table>
 				</div>
@@ -108,22 +116,22 @@
 
 
 <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Delete Confirmation</h4>
-            </div>
-            <div class="modal-body">
-                <p>Are you sure want to delete this item?</p>
-                <p style="color:red;">Be careful! This product will be deleted from the order table, payment table, size table, color table and rating table also.</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-danger btn-ok">Delete</a>
-            </div>
-        </div>
-    </div>
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title" id="myModalLabel">Delete Confirmation</h4>
+			</div>
+			<div class="modal-body">
+				<p>Are you sure want to delete this item?</p>
+				<p style="color:red;">Be careful! This product will be deleted from the order table, payment table, size table, color table and rating table also.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				<a class="btn btn-danger btn-ok">Delete</a>
+			</div>
+		</div>
+	</div>
 </div>
 
 <?php require_once('footer.php'); ?>

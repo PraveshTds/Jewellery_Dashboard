@@ -4,13 +4,13 @@
 if(isset($_POST['form1'])) {
 	$valid = 1;
 
-    if(empty($_POST['tcat_name'])) {
+    if(empty($_POST['gender_name'])) {
         $valid = 0;
         $error_message .= "Gender can not be empty<br>";
     } else {
     	// Duplicate Category checking
-    	$statement = $pdo->prepare("SELECT * FROM tbl_top_category WHERE tcat_name=?");
-    	$statement->execute(array($_POST['tcat_name']));
+    	$statement = $pdo->prepare("SELECT * FROM tbl_gender WHERE gender_name=?");
+    	$statement->execute(array($_POST['gender_name']));
     	$total = $statement->rowCount();
     	if($total)
     	{
@@ -21,9 +21,9 @@ if(isset($_POST['form1'])) {
 
     if($valid == 1) {
 
-		// Saving data into the main table tbl_top_category
-		$statement = $pdo->prepare("INSERT INTO tbl_top_category (tcat_name,show_on_menu) VALUES (?,?)");
-		$statement->execute(array($_POST['tcat_name'],$_POST['show_on_menu']));
+		// Saving data into the main table tbl_gender
+		$statement = $pdo->prepare("INSERT INTO tbl_gender (gender_name,show_on_menu) VALUES (?,?)");
+		$statement->execute(array($_POST['gender_name'],$_POST['show_on_menu']));
 	
     	$success_message = 'Gender is added successfully.';
     }
@@ -68,7 +68,7 @@ if(isset($_POST['form1'])) {
 						<div class="form-group">
 							<label for="" class="col-sm-2 control-label">Gender <span>*</span></label>
 							<div class="col-sm-4">
-								<input type="text" class="form-control" name="tcat_name">
+								<input type="text" class="form-control" name="gender_name">
 							</div>
 						</div>
 						<div class="form-group">

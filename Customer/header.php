@@ -12,7 +12,7 @@ $success_message1 = '';
 
 // Check if the user is logged in or not
 if (!isset($_SESSION['user'])) {
-	header('location: login.php');
+	header('location: index.php');
 	exit;
 }
 ?>
@@ -100,9 +100,9 @@ if (!isset($_SESSION['user'])) {
 						</a>
 					</li>
 
-					<!-- <li class="treeview <?php if (($cur_page == 'country.php') || ($cur_page == 'country-add.php') || ($cur_page == 'country-edit.php') || ($cur_page == 'manage-category.php') || ($cur_page == 'manage-category-add.php') || ($cur_page == 'manage-category-edit.php') || ($cur_page == 'category-type.php') || ($cur_page == 'category-type-add.php') || ($cur_page == 'category-type-edit.php') || ($cur_page == 'Category-List.php') || ($cur_page == 'Category-List-add.php') || ($cur_page == 'Category-List-edit.php')) {
-											echo 'active';
-										} ?>">
+					<!-- <li class="treeview <?php //if (($cur_page == 'country.php') || ($cur_page == 'country-add.php') || ($cur_page == 'country-edit.php') || ($cur_page == 'manage-category.php') || ($cur_page == 'manage-category-add.php') || ($cur_page == 'manage-category-edit.php') || ($cur_page == 'category-type.php') || ($cur_page == 'category-type-add.php') || ($cur_page == 'category-type-edit.php') || ($cur_page == 'Category-List.php') || ($cur_page == 'Category-List-add.php') || ($cur_page == 'Category-List-edit.php')) {
+											//echo 'active';
+										//} ?>">
 						<a href="#">
 							<i class="fa fa-cogs"></i>
 							<span>Category Management</span>

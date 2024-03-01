@@ -35,7 +35,7 @@
 														ON t1.cust_country = t2.country_id
 													");
 							$statement->execute();
-							$result = $statement->fetchAll(PDO::FETCH_ASSOC);						
+							$result = $statement->fetchAll(PDO::FETCH_ASSOC);					
 							foreach ($result as $row) {
 								$i++;
 								?>

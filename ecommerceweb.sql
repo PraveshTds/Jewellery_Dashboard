@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 23, 2024 at 10:01 AM
+-- Generation Time: Feb 28, 2024 at 06:50 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `ecommerceweb`
+-- Database: `ecom_test`
 --
 
 -- --------------------------------------------------------
@@ -313,7 +313,8 @@ CREATE TABLE `tbl_customer` (
 --
 
 INSERT INTO `tbl_customer` (`cust_id`, `cust_name`, `cust_cname`, `cust_email`, `cust_phone`, `cust_country`, `cust_address`, `cust_city`, `cust_state`, `cust_zip`, `cust_password`, `cust_token`, `cust_datetime`, `cust_timestamp`, `cust_status`) VALUES
-(14, 'Test', 'TDS', 'abcd@gmail.com', '9654321234', 99, 'Testing customer login', 'Thane', 'Maharashtra', '400001', '1234', '034b437570502cacc425465cbc82023b', '2024-02-14 09:48:43', '1707976125', 1);
+(1, 'Pravesh', 'TDS', 'pravesh@gmail.com', '9654321234', 99, 'Testing', 'Thane', 'Maharashtra', '400001', '81dc9bdb52d04dc20036dbd8313ed055', '4b5754ffa1fd2c002cfc4eebf85d1753', '2024-02-25 09:13:53', '1708924433', 1),
+(2, 'Akash', 'TDS', 'akash@gmail.com', '7345683773', 99, 'Test', 'Thane', 'Maharashtra', '400001', '81dc9bdb52d04dc20036dbd8313ed055', '82e1d9629bba97370b5a51fbc5edbe10', '2024-02-25 11:08:00', '1708931280', 1);
 
 -- --------------------------------------------------------
 
@@ -332,43 +333,37 @@ CREATE TABLE `tbl_customer_message` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_end_category`
+-- Table structure for table `tbl_category`
 --
 
-CREATE TABLE `tbl_end_category` (
-  `ecat_id` int(11) NOT NULL,
-  `ecat_name` varchar(255) NOT NULL,
-  `mcat_id` int(11) NOT NULL,
-  `cust_id` int(11) NOT NULL
+CREATE TABLE `tbl_category` (
+  `cat_id` int(11) NOT NULL,
+  `cat_name` varchar(255) NOT NULL,
+  `ctype_id` int(11) NOT NULL,
+  `sequence` int(11) NOT NULL,
+  `active_product_count` int(11) NOT NULL,
+  `customer` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_end_category`
+-- Dumping data for table `tbl_category`
 --
-
-INSERT INTO `tbl_end_category` (`ecat_id`, `ecat_name`, `mcat_id`,`cust_id`) VALUES
-(86, 'Ear Rings', 29,14);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_mid_category`
+-- Table structure for table `tbl_category_type`
 --
 
-CREATE TABLE `tbl_mid_category` (
-  `mcat_id` int(11) NOT NULL,
-  `mcat_name` varchar(255) NOT NULL,
-  `tcat_id` int(11) NOT NULL
+CREATE TABLE `tbl_category_type` (
+  `ctype_id` int(11) NOT NULL,
+  `ctype_name` varchar(255) NOT NULL,
+  `gender_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_mid_category`
+-- Dumping data for table `tbl_category_type`
 --
-
-INSERT INTO `tbl_mid_category` (`mcat_id`, `mcat_name`, `tcat_id`) VALUES
-(28, 'Neck', 23),
-(29, 'Ears', 23);
-
 -- --------------------------------------------------------
 
 --
@@ -439,7 +434,7 @@ CREATE TABLE `tbl_product` (
   `p_total_view` int(11) NOT NULL,
   `p_is_featured` int(1) NOT NULL,
   `p_is_active` int(1) NOT NULL,
-  `ecat_id` int(11) NOT NULL
+  `cat_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -636,22 +631,18 @@ INSERT INTO `tbl_size` (`size_id`, `size_name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_top_category`
+-- Table structure for table `tbl_gender`
 --
 
-CREATE TABLE `tbl_top_category` (
-  `tcat_id` int(11) NOT NULL,
-  `tcat_name` varchar(255) NOT NULL,
+CREATE TABLE `tbl_gender` (
+  `gender_id` int(11) NOT NULL,
+  `gender_name` varchar(255) NOT NULL,
   `show_on_menu` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_top_category`
+-- Dumping data for table `tbl_gender`
 --
-
-INSERT INTO `tbl_top_category` (`tcat_id`, `tcat_name`, `show_on_menu`) VALUES
-(23, 'Men', 1),
-(24, 'Women', 1);
 
 -- --------------------------------------------------------
 
@@ -667,18 +658,17 @@ CREATE TABLE `tbl_user` (
   `password` varchar(255) NOT NULL,
   `photo` varchar(255) NOT NULL,
   `role` varchar(30) NOT NULL,
-  `status` varchar(10) NOT NULL,
-  `customer_id` int(11) NOT NULL
+  `status` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_user`
 --
 
-INSERT INTO `tbl_user` (`id`, `full_name`, `email`, `phone`, `password`, `photo`, `role`, `status`, `customer_id`) VALUES
-(1, 'Administrator', 'admin@mail.com', '7777777777', '81dc9bdb52d04dc20036dbd8313ed055', 'user-1.png', 'Super Admin', 'Active', 15),
-(2, 'Christine', 'christine@mail.com', '4444444444', '81dc9bdb52d04dc20036dbd8313ed055', 'user-13.jpg', 'Admin', 'Active', 0),
-(3, 'Test', 'abcd@gmail.com', '1425361420', '81dc9bdb52d04dc20036dbd8313ed055', 'user-1.png', 'customer', 'Active', 10);
+INSERT INTO `tbl_user` (`id`, `full_name`, `email`, `phone`, `password`, `photo`, `role`, `status`) VALUES
+(1, 'Administrator', 'admin@mail.com', '7777777777', '81dc9bdb52d04dc20036dbd8313ed055', 'user-1.png', 'Super Admin', 'Active'),
+(18, 'Pravesh', 'pravesh@gmail.com', '9654321234', '81dc9bdb52d04dc20036dbd8313ed055', 'test.png', 'customer', 'Active'),
+(19, 'Akash', 'akash@gmail.com', '7345683773', '81dc9bdb52d04dc20036dbd8313ed055', 'test.png', 'customer', 'Active');
 
 --
 -- Indexes for dumped tables
@@ -703,16 +693,16 @@ ALTER TABLE `tbl_customer_message`
   ADD PRIMARY KEY (`customer_message_id`);
 
 --
--- Indexes for table `tbl_end_category`
+-- Indexes for table `tbl_category`
 --
-ALTER TABLE `tbl_end_category`
-  ADD PRIMARY KEY (`ecat_id`);
+ALTER TABLE `tbl_category`
+  ADD PRIMARY KEY (`cat_id`);
 
 --
--- Indexes for table `tbl_mid_category`
+-- Indexes for table `tbl_category_type`
 --
-ALTER TABLE `tbl_mid_category`
-  ADD PRIMARY KEY (`mcat_id`);
+ALTER TABLE `tbl_category_type`
+  ADD PRIMARY KEY (`ctype_id`);
 
 --
 -- Indexes for table `tbl_payment`
@@ -751,10 +741,10 @@ ALTER TABLE `tbl_size`
   ADD PRIMARY KEY (`size_id`);
 
 --
--- Indexes for table `tbl_top_category`
+-- Indexes for table `tbl_gender`
 --
-ALTER TABLE `tbl_top_category`
-  ADD PRIMARY KEY (`tcat_id`);
+ALTER TABLE `tbl_gender`
+  ADD PRIMARY KEY (`gender_id`);
 
 --
 -- Indexes for table `tbl_user`
@@ -776,7 +766,7 @@ ALTER TABLE `tbl_country`
 -- AUTO_INCREMENT for table `tbl_customer`
 --
 ALTER TABLE `tbl_customer`
-  MODIFY `cust_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `cust_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT for table `tbl_customer_message`
@@ -785,16 +775,16 @@ ALTER TABLE `tbl_customer_message`
   MODIFY `customer_message_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `tbl_end_category`
+-- AUTO_INCREMENT for table `tbl_category`
 --
-ALTER TABLE `tbl_end_category`
-  MODIFY `ecat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
+ALTER TABLE `tbl_category`
+  MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
 
 --
--- AUTO_INCREMENT for table `tbl_mid_category`
+-- AUTO_INCREMENT for table `tbl_category_type`
 --
-ALTER TABLE `tbl_mid_category`
-  MODIFY `mcat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+ALTER TABLE `tbl_category_type`
+  MODIFY `ctype_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT for table `tbl_payment`
@@ -833,16 +823,16 @@ ALTER TABLE `tbl_size`
   MODIFY `size_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
--- AUTO_INCREMENT for table `tbl_top_category`
+-- AUTO_INCREMENT for table `tbl_gender`
 --
-ALTER TABLE `tbl_top_category`
-  MODIFY `tcat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+ALTER TABLE `tbl_gender`
+  MODIFY `gender_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

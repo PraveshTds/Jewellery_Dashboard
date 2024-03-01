@@ -4,21 +4,21 @@
 if(isset($_POST['form1'])) {
 	$valid = 1;
 
-    if(empty($_POST['tcat_name'])) {
+    if(empty($_POST['gender_name'])) {
         $valid = 0;
         $error_message .= "Gender can not be empty<br>";
     } else {
 		// Duplicate Top Category checking
     	// current Top Category name that is in the database
-    	$statement = $pdo->prepare("SELECT * FROM tbl_top_category WHERE tcat_id=?");
+    	$statement = $pdo->prepare("SELECT * FROM tbl_gender WHERE gender_id=?");
 		$statement->execute(array($_REQUEST['id']));
 		$result = $statement->fetchAll(PDO::FETCH_ASSOC);
 		foreach($result as $row) {
-			$current_tcat_name = $row['tcat_name'];
+			$current_gender_name = $row['gender_name'];
 		}
 
-		$statement = $pdo->prepare("SELECT * FROM tbl_top_category WHERE tcat_name=? and tcat_name!=?");
-    	$statement->execute(array($_POST['tcat_name'],$current_tcat_name));
+		$statement = $pdo->prepare("SELECT * FROM tbl_gender WHERE gender_name=? and gender_name!=?");
+    	$statement->execute(array($_POST['gender_name'],$current_gender_name));
     	$total = $statement->rowCount();							
     	if($total) {
     		$valid = 0;
@@ -28,8 +28,8 @@ if(isset($_POST['form1'])) {
 
     if($valid == 1) {    	
 		// updating into the database
-		$statement = $pdo->prepare("UPDATE tbl_top_category SET tcat_name=?,show_on_menu=? WHERE tcat_id=?");
-		$statement->execute(array($_POST['tcat_name'],$_POST['show_on_menu'],$_REQUEST['id']));
+		$statement = $pdo->prepare("UPDATE tbl_gender SET gender_name=?,show_on_menu=? WHERE gender_id=?");
+		$statement->execute(array($_POST['gender_name'],$_POST['show_on_menu'],$_REQUEST['id']));
 
     	$success_message = 'Gender is updated successfully.';
     }
@@ -42,7 +42,7 @@ if(!isset($_REQUEST['id'])) {
 	exit;
 } else {
 	// Check the id is valid or not
-	$statement = $pdo->prepare("SELECT * FROM tbl_top_category WHERE tcat_id=?");
+	$statement = $pdo->prepare("SELECT * FROM tbl_gender WHERE gender_id=?");
 	$statement->execute(array($_REQUEST['id']));
 	$total = $statement->rowCount();
 	$result = $statement->fetchAll(PDO::FETCH_ASSOC);
@@ -65,7 +65,7 @@ if(!isset($_REQUEST['id'])) {
 
 <?php							
 foreach ($result as $row) {
-	$tcat_name = $row['tcat_name'];
+	$gender_name = $row['gender_name'];
     $show_on_menu = $row['show_on_menu'];
 }
 ?>
@@ -99,7 +99,7 @@ foreach ($result as $row) {
                 <div class="form-group">
                     <label for="" class="col-sm-2 control-label">Gender<span>*</span></label>
                     <div class="col-sm-4">
-                        <input type="text" class="form-control" name="tcat_name" value="<?php echo $tcat_name; ?>">
+                        <input type="text" class="form-control" name="gender_name" value="<?php echo $gender_name; ?>">
                     </div>
                 </div>
                 <div class="form-group">

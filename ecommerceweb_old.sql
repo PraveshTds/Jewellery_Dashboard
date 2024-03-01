@@ -350,39 +350,39 @@ CREATE TABLE `tbl_customer_message` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_end_category`
+-- Table structure for table `tbl_category`
 --
 
-CREATE TABLE `tbl_end_category` (
-  `ecat_id` int(11) NOT NULL,
-  `ecat_name` varchar(255) NOT NULL,
-  `mcat_id` int(11) NOT NULL
+CREATE TABLE `tbl_category` (
+  `cat_id` int(11) NOT NULL,
+  `cat_name` varchar(255) NOT NULL,
+  `ctype_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_end_category`
+-- Dumping data for table `tbl_category`
 --
 
-INSERT INTO `tbl_end_category` (`ecat_id`, `ecat_name`, `mcat_id`) VALUES
+INSERT INTO `tbl_category` (`cat_id`, `cat_name`, `ctype_id`) VALUES
 (80, 'Mangalsutras_01', 24);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_mid_category`
+-- Table structure for table `tbl_category_type`
 --
 
-CREATE TABLE `tbl_mid_category` (
-  `mcat_id` int(11) NOT NULL,
-  `mcat_name` varchar(255) NOT NULL,
-  `tcat_id` int(11) NOT NULL
+CREATE TABLE `tbl_category_type` (
+  `ctype_id` int(11) NOT NULL,
+  `ctype_name` varchar(255) NOT NULL,
+  `gender_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_mid_category`
+-- Dumping data for table `tbl_category_type`
 --
 
-INSERT INTO `tbl_mid_category` (`mcat_id`, `mcat_name`, `tcat_id`) VALUES
+INSERT INTO `tbl_category_type` (`ctype_id`, `ctype_name`, `gender_id`) VALUES
 (18, 'Earrings', 10),
 (21, 'fingers', 12),
 (23, 'neck', 16),
@@ -461,14 +461,14 @@ CREATE TABLE `tbl_product` (
   `p_total_view` int(11) NOT NULL,
   `p_is_featured` int(1) NOT NULL,
   `p_is_active` int(1) NOT NULL,
-  `ecat_id` int(11) NOT NULL
+  `cat_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_product`
 --
 
-INSERT INTO `tbl_product` (`p_id`, `p_name`, `p_old_price`, `p_current_price`, `p_qty`, `p_featured_photo`, `p_description`, `p_short_description`, `p_feature`, `p_condition`, `p_return_policy`, `p_total_view`, `p_is_featured`, `p_is_active`, `ecat_id`) VALUES
+INSERT INTO `tbl_product` (`p_id`, `p_name`, `p_old_price`, `p_current_price`, `p_qty`, `p_featured_photo`, `p_description`, `p_short_description`, `p_feature`, `p_condition`, `p_return_policy`, `p_total_view`, `p_is_featured`, `p_is_active`, `cat_id`) VALUES
 (103, 'Mangalsutras', '', '1000', 1, 'product-featured-103.png', '', '', '', '', '', 0, 0, 0, 80);
 
 -- --------------------------------------------------------
@@ -665,20 +665,20 @@ INSERT INTO `tbl_size` (`size_id`, `size_name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_top_category`
+-- Table structure for table `tbl_gender`
 --
 
-CREATE TABLE `tbl_top_category` (
-  `tcat_id` int(11) NOT NULL,
-  `tcat_name` varchar(255) NOT NULL,
+CREATE TABLE `tbl_gender` (
+  `gender_id` int(11) NOT NULL,
+  `gender_name` varchar(255) NOT NULL,
   `show_on_menu` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_top_category`
+-- Dumping data for table `tbl_gender`
 --
 
-INSERT INTO `tbl_top_category` (`tcat_id`, `tcat_name`, `show_on_menu`) VALUES
+INSERT INTO `tbl_gender` (`gender_id`, `gender_name`, `show_on_menu`) VALUES
 (7, 'Earrings', 1),
 (8, 'Sets', 1),
 (9, 'Mangalsutras', 1),
@@ -739,16 +739,16 @@ ALTER TABLE `tbl_customer_message`
   ADD PRIMARY KEY (`customer_message_id`);
 
 --
--- Indexes for table `tbl_end_category`
+-- Indexes for table `tbl_category`
 --
-ALTER TABLE `tbl_end_category`
-  ADD PRIMARY KEY (`ecat_id`);
+ALTER TABLE `tbl_category`
+  ADD PRIMARY KEY (`cat_id`);
 
 --
--- Indexes for table `tbl_mid_category`
+-- Indexes for table `tbl_category_type`
 --
-ALTER TABLE `tbl_mid_category`
-  ADD PRIMARY KEY (`mcat_id`);
+ALTER TABLE `tbl_category_type`
+  ADD PRIMARY KEY (`ctype_id`);
 
 --
 -- Indexes for table `tbl_payment`
@@ -787,10 +787,10 @@ ALTER TABLE `tbl_size`
   ADD PRIMARY KEY (`size_id`);
 
 --
--- Indexes for table `tbl_top_category`
+-- Indexes for table `tbl_gender`
 --
-ALTER TABLE `tbl_top_category`
-  ADD PRIMARY KEY (`tcat_id`);
+ALTER TABLE `tbl_gender`
+  ADD PRIMARY KEY (`gender_id`);
 
 --
 -- Indexes for table `tbl_user`
@@ -821,16 +821,16 @@ ALTER TABLE `tbl_customer_message`
   MODIFY `customer_message_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `tbl_end_category`
+-- AUTO_INCREMENT for table `tbl_category`
 --
-ALTER TABLE `tbl_end_category`
-  MODIFY `ecat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=85;
+ALTER TABLE `tbl_category`
+  MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=85;
 
 --
--- AUTO_INCREMENT for table `tbl_mid_category`
+-- AUTO_INCREMENT for table `tbl_category_type`
 --
-ALTER TABLE `tbl_mid_category`
-  MODIFY `mcat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+ALTER TABLE `tbl_category_type`
+  MODIFY `ctype_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `tbl_payment`
@@ -869,10 +869,10 @@ ALTER TABLE `tbl_size`
   MODIFY `size_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
--- AUTO_INCREMENT for table `tbl_top_category`
+-- AUTO_INCREMENT for table `tbl_gender`
 --
-ALTER TABLE `tbl_top_category`
-  MODIFY `tcat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+ALTER TABLE `tbl_gender`
+  MODIFY `gender_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `tbl_user`

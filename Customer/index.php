@@ -6,7 +6,7 @@
 
 <?php
 $customer = $_SESSION['user']['id'];
-$statement = $pdo->prepare("SELECT * FROM tbl_end_category where customer=?");
+$statement = $pdo->prepare("SELECT * FROM tbl_category where customer=? AND cat_status=1");
 $statement->execute(array($customer));
 $total_end_category = $statement->rowCount();
 
@@ -22,7 +22,6 @@ $total_product = $statement->rowCount();
 			<div class="small-box bg-primary">
 				<div class="inner">
 					<h3><?php echo $total_product; ?></h3>
-
 					<p>Products</p>
 				</div>
 				<div class="icon">

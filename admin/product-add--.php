@@ -4,17 +4,17 @@
 if(isset($_POST['form1'])) {
 	$valid = 1;
 
-    if(empty($_POST['tcat_id'])) {
+    if(empty($_POST['gender_id'])) {
         $valid = 0;
         $error_message .= "You must have to select gender<br>";
     }
 
-    if(empty($_POST['mcat_id'])) {
+    if(empty($_POST['ctype_id'])) {
         $valid = 0;
         $error_message .= "You must have to select category type<br>";
     }
 
-    if(empty($_POST['ecat_id'])) { //not required its end-level-category
+    if(empty($_POST['cat_id'])) { //not required its end-level-category
         $valid = 0;
         $error_message .= "You must have to select category<br>";
     }
@@ -116,7 +116,7 @@ if(isset($_POST['form1'])) {
 										p_total_view,
 										p_is_featured,
 										p_is_active,
-										ecat_id
+										cat_id
 									) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 		$statement->execute(array(
 										$_POST['p_name'],
@@ -132,7 +132,7 @@ if(isset($_POST['form1'])) {
 										0,
 										$_POST['p_is_featured'],
 										$_POST['p_is_active'],
-										$_POST['ecat_id']
+										$_POST['cat_id']
 									));
 
 		
@@ -194,15 +194,15 @@ if(isset($_POST['form1'])) {
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label">Category Name <span>*</span></label>
 							<div class="col-sm-4">
-								<select name="tcat_id" class="form-control select2 top-cat">
+								<select name="gender_id" class="form-control select2 gender">
 									<option value="">Select Category Name</option>
 									<?php
-									$statement = $pdo->prepare("SELECT * FROM tbl_top_category ORDER BY tcat_name ASC");
+									$statement = $pdo->prepare("SELECT * FROM tbl_gender ORDER BY gender_name ASC");
 									$statement->execute();
 									$result = $statement->fetchAll(PDO::FETCH_ASSOC);	
 									foreach ($result as $row) {
 										?>
-										<option value="<?php echo $row['tcat_id']; ?>"><?php echo $row['tcat_name']; ?></option>
+										<option value="<?php echo $row['gender_id']; ?>"><?php echo $row['gender_name']; ?></option>
 										<?php
 									}
 									?>
@@ -212,7 +212,7 @@ if(isset($_POST['form1'])) {
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label">Type<span>*</span></label>
 							<div class="col-sm-4">
-								<select name="mcat_id" class="form-control select2 mid-cat">
+								<select name="ctype_id" class="form-control select2 cat-type">
 									<option value="">Select Type</option>
 								</select>
 							</div>
@@ -220,7 +220,7 @@ if(isset($_POST['form1'])) {
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label">Category Name <span>*</span></label>
 							<div class="col-sm-4">
-								<select name="ecat_id" class="form-control select2 end-cat">
+								<select name="cat_id" class="form-control select2 end-cat">
 									<option value="">Select Category</option>
 								</select>
 							</div>
@@ -306,7 +306,7 @@ if(isset($_POST['form1'])) {
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label">is_uploaded<span>*</span></label>
 							<div class="col-sm-4">								
-									<select name="mcat_id" class="form-control select2 mid-cat">										
+									<select name="ctype_id" class="form-control select2 cat-type">										
 											<option value="">true</option>
 											<option value="">false</option>								
 									</select>
@@ -321,7 +321,7 @@ if(isset($_POST['form1'])) {
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label">Modal<span>*</span></label>
 								<div class="col-sm-4">
-									<select name="mcat_id" class="form-control select2 mid-cat">
+									<select name="ctype_id" class="form-control select2 cat-type">
 											<option value="">Select Modal</option>
 											<option value=""> 1</option>
 											<option value=""> 2</option>
@@ -345,7 +345,7 @@ if(isset($_POST['form1'])) {
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label">Tryon<span>*</span></label>
 							<div class="col-sm-4">
-									<select name="mcat_id" class="form-control select2 mid-cat">
+									<select name="ctype_id" class="form-control select2 cat-type">
 											<option value="">Enable</option>
 											<option value="">Disable</option>
 										
@@ -355,7 +355,7 @@ if(isset($_POST['form1'])) {
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label">Gallery Mode<span>*</span></label>
 							<div class="col-sm-4">
-									<select name="mcat_id" class="form-control select2 mid-cat">
+									<select name="ctype_id" class="form-control select2 cat-type">
 											<option value="">Enable</option>
 											<option value="">Disable</option>
 										

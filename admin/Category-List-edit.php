@@ -4,27 +4,22 @@
 if(isset($_POST['form1'])) {
 	$valid = 1;
 
-    if(empty($_POST['tcat_id'])) {
+    if(empty($_POST['gender_id'])) {
         $valid = 0;
         $error_message .= "You must have to select Gender<br>";
     }
 
-    if(empty($_POST['mcat_id'])) {
+    if(empty($_POST['ctype_name'])) {
         $valid = 0;
-        $error_message .= "You must have to select category type<br>";
-    }
-
-    if(empty($_POST['ecat_name'])) {
-        $valid = 0;
-        $error_message .= "Category name can not be empty<br>";
+        $error_message .= "Category type can not be empty<br>";
     }
 
     if($valid == 1) {    	
 		// updating into the database
-		$statement = $pdo->prepare("UPDATE tbl_end_category SET ecat_name=?,mcat_id=? WHERE ecat_id=?");
-		$statement->execute(array($_POST['ecat_name'],$_POST['mcat_id'],$_REQUEST['id']));
+		$statement = $pdo->prepare("UPDATE tbl_category_type SET ctype_name=?,gender_id=? WHERE ctype_id=?");
+		$statement->execute(array($_POST['ctype_name'],$_POST['gender_id'],$_REQUEST['id']));
 
-    	$success_message = 'Category is updated successfully.';
+    	$success_message = 'Category type is updated successfully.';
     }
 }
 ?>
@@ -35,13 +30,7 @@ if(!isset($_REQUEST['id'])) {
 	exit;
 } else {
 	// Check the id is valid or not
-	$statement = $pdo->prepare("SELECT * 
-                            FROM tbl_end_category t1
-                            JOIN tbl_mid_category t2
-                            ON t1.mcat_id = t2.mcat_id
-                            JOIN tbl_top_category t3
-                            ON t2.tcat_id = t3.tcat_id
-                            WHERE t1.ecat_id=?");
+	$statement = $pdo->prepare("SELECT * FROM tbl_category_type WHERE ctype_id=?");
 	$statement->execute(array($_REQUEST['id']));
 	$total = $statement->rowCount();
 	$result = $statement->fetchAll(PDO::FETCH_ASSOC);
@@ -54,19 +43,18 @@ if(!isset($_REQUEST['id'])) {
 
 <section class="content-header">
 	<div class="content-header-left">
-		<h1>Edit Category</h1>
+		<h1>Edit Type</h1>
 	</div>
 	<div class="content-header-right">
-		<a href="Category-List.php" class="btn btn-primary btn-sm">View All</a>
+		<a href="category.php" class="btn btn-primary btn-sm">View All</a>
 	</div>
 </section>
 
 
 <?php							
 foreach ($result as $row) {
-	$ecat_name = $row['ecat_name'];
-    $mcat_id = $row['mcat_id'];
-    $tcat_id = $row['tcat_id'];
+	$ctype_name = $row['ctype_name'];
+    $gender_id = $row['gender_id'];
 }
 ?>
 
@@ -97,17 +85,17 @@ foreach ($result as $row) {
 
             <div class="box-body">
                 <div class="form-group">
-                    <label for="" class="col-sm-3 control-label">Gender <span>*</span></label>
+                    <label for="" class="col-sm-3 control-label"> Gender <span>*</span></label>
                     <div class="col-sm-4">
-                        <select name="tcat_id" class="form-control select2 top-cat">
-                            <option value="">Select Category</option>
+                        <select name="gender_id" class="form-control select2">
+                            <option value="">Select Gender</option>
                             <?php
-                            $statement = $pdo->prepare("SELECT * FROM tbl_top_category ORDER BY tcat_name ASC");
+                            $statement = $pdo->prepare("SELECT * FROM tbl_gender ORDER BY gender_name ASC");
                             $statement->execute();
                             $result = $statement->fetchAll(PDO::FETCH_ASSOC);   
                             foreach ($result as $row) {
                                 ?>
-                                <option value="<?php echo $row['tcat_id']; ?>" <?php if($row['tcat_id'] == $tcat_id){echo 'selected';} ?>><?php echo $row['tcat_name']; ?></option>
+                                <option value="<?php echo $row['gender_id']; ?>" <?php if($row['gender_id'] == $gender_id){echo 'selected';} ?>><?php echo $row['gender_name']; ?></option>
                                 <?php
                             }
                             ?>
@@ -115,30 +103,11 @@ foreach ($result as $row) {
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="" class="col-sm-3 control-label">Category Type<span>*</span></label>
+                    <label for="" class="col-sm-3 control-label">Category type<span>*</span></label>
                     <div class="col-sm-4">
-                        <select name="mcat_id" class="form-control select2 mid-cat">
-                            <option value="">Select Type</option>
-                            <?php
-                            $statement = $pdo->prepare("SELECT * FROM tbl_mid_category WHERE tcat_id = ? ORDER BY mcat_name ASC");
-                            $statement->execute(array($tcat_id));
-                            $result = $statement->fetchAll(PDO::FETCH_ASSOC);   
-                            foreach ($result as $row) {
-                                ?>
-                                <option value="<?php echo $row['mcat_id']; ?>" <?php if($row['mcat_id'] == $mcat_id){echo 'selected';} ?>><?php echo $row['mcat_name']; ?></option>
-                                <?php
-                            }
-                            ?>
-                        </select>
+                        <input type="text" class="form-control" name="ctype_name" value="<?php echo $ctype_name; ?>">
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="" class="col-sm-3 control-label">Category Name<span>*</span></label>
-                    <div class="col-sm-4">
-                        <input type="text" class="form-control" name="ecat_name" value="<?php echo $ecat_name; ?>">
-                    </div>
-                </div>
-                
                 <div class="form-group">
                 	<label for="" class="col-sm-3 control-label"></label>
                     <div class="col-sm-6">

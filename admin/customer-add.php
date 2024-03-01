@@ -1,20 +1,20 @@
 <?php require_once('header.php'); ?>
-<?php 
+<!-- <?php 
 // server connection
-$ftpHost = 'ftp.textronic.in';
-$ftpUsername = 'textrqh5';
-$ftpPassword = '1$J4l@6H+9R4+pXz';
-$ftpDirectory = 'public_html/api_jewellery/api/Brand/';
+// $ftpHost = 'ftp.textronic.in';
+// $ftpUsername = 'textrqh5';
+// $ftpPassword = '1$J4l@6H+9R4+pXz';
+// $ftpDirectory = 'public_html/api_jewellery/api/Brand/';
 
 // Connect to FTP server
-$ftpConnection = ftp_connect($ftpHost);
-$login = ftp_login($ftpConnection, $ftpUsername, $ftpPassword);
+// $ftpConnection = ftp_connect($ftpHost);
+// $login = ftp_login($ftpConnection, $ftpUsername, $ftpPassword);
 
 // Check connection
-if (!$ftpConnection || !$login) {
-    die('FTP connection failed');
-}
-$local_folder = 'C:\xampp\htdocs\ECommerce\Pravesh';
+// if (!$ftpConnection || !$login) {
+//     die('FTP connection failed');
+// }
+// // $local_folder = 'C:\xampp\htdocs\ECommerce\Pravesh';
 // function ftp_recursive_put($ftpConnection, $local_folder, $remote_folder) {
 //     $dir = opendir($local_folder);
 
@@ -37,7 +37,7 @@ $local_folder = 'C:\xampp\htdocs\ECommerce\Pravesh';
 
 //     closedir($dir);
 // }
-?>
+?> -->
 
 <?php
 if (isset($_POST['form1'])) {
@@ -56,7 +56,7 @@ if (isset($_POST['form1'])) {
             $valid = 0;
             $error_message .= "Email doesnt Match" . "<br>";
         } else {
-            $statement = $pdo->prepare("SELECT * FROM tbl_customer WHERE cust_email=?");
+            $statement = $pdo->prepare("SELECT * FROM tbl_user WHERE email=?");
             $statement->execute(array($_POST['cust_email']));
             $total = $statement->rowCount();
             if ($total) {
@@ -147,42 +147,27 @@ if (isset($_POST['form1'])) {
             $cust_timestamp,
             0
         ));
+       "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
-        // Send email for confirmation of the account
-//         $to = $_POST['cust_email'];
-
-//         $subject = "Confirm your Account";
-//         $verify_link = BASE_URL . 'verify.php?email=' . $to . '&token=' . $token;
-//         $message = '
-// ' . "Email verify" . '<br><br>
-
-// <a href="' . $verify_link . '">' . $verify_link . '</a>';
-
-//         $headers = "From: noreply@" . BASE_URL . "\r\n" .
-//             "Reply-To: noreply@" . BASE_URL . "\r\n" .
-//             "X-Mailer: PHP/" . phpversion() . "\r\n" .
-//             "MIME-Version: 1.0\r\n" .
-//             "Content-Type: text/html; charset=ISO-8859-1\r\n";
-
-        // start
-//         $statement = $pdo->prepare("INSERT INTO tbl_user (
-//     full_name,
-//     email,
-//     phone,
-//     password,
-//     photo,
-//     role,
-//     status
-// ) VALUES (?,?,?,?,?,?,?)");
-//         $statement->execute(array(
-//             strip_tags($_POST['cust_name']),
-//             strip_tags($_POST['cust_email']),
-//             strip_tags($_POST['cust_phone']),
-//             md5($_POST['cust_password']),
-//             strip_tags('test.png'),
-//             strip_tags('Admin'),
-//             strip_tags('Active')
-//         ));
+        // saving into db for creating customer 
+        $statement = $pdo->prepare("INSERT INTO tbl_user (
+    full_name,
+    email,
+    phone,
+    password,
+    photo,
+    role,
+    status
+) VALUES (?,?,?,?,?,?,?)");
+        $statement->execute(array(
+            strip_tags($_POST['cust_name']),
+            strip_tags($_POST['cust_email']),
+            strip_tags($_POST['cust_phone']),
+            md5($_POST['cust_password']),
+            strip_tags('test.png'),
+            strip_tags('Admin'),
+            strip_tags('Active')
+        ));
         // end
 
         // Create a new folder
@@ -206,7 +191,7 @@ if (isset($_POST['form1'])) {
         unset($_POST['cust_city']);
         unset($_POST['cust_state']);
         unset($_POST['cust_zip']);
-        ftp_close($ftpConnection);
+        // ftp_close($ftpConnection);
         $success_message = "Customer has been added successfully.";
     }
 }
@@ -217,7 +202,7 @@ if (isset($_POST['form1'])) {
         <h1>Add Product</h1>
     </div>
     <div class="content-header-right">
-        <a href="product.php" class="btn btn-primary btn-sm">View All</a>
+        <a href="customer.php" class="btn btn-primary btn-sm">View All</a>
     </div>
 </section>
 
@@ -320,6 +305,11 @@ if (isset($_POST['form1'])) {
                                             <label for="">Confirm Password *</label>
                                             <input type="password" class="form-control" name="cust_re_password">
                                         </div>
+                                        <div class="col-md-12 form-group">
+                                            <label for="">Role *</label>
+                                            <input type="text" class="form-control" name="cust_role">
+                                        </div>
+
                                         <div class="col-md-6 form-group">
                                             <label for=""></label>
                                             <input type="submit" class="btn btn-danger" value="Submit" name="form1">

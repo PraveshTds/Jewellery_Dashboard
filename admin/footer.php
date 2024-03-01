@@ -43,28 +43,28 @@
 	        	height: 300
 	        });
 	    });
-		$(".top-cat").on('change',function(){
+		$(".gender").on('change',function(){
 			var id=$(this).val();
 			var dataString = 'id='+ id;
 			$.ajax
 			({
 				type: "POST",
-				url: "get-category-type.php",
+				url: "get-category-list.php",
 				data: dataString,
 				cache: false,
 				success: function(html)
 				{
-					$(".mid-cat").html(html);
+					$(".cat-type").html(html);
 				}
 			});			
 		});
-		$(".mid-cat").on('change',function(){
+		$(".cat-type").on('change',function(){
 			var id=$(this).val();
 			var dataString = 'id='+ id;
 			$.ajax
 			({
 				type: "POST",
-				url: "get-Category-List.php",
+				url: "get-Category.php",
 				data: dataString,
 				cache: false,
 				success: function(html)
@@ -73,6 +73,22 @@
 				}
 			});			
 		});
+		// getting customer selection
+		// $(".cust_data").on('change',function(){
+		// 	var id=$(this).val();
+		// 	var dataString = 'id='+ id;
+		// 	$.ajax
+		// 	({
+		// 		type: "POST",
+		// 		url: "Category-List.php",
+		// 		data: dataString,
+		// 		cache: false,
+		// 		success: function(html)
+		// 		{
+		// 			$(".end-cat").html(html);
+		// 		}
+		// 	});			
+		// });
 	</script>
 
 	<script>

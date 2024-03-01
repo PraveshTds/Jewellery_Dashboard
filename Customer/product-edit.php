@@ -4,17 +4,17 @@
 if (isset($_POST['form1'])) {
 	$valid = 1;
 
-	if (empty($_POST['tcat_id'])) {
+	if (empty($_POST['gender_id'])) {
 		$valid = 0;
 		$error_message .= "You must have to select a top level category<br>";
 	}
 
-	if (empty($_POST['mcat_id'])) {
+	if (empty($_POST['ctype_id'])) {
 		$valid = 0;
 		$error_message .= "You must have to select a mid level category<br>";
 	}
 
-	if (empty($_POST['ecat_id'])) {
+	if (empty($_POST['cat_id'])) {
 		$valid = 0;
 		$error_message .= "You must have to select an end level category<br>";
 	}
@@ -99,7 +99,7 @@ if (isset($_POST['form1'])) {
         							p_return_policy=?,
         							p_is_featured=?,
         							p_is_active=?,
-        							ecat_id=?
+        							cat_id=?
 
         							WHERE p_id=?");
 			$statement->execute(array(
@@ -114,7 +114,7 @@ if (isset($_POST['form1'])) {
 				$_POST['p_return_policy'],
 				$_POST['p_is_featured'],
 				$_POST['p_is_active'],
-				$_POST['ecat_id'],
+				$_POST['cat_id'],
 				$_REQUEST['id']
 			));
 		} else {
@@ -138,7 +138,7 @@ if (isset($_POST['form1'])) {
         							p_return_policy=?,
         							p_is_featured=?,
         							p_is_active=?,
-        							ecat_id=?
+        							cat_id=?
 
         							WHERE p_id=?");
 			$statement->execute(array(
@@ -154,7 +154,7 @@ if (isset($_POST['form1'])) {
 				$_POST['p_return_policy'],
 				$_POST['p_is_featured'],
 				$_POST['p_is_active'],
-				$_POST['ecat_id'],
+				$_POST['cat_id'],
 				$_REQUEST['id']
 			));
 		}
@@ -222,22 +222,22 @@ foreach ($result as $row) {
 	$p_return_policy = $row['p_return_policy'];
 	$p_is_featured = $row['p_is_featured'];
 	$p_is_active = $row['p_is_active'];
-	$ecat_id = $row['ecat_id'];
+	$cat_id = $row['cat_id'];
 }
 
 $statement = $pdo->prepare("SELECT * 
-                        FROM tbl_end_category t1
-                        JOIN tbl_mid_category t2
-                        ON t1.mcat_id = t2.mcat_id
-                        JOIN tbl_top_category t3
-                        ON t2.tcat_id = t3.tcat_id
-                        WHERE t1.ecat_id=?");
-$statement->execute(array($ecat_id));
+                        FROM tbl_category t1
+                        JOIN tbl_category_type t2
+                        ON t1.ctype_id = t2.ctype_id
+                        JOIN tbl_gender t3
+                        ON t2.gender_id = t3.gender_id
+                        WHERE t1.cat_id=?");
+$statement->execute(array($cat_id));
 $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 foreach ($result as $row) {
-	$ecat_name = $row['ecat_name'];
-	$mcat_id = $row['mcat_id'];
-	$tcat_id = $row['tcat_id'];
+	$cat_name = $row['cat_name'];
+	$ctype_id = $row['ctype_id'];
+	$gender_id = $row['gender_id'];
 }
 
 // $statement = $pdo->prepare("SELECT * FROM tbl_product_size WHERE p_id=?");
@@ -278,17 +278,17 @@ foreach ($result as $row) {
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label">Top Level Category Name <span>*</span></label>
 							<div class="col-sm-4">
-								<select name="tcat_id" class="form-control select2 top-cat">
+								<select name="gender_id" class="form-control select2 gender">
 									<option value="">Select Top Level Category</option>
 									<?php
-									$statement = $pdo->prepare("SELECT * FROM tbl_top_category ORDER BY tcat_name ASC");
+									$statement = $pdo->prepare("SELECT * FROM tbl_gender ORDER BY gender_name ASC");
 									$statement->execute();
 									$result = $statement->fetchAll(PDO::FETCH_ASSOC);
 									foreach ($result as $row) {
 									?>
-										<option value="<?php echo $row['tcat_id']; ?>" <?php if ($row['tcat_id'] == $tcat_id) {
+										<option value="<?php echo $row['gender_id']; ?>" <?php if ($row['gender_id'] == $gender_id) {
 																							echo 'selected';
-																						} ?>><?php echo $row['tcat_name']; ?></option>
+																						} ?>><?php echo $row['gender_name']; ?></option>
 									<?php
 									}
 									?>
@@ -298,17 +298,17 @@ foreach ($result as $row) {
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label">Mid Level Category Name <span>*</span></label>
 							<div class="col-sm-4">
-								<select name="mcat_id" class="form-control select2 mid-cat">
+								<select name="ctype_id" class="form-control select2 cat-type">
 									<option value="">Select Mid Level Category</option>
 									<?php
-									$statement = $pdo->prepare("SELECT * FROM tbl_mid_category WHERE tcat_id = ? ORDER BY mcat_name ASC");
-									$statement->execute(array($tcat_id));
+									$statement = $pdo->prepare("SELECT * FROM tbl_category_type WHERE gender_id = ? ORDER BY ctype_name ASC");
+									$statement->execute(array($gender_id));
 									$result = $statement->fetchAll(PDO::FETCH_ASSOC);
 									foreach ($result as $row) {
 									?>
-										<option value="<?php echo $row['mcat_id']; ?>" <?php if ($row['mcat_id'] == $mcat_id) {
+										<option value="<?php echo $row['ctype_id']; ?>" <?php if ($row['ctype_id'] == $ctype_id) {
 																							echo 'selected';
-																						} ?>><?php echo $row['mcat_name']; ?></option>
+																						} ?>><?php echo $row['ctype_name']; ?></option>
 									<?php
 									}
 									?>
@@ -318,17 +318,17 @@ foreach ($result as $row) {
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label">End Level Category Name <span>*</span></label>
 							<div class="col-sm-4">
-								<select name="ecat_id" class="form-control select2 end-cat">
+								<select name="cat_id" class="form-control select2 end-cat">
 									<option value="">Select End Level Category</option>
 									<?php
-									$statement = $pdo->prepare("SELECT * FROM tbl_end_category WHERE mcat_id = ? ORDER BY ecat_name ASC");
-									$statement->execute(array($mcat_id));
+									$statement = $pdo->prepare("SELECT * FROM tbl_category WHERE ctype_id = ? ORDER BY cat_name ASC");
+									$statement->execute(array($ctype_id));
 									$result = $statement->fetchAll(PDO::FETCH_ASSOC);
 									foreach ($result as $row) {
 									?>
-										<option value="<?php echo $row['ecat_id']; ?>" <?php if ($row['ecat_id'] == $ecat_id) {
+										<option value="<?php echo $row['cat_id']; ?>" <?php if ($row['cat_id'] == $cat_id) {
 																							echo 'selected';
-																						} ?>><?php echo $row['ecat_name']; ?></option>
+																						} ?>><?php echo $row['cat_name']; ?></option>
 									<?php
 									}
 									?>

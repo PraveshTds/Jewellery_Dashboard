@@ -7,7 +7,7 @@ if(!isset($_REQUEST['id'])) {
 	exit;
 } else {
 	// Check the id is valid or not
-	$statement = $pdo->prepare("SELECT * FROM tbl_top_category WHERE tcat_id=?");
+	$statement = $pdo->prepare("SELECT * FROM tbl_gender WHERE gender_id=?");
 	$statement->execute(array($_REQUEST['id']));
 	$total = $statement->rowCount();
 	if( $total == 0 ) {
@@ -19,23 +19,23 @@ if(!isset($_REQUEST['id'])) {
 
 <?php	
 	$statement = $pdo->prepare("SELECT * 
-							FROM tbl_top_category t1
-							JOIN tbl_mid_category t2
-							ON t1.tcat_id = t2.tcat_id
-							JOIN tbl_end_category t3
-							ON t2.mcat_id = t3.mcat_id
-							WHERE t1.tcat_id=?");
+							FROM tbl_gender t1
+							JOIN tbl_category_type t2
+							ON t1.gender_id = t2.gender_id
+							JOIN tbl_category t3
+							ON t2.ctype_id = t3.ctype_id
+							WHERE t1.gender_id=?");
 	$statement->execute(array($_REQUEST['id']));
 	$result = $statement->fetchAll(PDO::FETCH_ASSOC);							
 	foreach ($result as $row) {
-		$ecat_ids[] = $row['ecat_id'];
+		$cat_ids[] = $row['cat_id'];
 	}
 
-	if(isset($ecat_ids)) {
+	if(isset($cat_ids)) {
 
-		for($i=0;$i<count($ecat_ids);$i++) {
-			$statement = $pdo->prepare("SELECT * FROM tbl_product WHERE ecat_id=?");
-			$statement->execute(array($ecat_ids[$i]));
+		for($i=0;$i<count($cat_ids);$i++) {
+			$statement = $pdo->prepare("SELECT * FROM tbl_product WHERE cat_id=?");
+			$statement->execute(array($cat_ids[$i]));
 			$result = $statement->fetchAll(PDO::FETCH_ASSOC);							
 			foreach ($result as $row) {
 				$p_ids[] = $row['p_id'];
@@ -80,20 +80,20 @@ if(!isset($_REQUEST['id'])) {
 
 		}
 
-		// Delete from tbl_end_category
-		for($i=0;$i<count($ecat_ids);$i++) {
-			$statement = $pdo->prepare("DELETE FROM tbl_end_category WHERE ecat_id=?");
-			$statement->execute(array($ecat_ids[$i]));
+		// Delete from tbl_category
+		for($i=0;$i<count($cat_ids);$i++) {
+			$statement = $pdo->prepare("DELETE FROM tbl_category WHERE cat_id=?");
+			$statement->execute(array($cat_ids[$i]));
 		}
 
 	}
 
-	// Delete from tbl_mid_category
-	$statement = $pdo->prepare("DELETE FROM tbl_mid_category WHERE tcat_id=?");
+	// Delete from tbl_category_type
+	$statement = $pdo->prepare("DELETE FROM tbl_category_type WHERE gender_id=?");
 	$statement->execute(array($_REQUEST['id']));
 
-	// Delete from tbl_top_category
-	$statement = $pdo->prepare("DELETE FROM tbl_top_category WHERE tcat_id=?");
+	// Delete from tbl_gender
+	$statement = $pdo->prepare("DELETE FROM tbl_gender WHERE gender_id=?");
 	$statement->execute(array($_REQUEST['id']));
 
 	header('location: manage-gender.php');
