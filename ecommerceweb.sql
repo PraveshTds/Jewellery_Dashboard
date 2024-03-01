@@ -313,8 +313,14 @@ CREATE TABLE `tbl_customer` (
 --
 
 INSERT INTO `tbl_customer` (`cust_id`, `cust_name`, `cust_cname`, `cust_email`, `cust_phone`, `cust_country`, `cust_address`, `cust_city`, `cust_state`, `cust_zip`, `cust_password`, `cust_token`, `cust_datetime`, `cust_timestamp`, `cust_status`) VALUES
+<<<<<<< HEAD
 (1, 'Pravesh', 'TDS', 'pravesh@gmail.com', '9654321234', 99, 'Testing', 'Thane', 'Maharashtra', '400001', '81dc9bdb52d04dc20036dbd8313ed055', '4b5754ffa1fd2c002cfc4eebf85d1753', '2024-02-25 09:13:53', '1708924433', 1),
 (2, 'Akash', 'TDS', 'akash@gmail.com', '7345683773', 99, 'Test', 'Thane', 'Maharashtra', '400001', '81dc9bdb52d04dc20036dbd8313ed055', '82e1d9629bba97370b5a51fbc5edbe10', '2024-02-25 11:08:00', '1708931280', 1);
+=======
+(39, 'Pravesh', 'TDS', 'pravesh@gmail.com', '9654321234', 99, 'Testing', 'Thane', 'Maharashtra', '400001', '81dc9bdb52d04dc20036dbd8313ed055', '4b5754ffa1fd2c002cfc4eebf85d1753', '2024-02-25 09:13:53', '1708924433', 1),
+(40, 'Akash', 'TDS', 'akash@gmail.com', '7345683773', 99, 'Test', 'Thane', 'Maharashtra', '400001', '81dc9bdb52d04dc20036dbd8313ed055', '82e1d9629bba97370b5a51fbc5edbe10', '2024-02-25 11:08:00', '1708931280', 1),
+(41, 'Tanmay', 'TDS', 'tanmay@gmail.com', '9654321234', 99, 'ewerg', 'Thane', 'Maharashtra', '400001', '81dc9bdb52d04dc20036dbd8313ed055', '7ebd98335a6d0e042faf47b68d0dbb08', '2024-02-26 03:35:14', '1708947314', 1);
+>>>>>>> 27f2e302d4b9a34929f407618f602d09cfcaf763
 
 -- --------------------------------------------------------
 
@@ -336,10 +342,17 @@ CREATE TABLE `tbl_customer_message` (
 -- Table structure for table `tbl_category`
 --
 
+<<<<<<< HEAD
 CREATE TABLE `tbl_category` (
   `cat_id` int(11) NOT NULL,
   `cat_name` varchar(255) NOT NULL,
   `ctype_id` int(11) NOT NULL,
+=======
+CREATE TABLE `tbl_end_category` (
+  `ecat_id` int(11) NOT NULL,
+  `ecat_name` varchar(255) NOT NULL,
+  `mcat_id` int(11) NOT NULL,
+>>>>>>> 27f2e302d4b9a34929f407618f602d09cfcaf763
   `sequence` int(11) NOT NULL,
   `active_product_count` int(11) NOT NULL,
   `customer` int(11) NOT NULL
@@ -349,6 +362,21 @@ CREATE TABLE `tbl_category` (
 -- Dumping data for table `tbl_category`
 --
 
+<<<<<<< HEAD
+=======
+INSERT INTO `tbl_end_category` (`ecat_id`, `ecat_name`, `mcat_id`, `sequence`, `active_product_count`, `customer`) VALUES
+(99, 'Chains', 36, 1, 12, 18),
+(100, 'Mangalsutra', 36, 3, 5, 18),
+(101, 'Earrings', 35, 2, 10, 18),
+(102, 'Rings', 39, 8, 10, 18),
+(103, 'Watch', 38, 5, 5, 19),
+(104, 'Watch', 38, 5, 5, 19),
+(106, 'Mangtika', 34, 6, 5, 18),
+(107, 'Mangtika', 34, 8, 5, 18),
+(108, 'Mangtika', 34, 1, 5, 19),
+(109, 'Ring-1', 39, 20, 2, 19);
+
+>>>>>>> 27f2e302d4b9a34929f407618f602d09cfcaf763
 -- --------------------------------------------------------
 
 --
@@ -364,6 +392,18 @@ CREATE TABLE `tbl_category_type` (
 --
 -- Dumping data for table `tbl_category_type`
 --
+<<<<<<< HEAD
+=======
+
+INSERT INTO `tbl_mid_category` (`mcat_id`, `mcat_name`, `tcat_id`) VALUES
+(34, 'Head', 24),
+(35, 'Ears', 24),
+(36, 'Neck', 24),
+(37, 'Nose', 24),
+(38, 'Wrist', 24),
+(39, 'Finger', 24);
+
+>>>>>>> 27f2e302d4b9a34929f407618f602d09cfcaf763
 -- --------------------------------------------------------
 
 --
@@ -777,14 +817,24 @@ ALTER TABLE `tbl_customer_message`
 --
 -- AUTO_INCREMENT for table `tbl_category`
 --
+<<<<<<< HEAD
 ALTER TABLE `tbl_category`
   MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
+=======
+ALTER TABLE `tbl_end_category`
+  MODIFY `ecat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
+>>>>>>> 27f2e302d4b9a34929f407618f602d09cfcaf763
 
 --
 -- AUTO_INCREMENT for table `tbl_category_type`
 --
+<<<<<<< HEAD
 ALTER TABLE `tbl_category_type`
   MODIFY `ctype_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+=======
+ALTER TABLE `tbl_mid_category`
+  MODIFY `mcat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+>>>>>>> 27f2e302d4b9a34929f407618f602d09cfcaf763
 
 --
 -- AUTO_INCREMENT for table `tbl_payment`
@@ -825,8 +875,13 @@ ALTER TABLE `tbl_size`
 --
 -- AUTO_INCREMENT for table `tbl_gender`
 --
+<<<<<<< HEAD
 ALTER TABLE `tbl_gender`
   MODIFY `gender_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+=======
+ALTER TABLE `tbl_top_category`
+  MODIFY `tcat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+>>>>>>> 27f2e302d4b9a34929f407618f602d09cfcaf763
 
 --
 -- AUTO_INCREMENT for table `tbl_user`
