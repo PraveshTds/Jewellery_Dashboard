@@ -274,13 +274,13 @@ if(isset($_POST['form1'])) {
 								</div>
 						</div>
 						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">price</label>
+							<label for="" class="col-sm-3 control-label">Price</label>
 							<div class="col-sm-4">								
 								<input type="text" name="p_name" value="" class="form-control">
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Quantity</label>
+							<label for="" class="col-sm-3 control-label">Quantity<span style="color:red">*</span></label>
 							<div class="col-sm-4">								
 								<input type="text" name="p_name" value="" class="form-control">
 							</div>

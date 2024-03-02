@@ -4,9 +4,9 @@
 	<div class="content-header-left">
 		<h1>View Products</h1>
 	</div>
-	<div class="content-header-right">
+	<!-- <div class="content-header-right">
 		<a href="product-add.php" class="btn btn-primary btn-sm">Add Product</a>
-	</div>
+	</div> -->
 </section>
 
 <section class="content">
