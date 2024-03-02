@@ -10,7 +10,7 @@ $dbhost = 'localhost';
 
 // Database Name
 // $dbname = 'ecommerceweb';
-$dbname = 'ecommerceweb';
+$dbname = 'ecom';
 
 // Database Username
 $dbuser = 'root';
