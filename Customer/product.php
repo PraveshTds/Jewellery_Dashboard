@@ -13,7 +13,7 @@
 	<div class="row">
 		<div class="col-md-12">
 			<div class="box box-info">
-				<div class="cat_type">
+				<!-- <div class="cat_type">
 					<label for="cars">Select Customer</label>
 					<select name="cars" id="cars">
 						<option value="volvo">indyverse</option>
@@ -21,7 +21,7 @@
 						<option value="mercedes">Kalyan jewel</option>
 					</select>
 					<button>Show</button>
-				</div>
+				</div> -->
 				<div class="box-body table-responsive">
 					<table id="example1" class="table table-bordered table-hover table-striped">
 						<thead class="thead-dark">
@@ -35,6 +35,8 @@
 								<th>Featured?</th>
 								<th>Active?</th>
 								<th>Category</th>
+								<th>Customer</th>
+								<th>Customer</th>
 								<th width="80">Action</th>
 							</tr>
 						</thead>
@@ -98,6 +100,8 @@
 										} ?>
 									</td>
 									<td><?php echo $row['gender_name']; ?><br><?php echo $row['ctype_name']; ?><br><?php echo $row['cat_name']; ?></td>
+									<td>Customer</td>
+									<td>Customer</td>
 									<td>
 										<a href="product-edit.php?id=<?php echo $row['p_id']; ?>" class="btn btn-primary btn-xs">Edit</a>
 										<a href="#" class="btn btn-danger btn-xs" data-href="product-delete.php?id=<?php echo $row['p_id']; ?>" data-toggle="modal" data-target="#confirm-delete">Delete</a>

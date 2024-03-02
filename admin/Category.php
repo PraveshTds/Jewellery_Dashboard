@@ -2,7 +2,7 @@
 
 <section class="content-header">
     <div class="content-header-left">
-        <h1>Category Master</h1>
+        <h1>Customer Category</h1>
     </div>
     <div class="content-header-right">
         <a href="category-add.php" class="btn btn-primary btn-sm">Assign Categories</a>

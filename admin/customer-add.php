@@ -1,43 +1,30 @@
 <?php require_once('header.php'); ?>
-<!-- <?php 
+<?php 
 // server connection
-// $ftpHost = 'ftp.textronic.in';
-// $ftpUsername = 'textrqh5';
-// $ftpPassword = '1$J4l@6H+9R4+pXz';
-// $ftpDirectory = 'public_html/api_jewellery/api/Brand/';
-
-// Connect to FTP server
-// $ftpConnection = ftp_connect($ftpHost);
-// $login = ftp_login($ftpConnection, $ftpUsername, $ftpPassword);
-
-// Check connection
-// if (!$ftpConnection || !$login) {
-//     die('FTP connection failed');
-// }
-// // $local_folder = 'C:\xampp\htdocs\ECommerce\Pravesh';
-// function ftp_recursive_put($ftpConnection, $local_folder, $remote_folder) {
-//     $dir = opendir($local_folder);
+$local_folder = 'C:\xampp\htdocs\ECommerce\Pravesh';
+function ftp_recursive_put($ftpConnection, $local_folder, $remote_folder) {
+    $dir = opendir($local_folder);
 
 //     // Iterate through each item in the folder
-//     while ($file = readdir($dir)) {
-//         if ($file != '.' && $file != '..') {
-//             $local_path = $local_folder . '/' . $file;
-//             $remote_path = $remote_folder . '/' . $file;
+    while ($file = readdir($dir)) {
+        if ($file != '.' && $file != '..') {
+            $local_path = $local_folder . '/' . $file;
+            $remote_path = $remote_folder . '/' . $file;
 
-//             if (is_dir($local_path)) {
-//                 // If it's a directory, create the directory on the server and recursively upload its contents
-//                 ftp_mkdir($ftpConnection, $remote_path);
-//                 ftp_recursive_put($ftpConnection, $local_path, $remote_path);
-//             } else {
-//                 // If it's a file, upload the file to the server
-//                 ftp_put($ftpConnection, $remote_path, $local_path, FTP_BINARY);
-//             }
-//         }
-//     }
+            if (is_dir($local_path)) {
+                // If it's a directory, create the directory on the server and recursively upload its contents
+                ftp_mkdir($ftpConnection, $remote_path);
+                ftp_recursive_put($ftpConnection, $local_path, $remote_path);
+            } else {
+                // If it's a file, upload the file to the server
+                ftp_put($ftpConnection, $remote_path, $local_path, FTP_BINARY);
+            }
+        }
+    }
 
-//     closedir($dir);
-// }
-?> -->
+    closedir($dir);
+}
+?>
 
 <?php
 if (isset($_POST['form1'])) {
@@ -171,14 +158,14 @@ if (isset($_POST['form1'])) {
         // end
 
         // Create a new folder
-        // if (ftp_mkdir($ftpConnection, $ftpDirectory . strip_tags($_POST['cust_name']))) {
-        //     echo 'Folder created successfully';
-        // } else {
-        //     echo 'Failed to create folder';
-        // }
-        // $server_folder = strip_tags($_POST['cust_name']);
-        // $remote_folder = "public_html/api_jewellery/api/Brand/{$server_folder}";
-        // ftp_recursive_put($ftpConnection, $local_folder, $remote_folder);
+        if (ftp_mkdir($ftpConnection, $ftpDirectory . strip_tags($_POST['cust_name']))) {
+            echo 'Folder created successfully';
+        } else {
+            echo 'Failed to create folder';
+        }
+        $server_folder = strip_tags($_POST['cust_name']);
+        $remote_folder = "public_html/api_jewellery/api/Brand/{$server_folder}";
+        ftp_recursive_put($ftpConnection, $local_folder, $remote_folder);
 
         // Sending Email
         // mail($to, $subject, $message, $headers);
@@ -191,7 +178,7 @@ if (isset($_POST['form1'])) {
         unset($_POST['cust_city']);
         unset($_POST['cust_state']);
         unset($_POST['cust_zip']);
-        // ftp_close($ftpConnection);
+        ftp_close($ftpConnection);
         $success_message = "Customer has been added successfully.";
     }
 }

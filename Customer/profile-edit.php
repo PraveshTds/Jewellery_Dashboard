@@ -168,7 +168,7 @@ foreach ($result as $row) {
 									<div class="form-group">
 										<label for="" class="col-sm-2 control-label">Name <span>*</span></label>
 										<?php
-										if($_SESSION['user']['role'] == 'Super Admin') {
+										if($_SESSION['user']['role'] == 'customer') {
 											?>
 												<div class="col-sm-4">
 													<input type="text" class="form-control" name="full_name" value="<?php echo $full_name; ?>">
@@ -194,7 +194,7 @@ foreach ($result as $row) {
 									<div class="form-group">
 										<label for="" class="col-sm-2 control-label">Email Address <span>*</span></label>
 										<?php
-										if($_SESSION['user']['role'] == 'Super Admin') {
+										if($_SESSION['user']['role'] == 'customer') {
 											?>
 												<div class="col-sm-4">
 													<input type="email" class="form-control" name="email" value="<?php echo $email; ?>">

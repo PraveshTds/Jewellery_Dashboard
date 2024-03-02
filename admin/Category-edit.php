@@ -67,6 +67,7 @@ foreach ($result as $row) {
 	$cat_name = $row['cat_name'];
     $ctype_id = $row['ctype_id'];
     $gender_id = $row['gender_id'];
+    $id = $row['customer'];
 }
 ?>
 
@@ -108,6 +109,24 @@ foreach ($result as $row) {
                             foreach ($result as $row) {
                                 ?>
                                 <option value="<?php echo $row['gender_id']; ?>" <?php if($row['gender_id'] == $gender_id){echo 'selected';} ?>><?php echo $row['gender_name']; ?></option>
+                                <?php
+                            }
+                            ?>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-sm-3 control-label">Customer <span>*</span></label>
+                    <div class="col-sm-4">
+                        <select name="cust_id" class="form-control select2 customer">
+                            <option value="">Select Customer</option>
+                            <?php
+                            $statement = $pdo->prepare("SELECT * FROM tbl_user ORDER BY full_name ASC");
+                            $statement->execute();
+                            $result = $statement->fetchAll(PDO::FETCH_ASSOC);   
+                            foreach ($result as $row) {
+                                ?>
+                                <option value="<?php echo $row['id']; ?>" <?php if($row['id'] == $id){echo 'selected';} ?>><?php echo $row['full_name']; ?></option>
                                 <?php
                             }
                             ?>

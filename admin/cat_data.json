@@ -1,0 +1,12 @@
+{
+    "data": [
+        {
+            "category": "NewCategory",
+            "label": "New Category",
+            "type": "neck",
+            "sequence": 99,
+            "sets_info": [],
+            "active_product_count": 0
+        }
+    ]
+}

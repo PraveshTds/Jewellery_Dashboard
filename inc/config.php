@@ -31,3 +31,18 @@ try {
 catch( PDOException $exception ) {
 	echo "Connection error :" . $exception->getMessage();
 }
+
+// server connection
+$ftpHost = 'ftp.textronic.in';
+$ftpUsername = 'textrqh5';
+$ftpPassword = '1$J4l@6H+9R4+pXz';
+$ftpDirectory = 'public_html/api_jewellery/api/Brand/';
+
+// Connect to FTP server
+$ftpConnection = ftp_connect($ftpHost);
+$login = ftp_login($ftpConnection, $ftpUsername, $ftpPassword);
+
+// Check connection
+if (!$ftpConnection || !$login) {
+    die('FTP connection failed');
+}

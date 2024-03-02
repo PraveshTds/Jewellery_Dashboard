@@ -5,17 +5,18 @@
 </section>
 
 <?php
-$statement = $pdo->prepare("SELECT * FROM tbl_gender");
-$statement->execute();
-$total_top_category = $statement->rowCount();
+// $statement = $pdo->prepare("SELECT * FROM tbl_gender");
+// $statement->execute();
+// $total_top_category = $statement->rowCount();
 
-$statement = $pdo->prepare("SELECT * FROM tbl_category_type");
-$statement->execute();
-$total_mid_category = $statement->rowCount();
+// $statement = $pdo->prepare("SELECT * FROM tbl_category_type");
+// $statement->execute();
+// $total_mid_category = $statement->rowCount();
 
-$statement = $pdo->prepare("SELECT * FROM tbl_category");
+$statement = $pdo->prepare("SELECT cat_name, COUNT(*) as category_count FROM tbl_category GROUP BY cat_name");
 $statement->execute();
-$total_end_category = $statement->rowCount();
+$categories = $statement->fetchAll(PDO::FETCH_ASSOC);
+$category = $statement->rowCount();
 
 $statement = $pdo->prepare("SELECT * FROM tbl_product");
 $statement->execute();
@@ -82,7 +83,7 @@ $total_customers = $statement->rowCount();
 			<div class="col-lg-3 col-xs-6">
 				<div class="small-box bg-maroon">
 					<div class="inner">
-						<h3><?php echo $total_end_category; ?></h3>
+						<h3><?php echo $category; ?></h3>
 						<p>Categories</p>
 					</div>
 					<div class="icon">

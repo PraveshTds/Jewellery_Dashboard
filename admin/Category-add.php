@@ -14,32 +14,11 @@ if (isset($_POST['form1'])) {
 		$error_message .= "You must have to select category type<br>";
 	}
 
-	// if ($_POST['cat_name']) {
-	// 	if (empty($_POST['cat_name'])) {
-	// 		$valid = 0;
-	// 		$error_message .= "Category name can not be empty<br>";
-	// 	} else {
-	// 		// check if the category already exist
-	// 		$cat_count = 0;
-	// 		$cat_same = $pdo->prepare("select * from tbl_category where cat_name =? AND customer=?");
-	// 		$cat_same->execute(array($_POST['cat_name'], $_POST['customer']));
-	// 		$res = $cat_same->fetchAll(PDO::FETCH_ASSOC);
-	// 		if($res){
-	// 			$cat_count = 1;
-	// 		}
-	// 		if($cat_count == 1){
-	// 			$error_message .= "Category for this customer already exist , can not create new category<br>";
-	// 			$valid = 0;
-	// 		}
-	// 	}
-	// }
-
 	if ($_POST['cat_name']) {
 		if (empty($_POST['cat_name'])) {
 			$valid = 0;
 			$error_message .= "Category name can not be empty<br>";
 		} else {
-			// Check if the category name contains only alphabets and underscores
 			if (!preg_match("/^[a-zA-Z]+(_[a-zA-Z]+)*$/", $_POST['cat_name'])) {
 				$valid = 0;
 				$error_message .= "Category name should only contain alphabets and underscores, and no spaces are allowed<br>";
@@ -53,23 +32,41 @@ if (isset($_POST['form1'])) {
 					$error_message .= "Category for this customer already exists, cannot create a new category<br>";
 					$valid = 0;
 				}
-				// $res = $existing_cat->fetchAll(PDO::FETCH_ASSOC);
-				// if ($res && $res[0]['cat_name'] == $_POST['cat_name']) {
-				// 	$cat_count = 1;
-				// }
-				// if ($cat_count == 1) {
-				// 	$error_message .= "Category for this customer already exists, cannot create a new category<br>";
-				// 	$valid = 0;
-				// }
 			}
 		}
 	}
 
 	if ($valid == 1) {
-
-		//Saving data into the main table tbl_category
 		$statement = $pdo->prepare("INSERT INTO tbl_category (cat_name,ctype_id,sequence,active_product_count,customer,cat_status) VALUES (?,?,?,?,?,0)");
 		$statement->execute(array($_POST['cat_name'], $_POST['ctype_id'], $_POST['sequence'], $_POST['active_product_count'], $_POST['customer']));
+
+		// $local_file = 'cat_data.json';
+
+		// $remote_file = "public_html/api_jewellery/api/Brand/pravesh/cat_data.json";
+
+		// ftp_get($ftpConnection, $local_file, $remote_file, FTP_BINARY);
+
+		// $data = json_decode(file_get_contents($local_file), true);
+
+		// $new_category = [
+		// 	"category" => "NewCategory",
+		// 	"label" => "New Category",
+		// 	"type" => "neck",
+		// 	"sequence" => 99,
+		// 	"sets_info" => [],
+		// 	"active_product_count" => 0
+		// ];
+
+		// $data['data'][] = $new_category;
+
+		// $updated_json = json_encode($data, JSON_PRETTY_PRINT);
+
+		// file_put_contents($local_file, $updated_json);
+
+		// ftp_put($ftpConnection, $remote_file, $local_file, FTP_BINARY);
+
+		// ftp_close($ftpConnection);
+
 		$success_message = 'Category is added successfully.';
 	}
 }
