@@ -192,7 +192,7 @@ if(isset($_POST['form1'])) {
 				<div class="box box-info">
 					<div class="box-body">
 						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Category Name <span>*</span></label>
+							<label for="" class="col-sm-3 control-label">Category Name <span style="color:red">*</span></label>
 							<div class="col-sm-4">
 								<select name="gender_id" class="form-control select2 gender">
 									<option value="">Select Category Name</option>
@@ -209,51 +209,122 @@ if(isset($_POST['form1'])) {
 								</select>
 							</div>
 						</div>
-						<div class="form-group">
+						<!-- <div class="form-group">
 							<label for="" class="col-sm-3 control-label">Type<span>*</span></label>
 							<div class="col-sm-4">
 								<select name="ctype_id" class="form-control select2 cat-type">
 									<option value="">Select Type</option>
 								</select>
 							</div>
-						</div>
-						<div class="form-group">
+						</div> -->
+						<!-- <div class="form-group">
 							<label for="" class="col-sm-3 control-label">Category Name <span>*</span></label>
 							<div class="col-sm-4">
 								<select name="cat_id" class="form-control select2 end-cat">
 									<option value="">Select Category</option>
 								</select>
 							</div>
-						</div>
-						<hr>
+						</div> -->
+						<!-- <hr> -->
 						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Product Name <span>*</span></label>
+							<label for="" class="col-sm-3 control-label">Product Name <span style="color:red">*</span></label>
 							<div class="col-sm-4">
 								<input type="text" name="p_name" class="form-control">
 							</div>
 						</div>	
 						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Collection<span>*</span></label>
+							<label for="" class="col-sm-3 control-label">Collection</label>
 							<div class="col-sm-4">
 								<input type="text" name="p_name" class="form-control">
 							</div>
 						</div>	
-						<div class="form-group">
+						<!-- <div class="form-group">
 							<label for="" class="col-sm-3 control-label">Details Button Name<span>*</span></label>
 							<div class="col-sm-4">
 								<input type="text" name="p_name" class="form-control">
 							</div>
-						</div>
+						</div> -->
 						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Site Link<span>*</span></label>
+							<label for="" class="col-sm-3 control-label">Site Link</label>
 							<div class="col-sm-4">								
 								<input type="text" name="p_name" class="form-control">
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Price<span>*</span></label>
+							<label for="" class="col-sm-3 control-label">SKU no<span style="color:red">*</span></label>
 							<div class="col-sm-4">								
-								<input type="text" name="p_name" value="0" class="form-control">
+								<input type="text" name="p_name" value="" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="" class="col-sm-3 control-label">Product code<span style="color:red">*</span></label>
+							<div class="col-sm-4">								
+								<input type="text" name="p_name" value="" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="" class="col-sm-3 control-label">Gender<span style="color:red">*</span></label>
+								<div class="col-sm-4">
+									<select name="ctype_id" class="form-control select2 cat-type">
+											<!-- <option value="">Select Modal</option> -->
+											<option value="">Men</option>
+											<option value="">Women</option>
+											<!-- <option value=""> 3</option> -->
+									</select>
+								</div>
+						</div>
+						<div class="form-group">
+							<label for="" class="col-sm-3 control-label">price</label>
+							<div class="col-sm-4">								
+								<input type="text" name="p_name" value="" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="" class="col-sm-3 control-label">Quantity</label>
+							<div class="col-sm-4">								
+								<input type="text" name="p_name" value="" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="" class="col-sm-3 control-label">Image_url<span style="color:red">*</span></label>
+							<div class="col-sm-4" style="padding-top:4px;">
+								<input type="file" name="p_featured_photo">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="" class="col-sm-3 control-label">Thumbnail_url</label>
+							<div class="col-sm-4" style="padding-top:4px;">
+								<table id="ProductTable" style="width:100%;">
+			                        <tbody>
+			                            <tr>
+			                                <td>
+			                                    <div class="upload-btn">
+			                                        <input type="file" name="photo[]" style="margin-bottom:5px;">
+			                                    </div>
+			                                </td>
+			                                <td style="width:28px;"><a href="javascript:void()" class="Delete btn btn-danger btn-xs">X</a></td>
+			                            </tr>
+			                        </tbody>
+			                    </table>
+							</div>
+							<div class="col-sm-2">
+			                    <input type="button" id="btnAddNew" value="Add Item" style="margin-top: 5px;margin-bottom:10px;border:0;color: #fff;font-size: 14px;border-radius:3px;" class="btn btn-warning btn-xs">
+			                </div>
+						</div>
+
+					    <div class="form-group">
+							<label for="" class="col-sm-3 control-label">Details</label>
+							<div class="col-sm-8">
+								<textarea name="p_short_description" class="form-control" cols="10" rows="5" ></textarea> <!-- remove this id  id="editor2" -->
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="" class="col-sm-3 control-label"></label>
+							<div class="col-sm-3 text-right ">
+								<button type="submit" class="btn btn-success pull-left" name="form1">Save</button>
+							</div>
+							<div class="col-sm-5 text-right ">
+								<button type="submit" class="btn btn-danger pull-right" name="form1">Cancel</button>
 							</div>
 						</div>
 						<!-- <div class="form-group">
@@ -262,7 +333,7 @@ if(isset($_POST['form1'])) {
 								<input type="text" name="p_name" class="form-control">
 							</div>
 						</div> -->
-						<hr>
+						<!-- <hr> -->
 						<!-- <div class="form-group">
 							<label for="" class="col-sm-3 control-label">Adjust<span>*</span></label>						
 								<div class="col-sm-1">
@@ -283,8 +354,8 @@ if(isset($_POST['form1'])) {
 										<input type="text" name="p_name" class="form-control">
 									</div>								
 								</div>
-						</div>
-						<hr>
+						</div> -->
+						<!-- <hr>
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label">Inventory<span>*</span></label>
 							<div class="col-sm-6">								
@@ -301,9 +372,9 @@ if(isset($_POST['form1'])) {
 									<input type="text" name="p_name" class="form-control">
 								</div>
 							</div>
-						</div>						
-						<hr>
-						<div class="form-group">
+						</div>						 -->
+						<!-- <hr> -->
+						<!-- <div class="form-group">
 							<label for="" class="col-sm-3 control-label">is_uploaded<span>*</span></label>
 							<div class="col-sm-4">								
 									<select name="ctype_id" class="form-control select2 cat-type">										
@@ -311,8 +382,8 @@ if(isset($_POST['form1'])) {
 											<option value="">false</option>								
 									</select>
 							</div>
-						</div>
-						<div class="form-group">
+						</div> -->
+						<!-- <div class="form-group">
 							<label for="" class="col-sm-3 control-label">shine count<span>*</span></label>
 							<div class="col-sm-4">								
 								<input type="text" name="p_name" value="0" class="form-control">
@@ -329,8 +400,8 @@ if(isset($_POST['form1'])) {
 									</select>
 								</div>
 						</div>
-						<hr> -->
-						<!-- <div class="form-group">
+						<hr>
+						<div class="form-group">
 							<label for="" class="col-sm-3 control-label">Price<span>*</span></label>
 							<div class="col-sm-4">								
 								<input type="text" name="p_name" value="0" class="form-control">
@@ -389,7 +460,7 @@ if(isset($_POST['form1'])) {
 								<input type="text" name="p_name" value="0" class="form-control">
 							</div>
 						</div>
-						<hr> -->
+						<hr>
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label">image_url<span>*</span></label>
 							<div class="col-sm-4" style="padding-top:4px;">
@@ -416,7 +487,7 @@ if(isset($_POST['form1'])) {
 			                    <input type="button" id="btnAddNew" value="Add Item" style="margin-top: 5px;margin-bottom:10px;border:0;color: #fff;font-size: 14px;border-radius:3px;" class="btn btn-warning btn-xs">
 			                </div>
 						</div>
-						<hr>
+						<hr> -->
 
 
 							<!--<div class="form-group">
@@ -488,18 +559,12 @@ if(isset($_POST['form1'])) {
 							</div>
 						</div> -->
 						<!-- commented above manisha -->
-						<div class="form-group">
+						<!-- <div class="form-group">
 							<label for="" class="col-sm-3 control-label">Current Price <span>*</span><br><span style="font-size:10px;font-weight:normal;">(In USD)</span></label>
 							<div class="col-sm-4">
 								<input type="text" name="p_current_price" class="form-control">
 							</div>
-						</div>	
-						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Details</label>
-							<div class="col-sm-8">
-								<textarea name="p_short_description" class="form-control" cols="30" rows="10" id="editor2"></textarea>
-							</div>
-						</div>
+						</div>	 -->
 						<!-- <div class="form-group">
 							<label for="" class="col-sm-3 control-label">Features</label>
 							<div class="col-sm-8">
@@ -518,7 +583,7 @@ if(isset($_POST['form1'])) {
 								<textarea name="p_return_policy" class="form-control" cols="30" rows="10" id="editor5"></textarea>
 							</div>
 						</div> -->
-						<div class="form-group">
+						<!-- <div class="form-group">
 							<label for="" class="col-sm-3 control-label">Is Featured</label>
 							<div class="col-sm-8">
 								<select name="p_is_featured" class="form-control" style="width:auto;">
@@ -535,13 +600,7 @@ if(isset($_POST['form1'])) {
 									<option value="1">Yes</option>
 								</select> 
 							</div>
-						</div>
-						<div class="form-group">
-							<label for="" class="col-sm-3 control-label"></label>
-							<div class="col-sm-6">
-								<button type="submit" class="btn btn-success pull-left" name="form1">Add Product</button>
-							</div>
-						</div>
+						</div> -->
 					</div>
 				</div>
 
