@@ -253,7 +253,82 @@ if(isset($_POST['form1'])) {
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label">Price<span>*</span></label>
 							<div class="col-sm-4">								
+<<<<<<< HEAD
 								<input type="text" name="p_name" value="0" class="form-control">
+=======
+								<input type="text" name="p_name" value="" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="" class="col-sm-3 control-label">Product code<span style="color:red">*</span></label>
+							<div class="col-sm-4">								
+								<input type="text" name="p_name" value="" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="" class="col-sm-3 control-label">Gender<span style="color:red">*</span></label>
+								<div class="col-sm-4">
+									<select name="ctype_id" class="form-control select2 cat-type">
+											<!-- <option value="">Select Modal</option> -->
+											<option value="">Men</option>
+											<option value="">Women</option>
+											<!-- <option value=""> 3</option> -->
+									</select>
+								</div>
+						</div>
+						<div class="form-group">
+							<label for="" class="col-sm-3 control-label">Price</label>
+							<div class="col-sm-4">								
+								<input type="text" name="p_name" value="" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="" class="col-sm-3 control-label">Quantity<span style="color:red">*</span></label>
+							<div class="col-sm-4">								
+								<input type="text" name="p_name" value="" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="" class="col-sm-3 control-label">Image_url<span style="color:red">*</span></label>
+							<div class="col-sm-4" style="padding-top:4px;">
+								<input type="file" name="p_featured_photo">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="" class="col-sm-3 control-label">Thumbnail_url</label>
+							<div class="col-sm-4" style="padding-top:4px;">
+								<table id="ProductTable" style="width:100%;">
+			                        <tbody>
+			                            <tr>
+			                                <td>
+			                                    <div class="upload-btn">
+			                                        <input type="file" name="photo[]" style="margin-bottom:5px;">
+			                                    </div>
+			                                </td>
+			                                <td style="width:28px;"><a href="javascript:void()" class="Delete btn btn-danger btn-xs">X</a></td>
+			                            </tr>
+			                        </tbody>
+			                    </table>
+							</div>
+							<div class="col-sm-2">
+			                    <input type="button" id="btnAddNew" value="Add Item" style="margin-top: 5px;margin-bottom:10px;border:0;color: #fff;font-size: 14px;border-radius:3px;" class="btn btn-warning btn-xs">
+			                </div>
+						</div>
+
+					    <div class="form-group">
+							<label for="" class="col-sm-3 control-label">Details</label>
+							<div class="col-sm-8">
+								<textarea name="p_short_description" class="form-control" cols="10" rows="5" ></textarea> <!-- remove this id  id="editor2" -->
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="" class="col-sm-3 control-label"></label>
+							<div class="col-sm-3 text-right ">
+								<button type="submit" class="btn btn-success pull-left" name="form1">Save</button>
+							</div>
+							<div class="col-sm-5 text-right ">
+								<button type="submit" class="btn btn-danger pull-right" name="form1">Cancel</button>
+>>>>>>> 6d75ee1ac17602cf996e6fb7e8d03489deaf0d2a
 							</div>
 						</div>
 						<!-- <div class="form-group">
