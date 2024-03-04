@@ -79,7 +79,7 @@
 									<td><?php echo $row['sku']; ?></td>
 									<td><?php echo $row['p_code']; ?></td>
 									
-									<!-- <td><?php echo $row['gender_name']; ?><br><?php echo $row['ctype_name']; ?><br><?php echo $row['cat_name']; ?></td> -->
+									<!-- <td><? //php echo $row['gender_name']; ?><br><?php echo $row['ctype_name']; ?><br><?php echo $row['cat_name']; ?></td> -->
 									<td>
 										<a href="product-edit.php?id=<?php echo $row['p_id']; ?>" class="btn btn-primary btn-xs">Edit</a>
 										<a href="#" class="btn btn-danger btn-xs" data-href="product-delete.php?id=<?php echo $row['p_id']; ?>" data-toggle="modal" data-target="#confirm-delete">Delete</a>
