@@ -4,32 +4,27 @@
 if(isset($_POST['form1'])) {
 	$valid = 1;
 
-    // if(empty($_POST['gender_id'])) {
-    //     $valid = 0;
-    //     $error_message .= "You must have to select a top level category<br>";
-    // }
-
-    // if(empty($_POST['ctype_id'])) {
-    //     $valid = 0;
-    //     $error_message .= "You must have to select a mid level category<br>";
-    // }
-
-    if(empty($_POST['cat_id'])) { //not required its end-level-category
+    if(empty($_POST['cat_id'])) {
         $valid = 0;
         $error_message .= "You must have to select an end level category<br>";
     }
 
-    if(empty($_POST['p_name'])) { // check db names and changes for name -> price
+    if(empty($_POST['p_name'])) {
         $valid = 0;
         $error_message .= "Product name can not be empty<br>";
     }
 
-    if(empty($_POST['p_current_price'])) { // not required
+    if(empty($_POST['sku'])) {
         $valid = 0;
         $error_message .= "Current Price can not be empty<br>";
     }
 
-    if(empty($_POST['p_qty'])) {
+    if(empty($_POST['Quantity'])) {
+        $valid = 0;
+        $error_message .= "Quantity can not be empty<br>";
+    }
+
+    if(empty($_POST['product_code'])) {
         $valid = 0;
         $error_message .= "Quantity can not be empty<br>";
     }
@@ -100,56 +95,35 @@ if(isset($_POST['form1'])) {
 
 		$final_name = 'product-featured-'.$ai_id.'.'.$ext;
         move_uploaded_file( $path_tmp, '../assets/uploads/'.$final_name );
-
 		//Saving data into the main table tbl_product
 		$statement = $pdo->prepare("INSERT INTO tbl_product(
 										p_name,
-										p_old_price,
-										p_current_price,
-										p_qty,
+										collection,
+										site_link,
+										sku,
 										p_featured_photo,
-										p_description,
-										p_short_description,
-										p_feature,
-										p_condition,
-										p_return_policy,
-										p_total_view,
-										p_is_featured,
-										p_is_active,
-										cat_id
-									) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+										p_code,
+										gender_id,
+										price,
+										quantity,
+										details,
+										cat_id,
+										cust_id
+									) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");
 		$statement->execute(array(
 										$_POST['p_name'],
-										$_POST['p_old_price'],
-										$_POST['p_current_price'],
-										$_POST['p_qty'],
+										$_POST['collection'],
+										$_POST['site_link'],
+										$_POST['sku'],
 										$final_name,
-										$_POST['p_description'],
-										$_POST['p_short_description'],
-										$_POST['p_feature'],
-										$_POST['p_condition'],
-										$_POST['p_return_policy'],
-										0,
-										$_POST['p_is_featured'],
-										$_POST['p_is_active'],
-										$_POST['cat_id']
+										$_POST['product_code'],
+										$_POST['gender'],
+										$_POST['price'],
+										$_POST['Quantity'],
+										$_POST['details'],
+										$_POST['cat_id'],
+										$_SESSION['user']['id']
 									));
-
-		
-
-        // if(isset($_POST['size'])) {
-		// 	foreach($_POST['size'] as $value) {
-		// 		$statement = $pdo->prepare("INSERT INTO tbl_product_size (size_id,p_id) VALUES (?,?)");
-		// 		$statement->execute(array($value,$ai_id));
-		// 	}
-		// } size deleted
-
-		// if(isset($_POST['color'])) {
-		// 	foreach($_POST['color'] as $value) {
-		// 		$statement = $pdo->prepare("INSERT INTO tbl_product_color (color_id,p_id) VALUES (?,?)");
-		// 		$statement->execute(array($value,$ai_id));
-		// 	}
-		// } color deleted
 	
     	$success_message = 'Product is added successfully.';
     }
@@ -194,8 +168,57 @@ if(isset($_POST['form1'])) {
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label">Category Name <span style="color:red">*</span></label>
 							<div class="col-sm-4">
-								<select name="gender_id" class="form-control select2 gender">
+								<select name="cat_id" class="form-control category">
 									<option value="">Select Category Name</option>
+									<?php
+									$cust_id = $_SESSION['user']['id'];
+									$statement = $pdo->prepare("SELECT * FROM tbl_category where customer=? AND cat_status=1 ORDER BY cat_name ASC");
+									$statement->execute(array($cust_id));
+									$result = $statement->fetchAll(PDO::FETCH_ASSOC);	
+									foreach ($result as $row) {
+										?>
+										<option value="<?php echo $row['cat_id']; ?>"><?php echo $row['cat_name']; ?></option>
+										<?php
+									}
+									?>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="" class="col-sm-3 control-label">Product Name <span style="color:red">*</span></label>
+							<div class="col-sm-4">
+								<input type="text" name="p_name" class="form-control">
+							</div>
+						</div>	
+						<div class="form-group">
+							<label for="" class="col-sm-3 control-label">Collection</label>
+							<div class="col-sm-4">
+								<input type="text" name="collection" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="" class="col-sm-3 control-label">Site Link</label>
+							<div class="col-sm-4">								
+								<input type="text" name="site_link" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="" class="col-sm-3 control-label">SKU no<span style="color:red">*</span></label>
+							<div class="col-sm-4">								
+								<input type="text" name="sku" value="" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="" class="col-sm-3 control-label">Product code<span style="color:red">*</span></label>
+							<div class="col-sm-4">								
+								<input type="text" name="product_code" value="" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="" class="col-sm-3 control-label">Gender<span style="color:red">*</span></label>
+								<div class="col-sm-4">
+									<select name="gender" class="form-control select2 cat-type">
+									<option value="">Select Gender</option>
 									<?php
 									$statement = $pdo->prepare("SELECT * FROM tbl_gender ORDER BY gender_name ASC");
 									$statement->execute();
@@ -206,70 +229,6 @@ if(isset($_POST['form1'])) {
 										<?php
 									}
 									?>
-								</select>
-							</div>
-						</div>
-						<!-- <div class="form-group">
-							<label for="" class="col-sm-3 control-label">Type<span>*</span></label>
-							<div class="col-sm-4">
-								<select name="ctype_id" class="form-control select2 cat-type">
-									<option value="">Select Type</option>
-								</select>
-							</div>
-						</div> -->
-						<!-- <div class="form-group">
-							<label for="" class="col-sm-3 control-label">Category Name <span>*</span></label>
-							<div class="col-sm-4">
-								<select name="cat_id" class="form-control select2 end-cat">
-									<option value="">Select Category</option>
-								</select>
-							</div>
-						</div> -->
-						<!-- <hr> -->
-						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Product Name <span style="color:red">*</span></label>
-							<div class="col-sm-4">
-								<input type="text" name="p_name" class="form-control">
-							</div>
-						</div>	
-						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Collection</label>
-							<div class="col-sm-4">
-								<input type="text" name="c_name" class="form-control">
-							</div>
-						</div>	
-						<!-- <div class="form-group">
-							<label for="" class="col-sm-3 control-label">Details Button Name<span>*</span></label>
-							<div class="col-sm-4">
-								<input type="text" name="p_name" class="form-control">
-							</div>
-						</div> -->
-						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Site Link</label>
-							<div class="col-sm-4">								
-								<input type="text" name="s_name" class="form-control">
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">SKU no<span style="color:red">*</span></label>
-							<div class="col-sm-4">								
-								<input type="text" name="sk_name" value="" class="form-control">
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Product code<span style="color:red">*</span></label>
-							<div class="col-sm-4">								
-								<input type="text" name="p_name" value="" class="form-control">
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Gender<span style="color:red">*</span></label>
-								<div class="col-sm-4">
-									<select name="ctype_id" class="form-control select2 cat-type">
-											<!-- <option value="">Select Modal</option> -->
-											<option value="">Men</option>
-											<option value="">Women</option>
-											<!-- <option value=""> 3</option> -->
 									</select>
 								</div>
 						</div>
@@ -286,13 +245,13 @@ if(isset($_POST['form1'])) {
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Image_url<span style="color:red">*</span></label>
+							<label for="" class="col-sm-3 control-label">Image<span style="color:red">*</span></label>
 							<div class="col-sm-4" style="padding-top:4px;">
 								<input type="file" name="p_featured_photo">
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Thumbnail_url</label>
+							<label for="" class="col-sm-3 control-label">Thumb_image</label>
 							<div class="col-sm-4" style="padding-top:4px;">
 								<table id="ProductTable" style="width:100%;">
 			                        <tbody>
@@ -315,7 +274,7 @@ if(isset($_POST['form1'])) {
 					    <div class="form-group">
 							<label for="" class="col-sm-3 control-label">Details</label>
 							<div class="col-sm-8">
-								<textarea name="p_short_description" class="form-control" cols="10" rows="5" ></textarea> <!-- remove this id  id="editor2" -->
+								<textarea name="details" class="form-control" cols="10" rows="5" ></textarea> 
 							</div>
 						</div>
 						<div class="form-group">
@@ -327,280 +286,6 @@ if(isset($_POST['form1'])) {
 								<button type="submit" class="btn btn-danger pull-right" name="form1">Cancel</button>
 							</div>
 						</div>
-						<!-- <div class="form-group">
-							<label for="" class="col-sm-3 control-label">is_calibrated<span>*</span></label>
-							<div class="col-sm-4">								
-								<input type="text" name="p_name" class="form-control">
-							</div>
-						</div> -->
-						<!-- <hr> -->
-						<!-- <div class="form-group">
-							<label for="" class="col-sm-3 control-label">Adjust<span>*</span></label>						
-								<div class="col-sm-1">
-									<div>									
-										<label for="" class="col-sm-3 control-label">height<span>*</span></label>
-										<input type="text" name="p_name" class="form-control">
-									</div>								
-								</div>
-								<div class="col-sm-1">
-									<div>									
-										<label for="" class="col-sm-3 control-label">x_offset<span>*</span></label>
-										<input type="text" name="p_name" class="form-control">
-									</div>								
-								</div>
-								<div class="col-sm-1">
-									<div>									
-										<label for="" class="col-sm-3 control-label">y_offset<span>*</span></label>
-										<input type="text" name="p_name" class="form-control">
-									</div>								
-								</div>
-						</div> -->
-						<!-- <hr>
-						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Inventory<span>*</span></label>
-							<div class="col-sm-6">								
-								<div class="col-sm-2">	
-									<label for="" class="col-sm-3 control-label">product_code</label>							
-									<input type="text" name="p_name" class="form-control">
-								</div>
-								<div class="col-sm-2">	
-									<label for="" class="col-sm-3 control-label">Collection</label>							
-									<input type="text" name="p_name" class="form-control">
-								</div>
-								<div class="col-sm-2">	
-									<label for="" class="col-sm-3 control-label">Female</label>							
-									<input type="text" name="p_name" class="form-control">
-								</div>
-							</div>
-						</div>						 -->
-						<!-- <hr> -->
-						<!-- <div class="form-group">
-							<label for="" class="col-sm-3 control-label">is_uploaded<span>*</span></label>
-							<div class="col-sm-4">								
-									<select name="ctype_id" class="form-control select2 cat-type">										
-											<option value="">true</option>
-											<option value="">false</option>								
-									</select>
-							</div>
-						</div> -->
-						<!-- <div class="form-group">
-							<label for="" class="col-sm-3 control-label">shine count<span>*</span></label>
-							<div class="col-sm-4">								
-								<input type="text" name="p_name" value="0" class="form-control">
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Modal<span>*</span></label>
-								<div class="col-sm-4">
-									<select name="ctype_id" class="form-control select2 cat-type">
-											<option value="">Select Modal</option>
-											<option value=""> 1</option>
-											<option value=""> 2</option>
-											<option value=""> 3</option>
-									</select>
-								</div>
-						</div>
-						<hr>
-						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Price<span>*</span></label>
-							<div class="col-sm-4">								
-								<input type="text" name="p_name" value="0" class="form-control">
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Collection<span>*</span></label>
-							<div class="col-sm-4">								
-								<input type="text" name="p_name" value="0" class="form-control">
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Tryon<span>*</span></label>
-							<div class="col-sm-4">
-									<select name="ctype_id" class="form-control select2 cat-type">
-											<option value="">Enable</option>
-											<option value="">Disable</option>
-										
-									</select>
-								</div>
-						</div>
-						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Gallery Mode<span>*</span></label>
-							<div class="col-sm-4">
-									<select name="ctype_id" class="form-control select2 cat-type">
-											<option value="">Enable</option>
-											<option value="">Disable</option>
-										
-									</select>
-								</div>
-						</div>
-						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">isSetOnly<span>*</span></label>
-							<div class="col-sm-4">	
-								<select name="p_is_featured" class="form-control" style="width:auto;">
-									<option value="0">No</option>
-									<option value="1">Yes</option>
-								</select> 							
-							
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">order_key<span>*</span></label>
-							<div class="col-sm-4">								
-									<select name="p_is_featured" class="form-control" style="width:auto;">
-									<option value="0">1</option>
-									<option value="1">2</option>
-									<option value="3">3</option>
-									<option value="4">4</option>
-								</select> 
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">position<span>*</span></label>
-							<div class="col-sm-4">								
-								<input type="text" name="p_name" value="0" class="form-control">
-							</div>
-						</div>
-						<hr>
-						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">image_url<span>*</span></label>
-							<div class="col-sm-4" style="padding-top:4px;">
-								<input type="file" name="p_featured_photo">
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">thumbnail_url</label>
-							<div class="col-sm-4" style="padding-top:4px;">
-								<table id="ProductTable" style="width:100%;">
-			                        <tbody>
-			                            <tr>
-			                                <td>
-			                                    <div class="upload-btn">
-			                                        <input type="file" name="photo[]" style="margin-bottom:5px;">
-			                                    </div>
-			                                </td>
-			                                <td style="width:28px;"><a href="javascript:void()" class="Delete btn btn-danger btn-xs">X</a></td>
-			                            </tr>
-			                        </tbody>
-			                    </table>
-							</div>
-							<div class="col-sm-2">
-			                    <input type="button" id="btnAddNew" value="Add Item" style="margin-top: 5px;margin-bottom:10px;border:0;color: #fff;font-size: 14px;border-radius:3px;" class="btn btn-warning btn-xs">
-			                </div>
-						</div>
-						<hr> -->
-
-
-							<!--<div class="form-group">
-							<label for="" class="col-sm-3 control-label">disable <br><span style="font-size:10px;font-weight:normal;">(In USD)</span></label>
-							<div class="col-sm-4">
-								<input type="text" name="p_old_price" value="0" class="form-control">
-							</div>
-						</div>
-					 <div class="form-group">
-							<label for="" class="col-sm-3 control-label">Collection <br><span style="font-size:10px;font-weight:normal;">(In USD)</span></label>
-							<div class="col-sm-4">
-								<input type="text" name="p_old_price" class="form-control">
-							</div>
-						</div>
-						
-						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Quantity <span>*</span></label>
-							<div class="col-sm-4">
-								<input type="text" name="p_qty" class="form-control">
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Select Size</label>
-							<div class="col-sm-4">
-								<select name="size[]" class="form-control select2" multiple="multiple">
-									
-								</select>
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Select Color</label>
-							<div class="col-sm-4">
-								<select name="color[]" class="form-control select2" multiple="multiple">
-									
-
-								</select>
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">image_url<span>*</span></label>
-							<div class="col-sm-4" style="padding-top:4px;">
-								<input type="file" name="p_featured_photo">
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Other Photos</label>
-							<div class="col-sm-4" style="padding-top:4px;">
-								<table id="ProductTable" style="width:100%;">
-			                        <tbody>
-			                            <tr>
-			                                <td>
-			                                    <div class="upload-btn">
-			                                        <input type="file" name="photo[]" style="margin-bottom:5px;">
-			                                    </div>
-			                                </td>
-			                                <td style="width:28px;"><a href="javascript:void()" class="Delete btn btn-danger btn-xs">X</a></td>
-			                            </tr>
-			                        </tbody>
-			                    </table>
-							</div>
-							<div class="col-sm-2">
-			                    <input type="button" id="btnAddNew" value="Add Item" style="margin-top: 5px;margin-bottom:10px;border:0;color: #fff;font-size: 14px;border-radius:3px;" class="btn btn-warning btn-xs">
-			                </div>
-						</div>
-						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Description</label>
-							<div class="col-sm-8">
-								<textarea name="p_description" class="form-control" cols="30" rows="10" id="editor1"></textarea>
-							</div>
-						</div> -->
-						<!-- commented above manisha -->
-						<!-- <div class="form-group">
-							<label for="" class="col-sm-3 control-label">Current Price <span>*</span><br><span style="font-size:10px;font-weight:normal;">(In USD)</span></label>
-							<div class="col-sm-4">
-								<input type="text" name="p_current_price" class="form-control">
-							</div>
-						</div>	 -->
-						<!-- <div class="form-group">
-							<label for="" class="col-sm-3 control-label">Features</label>
-							<div class="col-sm-8">
-								<textarea name="p_feature" class="form-control" cols="30" rows="10" id="editor3"></textarea>
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Conditions</label>
-							<div class="col-sm-8">
-								<textarea name="p_condition" class="form-control" cols="30" rows="10" id="editor4"></textarea>
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Return Policy</label>
-							<div class="col-sm-8">
-								<textarea name="p_return_policy" class="form-control" cols="30" rows="10" id="editor5"></textarea>
-							</div>
-						</div> -->
-						<!-- <div class="form-group">
-							<label for="" class="col-sm-3 control-label">Is Featured</label>
-							<div class="col-sm-8">
-								<select name="p_is_featured" class="form-control" style="width:auto;">
-									<option value="0">No</option>
-									<option value="1">Yes</option>
-								</select> 
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Is Active</label>
-							<div class="col-sm-8">
-								<select name="p_is_active" class="form-control" style="width:auto;">
-									<option value="0">No</option>
-									<option value="1">Yes</option>
-								</select> 
-							</div>
-						</div> -->
 					</div>
 				</div>
 
