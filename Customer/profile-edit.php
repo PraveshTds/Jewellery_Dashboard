@@ -79,14 +79,22 @@ if(isset($_POST['form2'])) {
 
     if($valid == 1) {
 
+		if(file_exists('assets/uploads/'.$_SESSION['user']['photo'])) {
+			print_r("Exists");
+		}
+
+		if(file_exists('assets/uploads/')) {
+			print_r("Exists assets");
+		}
+
     	// removing the existing photo
     	if($_SESSION['user']['photo']!='') {
-    		unlink('../assets/uploads/'.$_SESSION['user']['photo']);	
+    		unlink('assets/uploads/'.$_SESSION['user']['photo']);	
     	}
 
     	// updating the data
     	$final_name = 'user-'.$_SESSION['user']['id'].'.'.$ext;
-        move_uploaded_file( $path_tmp, '../assets/uploads/'.$final_name );
+        move_uploaded_file( $path_tmp, 'assets/uploads/'.$final_name );
         $_SESSION['user']['photo'] = $final_name;
 
         // updating the database
@@ -187,7 +195,7 @@ foreach ($result as $row) {
 									<div class="form-group">
 							            <label for="" class="col-sm-2 control-label">Existing Photo</label>
 							            <div class="col-sm-6" style="padding-top:6px;">
-							                <img src="../assets/uploads/<?php echo $photo; ?>" class="existing-photo" width="140">
+							                <img src="./assets/uploads/<?php echo $photo; ?>" class="existing-photo" width="140">
 							            </div>
 							        </div>
 									

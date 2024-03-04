@@ -287,8 +287,8 @@ foreach ($result as $row) {
 									foreach ($result as $row) {
 									?>
 										<option value="<?php echo $row['gender_id']; ?>" <?php if ($row['gender_id'] == $gender_id) {
-																							echo 'selected';
-																						} ?>><?php echo $row['gender_name']; ?></option>
+																								echo 'selected';
+																							} ?>><?php echo $row['gender_name']; ?></option>
 									<?php
 									}
 									?>
