@@ -1,38 +1,33 @@
 <?php require_once('header.php'); ?>
 
-<!-- <?php
+<?php
 if (isset($_POST['form1'])) {
 	$valid = 1;
 
-	if (empty($_POST['gender_id'])) {
-		$valid = 0;
-		$error_message .= "You must have to select a top level category<br>";
-	}
+	if(empty($_POST['cat_id'])) {
+        $valid = 0;
+        $error_message .= "You must have to select an end level category<br>";
+    }
 
-	if (empty($_POST['ctype_id'])) {
-		$valid = 0;
-		$error_message .= "You must have to select a mid level category<br>";
-	}
+    if(empty($_POST['p_name'])) {
+        $valid = 0;
+        $error_message .= "Product name can not be empty<br>";
+    }
 
-	if (empty($_POST['cat_id'])) {
-		$valid = 0;
-		$error_message .= "You must have to select an end level category<br>";
-	}
+    if(empty($_POST['sku'])) {
+        $valid = 0;
+        $error_message .= "Current Price can not be empty<br>";
+    }
 
-	if (empty($_POST['p_name'])) {
-		$valid = 0;
-		$error_message .= "Product name can not be empty<br>";
-	}
+    if(empty($_POST['Quantity'])) {
+        $valid = 0;
+        $error_message .= "Quantity can not be empty<br>";
+    }
 
-	if (empty($_POST['p_current_price'])) {
-		$valid = 0;
-		$error_message .= "Current Price can not be empty<br>";
-	}
-
-	if (empty($_POST['p_qty'])) {
-		$valid = 0;
-		$error_message .= "Quantity can not be empty<br>";
-	}
+    if(empty($_POST['product_code'])) {
+        $valid = 0;
+        $error_message .= "Quantity can not be empty<br>";
+    }
 
 	$path = $_FILES['p_featured_photo']['name'];
 	$path_tmp = $_FILES['p_featured_photo']['tmp_name'];
@@ -177,7 +172,7 @@ if (isset($_POST['form1'])) {
 		$success_message = 'Product is updated successfully.';
 	}
 }
-?> -->
+?>
 
 <!-- <?php
 if (!isset($_REQUEST['id'])) {
@@ -333,18 +328,10 @@ foreach ($result as $row) {
 									$statement = $pdo->prepare("SELECT * FROM tbl_gender ORDER BY gender_name ASC");
 									$statement->execute();
 									$result = $statement->fetchAll(PDO::FETCH_ASSOC);	
-									foreach ($result as $row) {
-<<<<<<< HEAD
-									?>
-										<option value="<?php echo $row['gender_id']; ?>" <?php if ($row['gender_id'] == $gender_id) {
-																								echo 'selected';
-																							} ?>><?php echo $row['gender_name']; ?></option>
-									<?php
-=======
-										?>
+									foreach ($result as $row) {										?>
 										<option value="<?php echo $row['gender_id']; ?>"><?php echo $row['gender_name']; ?></option>
 										<?php
->>>>>>> 3a0991ba18054118e1a3301d668d0e94bd7a7856
+
 									}
 									?>
 									</select>
@@ -402,17 +389,3 @@ foreach ($result as $row) {
 							</div>
 							<div class="col-sm-5 text-right ">
 								<button type="submit" class="btn btn-danger pull-right" name="form1">Cancel</button>
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</form>
-
-
-		</div>
-	</div>
-
-</section>
-
-<?php require_once('footer.php'); ?>
