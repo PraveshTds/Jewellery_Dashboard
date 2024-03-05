@@ -39,8 +39,8 @@
 						<tbody>
 							<?php
 							$i = 0;
+							$loggedInCustomerId = $_SESSION['user']['id'];
 							$statement = $pdo->prepare("SELECT
-														
 														t1.p_id,
 														t1.p_name,
 														t1.price,
@@ -49,23 +49,17 @@
 														t1.p_code,
 														t2.cat_id,
 														t2.cat_name,
-
 														t3.ctype_id,
 														t3.ctype_name,
-
 														t4.gender_id,
 														t4.gender_name
-
-							                           	FROM tbl_product t1
-							                           	JOIN tbl_category t2
-							                           	ON t1.cat_id = t2.cat_id
-							                           	JOIN tbl_category_type t3
-							                           	ON t2.ctype_id = t3.ctype_id
-							                           	JOIN tbl_gender t4
-							                           	ON t3.gender_id = t4.gender_id
-							                           	ORDER BY t1.p_id DESC
-							                           	");
-							$statement->execute();
+														FROM tbl_product t1
+														JOIN tbl_category t2 ON t1.cat_id = t2.cat_id
+														JOIN tbl_category_type t3 ON t2.ctype_id = t3.ctype_id
+														JOIN tbl_gender t4 ON t3.gender_id = t4.gender_id
+														WHERE cust_id=?
+														ORDER BY t1.p_id DESC");
+							$statement->execute(array($loggedInCustomerId));
 							$result = $statement->fetchAll(PDO::FETCH_ASSOC);
 							foreach ($result as $row) {
 								$i++;
@@ -78,8 +72,9 @@
 									<td><?php echo $row['price']; ?></td>
 									<td><?php echo $row['sku']; ?></td>
 									<td><?php echo $row['p_code']; ?></td>
-									
-									<!-- <td><? //php echo $row['gender_name']; ?><br><?php echo $row['ctype_name']; ?><br><?php echo $row['cat_name']; ?></td> -->
+
+									<!-- <td><? //php echo $row['gender_name']; 
+												?><br><?php echo $row['ctype_name']; ?><br><?php echo $row['cat_name']; ?></td> -->
 									<td>
 										<a href="product-edit.php?id=<?php echo $row['p_id']; ?>" class="btn btn-primary btn-xs">Edit</a>
 										<a href="#" class="btn btn-danger btn-xs" data-href="product-delete.php?id=<?php echo $row['p_id']; ?>" data-toggle="modal" data-target="#confirm-delete">Delete</a>

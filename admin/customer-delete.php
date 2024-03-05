@@ -9,6 +9,7 @@ if(!isset($_REQUEST['id'])) {
 	$statement = $pdo->prepare("SELECT * FROM tbl_customer WHERE cust_id=?");
 	$statement->execute(array($_REQUEST['id']));
 	$total = $statement->rowCount();
+	$data = $statement->fetchAll();
 	if( $total == 0 ) {
 		header('location: logout.php');
 		exit;
@@ -22,9 +23,10 @@ if(!isset($_REQUEST['id'])) {
 	$statement = $pdo->prepare("DELETE FROM tbl_customer WHERE cust_id=?");
 	$statement->execute(array($_REQUEST['id']));
 
-	// Delete from tbl_rating
-	// $statement = $pdo->prepare("DELETE FROM tbl_rating WHERE cust_id=?");
-	// $statement->execute(array($_REQUEST['id']));
+
+	// Delete from tbl_user
+	$statement = $pdo->prepare("DELETE FROM tbl_user WHERE email=?");
+	$statement->execute(array($data[0]['cust_email']));
 
 	header('location: customer.php');
 ?>

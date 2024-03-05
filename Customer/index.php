@@ -10,8 +10,8 @@ $statement = $pdo->prepare("SELECT * FROM tbl_category where customer=? AND cat_
 $statement->execute(array($customer));
 $total_end_category = $statement->rowCount();
 
-$statement = $pdo->prepare("SELECT * FROM tbl_product");
-$statement->execute();
+$statement = $pdo->prepare("SELECT * FROM tbl_product where cust_id=?");
+$statement->execute(array($customer));
 $total_product = $statement->rowCount();
 
 ?>

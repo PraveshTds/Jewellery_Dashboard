@@ -26,16 +26,15 @@
 					<table id="example1" class="table table-bordered table-hover table-striped">
 						<thead class="thead-dark">
 							<tr>
-								<th width="10">#</th>
+								<th width="10">Id</th>
+								<th>Customer</th>
 								<th>Photo</th>
 								<th width="160">Product Name</th>
-								<th width="60">Old Price</th>
-								<th width="60">(C) Price</th>
-								<th width="60">Quantity</th>
-								<th>Featured</th>
-								<th>Active</th>
-								<th>Category</th>
-								<th width="80">Action</th>
+								<th width="60">Category Name</th>
+								<th width="60">Price</th>
+								<th width="60">SKU</th>
+								<th>Product Code</th>
+								<!-- <th width="80">Action</th> -->
 							</tr>
 						</thead>
 						<tbody>
@@ -45,16 +44,15 @@
 														
 														t1.p_id,
 														t1.p_name,
-														t1.p_old_price,
-														t1.p_current_price,
-														t1.p_qty,
+														t1.price,
+														t1.sku,
 														t1.p_featured_photo,
-														t1.p_is_featured,
-														t1.p_is_active,
-														t1.cat_id,
+														t1.p_code,
+														t1.cust_id,
 
 														t2.cat_id,
 														t2.cat_name,
+														t2.customer,
 
 														t3.ctype_id,
 														t3.ctype_name,
@@ -78,30 +76,31 @@
 							?>
 								<tr>
 									<td><?php echo $i; ?></td>
+									<td>
+										<?php if ($row['customer']) {
+											$cust_id = $row['customer'];
+											$query = "SELECT * from tbl_user where id='$cust_id'";
+											$stmt = $pdo->prepare($query);
+											$stmt->execute();
+											$res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+											foreach ($res as $row1) {
+												echo $row1['full_name'];
+											}
+										} ?>
+									</td>
 									<td style="width:82px;"><img src="../assets/uploads/<?php echo $row['p_featured_photo']; ?>" alt="<?php echo $row['p_name']; ?>" style="width:80px;"></td>
 									<td><?php echo $row['p_name']; ?></td>
-									<td>$<?php echo $row['p_old_price']; ?></td>
-									<td>$<?php echo $row['p_current_price']; ?></td>
-									<td><?php echo $row['p_qty']; ?></td>
-									<td>
-										<?php if ($row['p_is_featured'] == 1) {
-											echo '<span class="badge badge-success" style="background-color:green;">Yes</span>';
-										} else {
-											echo '<span class="badge badge-success" style="background-color:red;">No</span>';
-										} ?>
-									</td>
-									<td>
-										<?php if ($row['p_is_active'] == 1) {
-											echo '<span class="badge badge-success" style="background-color:green;">Yes</span>';
-										} else {
-											echo '<span class="badge badge-danger" style="background-color:red;">No</span>';
-										} ?>
-									</td>
-									<td><?php echo $row['gender_name']; ?><br><?php echo $row['ctype_name']; ?><br><?php echo $row['cat_name']; ?></td>
-									<td>
+									<td><?php echo $row['cat_name']; ?></td>
+									<td><?php echo $row['price']; ?></td>
+									<td><?php echo $row['sku']; ?></td>
+									<td><?php echo $row['p_code']; ?></td>
+
+									<!-- <td><? //php echo $row['gender_name']; 
+												?><br><?php echo $row['ctype_name']; ?><br><?php echo $row['cat_name']; ?></td> -->
+									<!-- <td>
 										<a href="product-edit.php?id=<?php echo $row['p_id']; ?>" class="btn btn-primary btn-xs">Edit</a>
 										<a href="#" class="btn btn-danger btn-xs" data-href="product-delete.php?id=<?php echo $row['p_id']; ?>" data-toggle="modal" data-target="#confirm-delete">Delete</a>
-									</td>
+									</td> -->
 								</tr>
 							<?php
 							}

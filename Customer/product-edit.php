@@ -277,7 +277,7 @@
 									$result = $statement->fetchAll(PDO::FETCH_ASSOC);
 									foreach ($result as $row) {
 									?>
-										<option value="<?php echo $row['cat_id']; ?>"><?php echo $row['cat_name']; ?></option>
+										<option value="<?php echo $row['cat_id']; ?>" <?php if($row['cat_id'] == $cat_id){echo 'selected';} ?>><?php echo $row['cat_name']; ?></option>
 									<?php
 									}
 									?>
@@ -287,45 +287,45 @@
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label">Product Name <span style="color:red">*</span></label>
 							<div class="col-sm-4">
-								<input type="text" name="p_name" class="form-control">
+								<input type="text" name="p_name" class="form-control" value="<?php echo $p_name; ?>">
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label">Collection</label>
 							<div class="col-sm-4">
-								<input type="text" name="collection" class="form-control">
+								<input type="text" name="collection" class="form-control" value="<?php echo $collection; ?>">
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label">Site Link</label>
 							<div class="col-sm-4">
-								<input type="text" name="site_link" class="form-control">
+								<input type="text" name="site_link" class="form-control" value="<?php echo $site_link; ?>">
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label">SKU no<span style="color:red">*</span></label>
 							<div class="col-sm-4">
-								<input type="text" name="sku" value="" class="form-control">
+								<input type="text" name="sku" class="form-control" value="<?php echo $sku; ?>">
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label">Product code<span style="color:red">*</span></label>
 							<div class="col-sm-4">
-								<input type="text" name="product_code" value="" class="form-control">
+								<input type="text" name="product_code" class="form-control" value="<?php echo $p_code; ?>">
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label">Gender<span style="color:red">*</span></label>
 							<div class="col-sm-4">
 								<select name="gender" class="form-control select2 cat-type">
-									<option value="">Select Gender</option>
+									<option>Select Gender</option>
 									<?php
 									$statement = $pdo->prepare("SELECT * FROM tbl_gender ORDER BY gender_name ASC");
 									$statement->execute();
 									$result = $statement->fetchAll(PDO::FETCH_ASSOC);
 									foreach ($result as $row) {
 									?>
-										<option value="<?php echo $row['gender_id']; ?>"><?php echo $row['gender_name']; ?></option>
+										<option value="<?php echo $row['gender_id']; ?>" <?php if($row['gender_id'] == $gender_id){echo 'selected';} ?>><?php echo $row['gender_name']; ?></option>
 									<?php
 									}
 									?>
@@ -335,13 +335,20 @@
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label">Price</label>
 							<div class="col-sm-4">
-								<input type="text" name="price" value="" class="form-control">
+								<input type="text" name="price" class="form-control" value="<?php echo $price; ?>">
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label">Quantity<span style="color:red">*</span></label>
 							<div class="col-sm-4">
-								<input type="text" name="Quantity" value="" class="form-control">
+								<input type="text" name="Quantity" class="form-control" value="<?php echo $quantity; ?>">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="" class="col-sm-3 control-label">Existing Photo</label>
+							<div class="col-sm-4" style="padding-top:4px;">
+								<img src="../assets/uploads/<?php echo $p_featured_photo; ?>" alt="" style="width:150px;">
+								<input type="hidden" name="current_photo" value="<?php echo $p_featured_photo; ?>">
 							</div>
 						</div>
 						<div class="form-group">
@@ -374,7 +381,7 @@
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label">Details</label>
 							<div class="col-sm-8">
-								<textarea name="details" class="form-control" cols="10" rows="5"></textarea>
+								<textarea name="details" class="form-control" cols="10" rows="5"><?php echo $details; ?></textarea>
 							</div>
 						</div>
 						<div class="form-group">

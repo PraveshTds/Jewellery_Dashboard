@@ -73,10 +73,10 @@
                                         } ?>
                                     </td>
                                     <td>
-                                        <!-- <a href="customer-change-status.php?id=<?php echo $row['cust_id']; ?>" class="btn btn-success btn-xs">Change Status</a> -->
+                                        <!-- <a href="category-change-status.php?id=<?php echo $row['cust_id']; ?>" class="btn btn-success btn-xs">Change Status</a> -->
                                         <label class="switch">
                                             <input type="checkbox" 1="">
-                                            <span class="slider round"></span>
+                                            <span class="slider round" data-href="category-change-status.php?id=<?php echo $row['cat_id']; ?>"></span>
                                         </label>
                                     </td>
                                     <td>

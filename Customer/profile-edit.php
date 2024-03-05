@@ -79,22 +79,14 @@ if(isset($_POST['form2'])) {
 
     if($valid == 1) {
 
-		if(file_exists('assets/uploads/'.$_SESSION['user']['photo'])) {
-			print_r("Exists");
-		}
-
-		if(file_exists('assets/uploads/')) {
-			print_r("Exists assets");
-		}
-
     	// removing the existing photo
     	if($_SESSION['user']['photo']!='') {
-    		unlink('assets/uploads/'.$_SESSION['user']['photo']);	
+    		unlink('../assets/uploads/'.$_SESSION['user']['photo']);	
     	}
 
     	// updating the data
     	$final_name = 'user-'.$_SESSION['user']['id'].'.'.$ext;
-        move_uploaded_file( $path_tmp, 'assets/uploads/'.$final_name );
+        move_uploaded_file( $path_tmp, '../assets/uploads/'.$final_name );
         $_SESSION['user']['photo'] = $final_name;
 
         // updating the database

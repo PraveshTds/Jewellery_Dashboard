@@ -9,7 +9,6 @@ date_default_timezone_set('America/Los_Angeles');
 $dbhost = 'localhost';
 
 // Database Name
-//$dbname = 'ecommerceweb';
 $dbname = 'ecom';
 
 // Database Username
