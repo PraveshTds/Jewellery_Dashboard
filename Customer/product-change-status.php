@@ -6,7 +6,7 @@ if(!isset($_POST['id'])) {
 	exit;
 } else {
 	// Check the id is valid or not
-	$statement = $pdo->prepare("SELECT * FROM tbl_customer WHERE cust_id=?");
+	$statement = $pdo->prepare("SELECT * FROM tbl_product WHERE p_id=?");
 	$statement->execute(array($_POST['id']));
 	$total = $statement->rowCount();
 	if( $total == 0 ) {
@@ -15,16 +15,16 @@ if(!isset($_POST['id'])) {
 	} else {
 		$result = $statement->fetchAll(PDO::FETCH_ASSOC);							
 		foreach ($result as $row) {
-			$cust_status = $row['cust_status'];
+			$p_status = $row['p_status'];
 		}
 	}
 }
 ?>
 
 <?php
-if($cust_status == 0) {$final = 1;} else {$final = 0;}
-$statement = $pdo->prepare("UPDATE tbl_customer SET cust_status=? WHERE cust_id=?");
+if($p_status == 0) {$final = 1;} else {$final = 0;}
+$statement = $pdo->prepare("UPDATE tbl_product SET p_status=? WHERE p_id=?");
 $statement->execute(array($final,$_REQUEST['id']));
 
-header('location: customer.php');
+header('location: product.php');
 ?>

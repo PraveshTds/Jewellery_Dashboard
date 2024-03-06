@@ -19,8 +19,8 @@
                                 <th>Id</th>
                                 <th>Customer</th>
                                 <th>Category Name</th>
+                                <!-- <th>Status</th> -->
                                 <th>Status</th>
-                                <th>Change Status</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -39,17 +39,11 @@
                             $result = $statement->fetchAll(PDO::FETCH_ASSOC);
                             foreach ($result as $row) {
                                 $i++;
-                                ?>
-                                <tr class="<?php if ($row['cat_status'] == 1) {
-                                    echo 'bg-g';
-                                } else {
-                                    echo 'bg-r';
-                                } ?>">
+                            ?>
+                                <tr>
                                     <td>
                                         <?php echo $i; ?>
                                     </td>
-                                    <!-- <td><? //php echo $row['gender_name'];  ?></td>
-                                    <td><? //php echo $row['ctype_name'];  ?></td> -->
                                     <td>
                                         <?php if ($row['customer']) {
                                             $cust_id = $row['customer'];
@@ -65,29 +59,20 @@
                                     <td>
                                         <?php echo $row['cat_name']; ?>
                                     </td>
-                                    <td>
-                                        <?php if ($row['cat_status'] == 1) {
-                                            echo 'Enable';
-                                        } else {
-                                            echo 'Disable';
-                                        } ?>
+                                    <!-- <td><?//php if ($row['cat_status'] == 1) { echo 'Enable'; } else { echo 'Disable'; } ?> -->
                                     </td>
                                     <td>
-                                        <!-- <a href="category-change-status.php?id=<?php echo $row['cust_id']; ?>" class="btn btn-success btn-xs">Change Status</a> -->
                                         <label class="switch">
-                                            <input type="checkbox" 1="">
-                                            <span class="slider round" data-href="category-change-status.php?id=<?php echo $row['cat_id']; ?>"></span>
+                                            <input type="checkbox" class="category-toggle" data-cat-id="<?php echo $row['cat_id']; ?>" <?php echo ($row['cat_status'] == 1) ? 'checked' : ''; ?>>
+                                            <span class="slider round"></span>
                                         </label>
                                     </td>
                                     <td>
-                                        <a href="category-edit.php?id=<?php echo $row['cat_id']; ?>"
-                                            class="btn btn-primary btn-xs">Edit</a>
-                                        <a href="#" class="btn btn-danger btn-xs"
-                                            data-href="category-delete.php?id=<?php echo $row['cat_id']; ?>"
-                                            data-toggle="modal" data-target="#confirm-delete">Delete</a>
+                                        <a href="category-edit.php?id=<?php echo $row['cat_id']; ?>" class="btn btn-primary btn-xs">Edit</a>
+                                        <a href="#" class="btn btn-danger btn-xs" data-href="category-delete.php?id=<?php echo $row['cat_id']; ?>" data-toggle="modal" data-target="#confirm-delete">Delete</a>
                                     </td>
                                 </tr>
-                                <?php
+                            <?php
                             }
                             ?>
                         </tbody>
@@ -96,8 +81,7 @@
             </div>
 </section>
 
-<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-    aria-hidden="true">
+<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">

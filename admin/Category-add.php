@@ -174,8 +174,11 @@ if (isset($_POST['form1'])) {
 
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label"></label>
-							<div class="col-sm-6">
+							<div class="col-sm-3 text-right ">
 								<button type="submit" class="btn btn-success pull-left" name="form1">Submit</button>
+							</div>
+							<div class="col-sm-5 text-right ">
+								<a href="Category.php" class="btn btn-danger pull-left" name="cancel">Cancel</a>
 							</div>
 						</div>
 

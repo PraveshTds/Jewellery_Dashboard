@@ -21,7 +21,7 @@
 								<th width="180">Name</th>
 								<th width="150">Email Address</th>
 								<th width="180">Country, City, State</th>
-								<th>Status</th>
+								<!-- <th>Status</th> -->
 								<th width="100">Change Status</th>
 								<th width="100">Action</th>
 							</tr>
@@ -38,12 +38,8 @@
 							$result = $statement->fetchAll(PDO::FETCH_ASSOC);
 							foreach ($result as $row) {
 								$i++;
-								?>
-								<tr class="<?php if ($row['cust_status'] == 1) {
-									echo 'bg-g';
-								} else {
-									echo 'bg-r';
-								} ?>">
+							?>
+								<tr>
 									<td>
 										<?php echo $i; ?>
 									</td>
@@ -58,27 +54,21 @@
 										<?php echo $row['cust_city']; ?><br>
 										<?php echo $row['cust_state']; ?>
 									</td>
-									<td>
-										<?php if ($row['cust_status'] == 1) {
-											echo 'Active';
-										} else {
-											echo 'Inactive';
-										} ?>
-									</td>
+									<!-- <td>
+										<?//php if ($row['cust_status'] == 1) {echo 'Active';} else { echo 'Inactive';} ?>
+									</td> -->
 									<td>
 										<!-- <a href="customer-change-status.php?id=<?php echo $row['cust_id']; ?>" class="btn btn-success btn-xs">Change Status</a> -->
 										<label class="switch">
-											<input type="checkbox" 1="">
+											<input type="checkbox" class="customer-toggle" data-id="<?php echo $row['cust_id']; ?>" <?php echo ($row['cust_status'] == 1) ? 'checked' : ''; ?>>
 											<span class="slider round"></span>
 										</label>
 									</td>
 									<td>
-										<a href="#" class="btn btn-danger btn-xs"
-											data-href="customer-delete.php?id=<?php echo $row['cust_id']; ?>"
-											data-toggle="modal" data-target="#confirm-delete">Delete</a>
+										<a href="#" class="btn btn-danger btn-xs" data-href="customer-delete.php?id=<?php echo $row['cust_id']; ?>" data-toggle="modal" data-target="#confirm-delete">Delete</a>
 									</td>
 								</tr>
-								<?php
+							<?php
 							}
 							?>
 						</tbody>
@@ -92,8 +82,7 @@
 </section>
 
 
-<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-	aria-hidden="true">
+<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">

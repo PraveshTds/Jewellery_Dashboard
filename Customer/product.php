@@ -23,16 +23,17 @@
 					<button>Show</button>
 				</div> -->
 				<div class="box-body table-responsive">
-					<table id="example1" class="table table-bordered table-hover table-striped">
+					<table id="example1" border="2" class="table table-bordered table-hover table-striped">
 						<thead class="thead-dark">
 							<tr>
 								<th width="10">Id</th>
-								<th>Photo</th>
-								<th width="160">Product Name</th>
+								<th width="80">Photo</th>
+								<th width="50">Product Name</th>
 								<th width="60">Category Name</th>
-								<th width="60">Price</th>
 								<th width="60">SKU</th>
-								<th>Product Code</th>
+								<th width="50">Quantity</th>
+								<th width="60">Price</th>
+								<th width="50">Status</th>
 								<th width="80">Action</th>
 							</tr>
 						</thead>
@@ -46,9 +47,12 @@
 														t1.price,
 														t1.sku,
 														t1.p_featured_photo,
-														t1.p_code,
+														t1.quantity,
+														t1.cust_id,
+														t1.p_status,
 														t2.cat_id,
 														t2.cat_name,
+														t2.customer,
 														t3.ctype_id,
 														t3.ctype_name,
 														t4.gender_id,
@@ -66,15 +70,18 @@
 							?>
 								<tr>
 									<td><?php echo $i; ?></td>
-									<td style="width:82px;"><img src="../assets/uploads/<?php echo $row['p_featured_photo']; ?>" alt="<?php echo $row['p_name']; ?>" style="width:80px;"></td>
+									<td style="width:82px;"><img src="../assets/uploads/<?php echo $row['p_featured_photo']; ?>" alt="<?php echo $row['p_name']; ?>" style="width:50px;"></td>
 									<td><?php echo $row['p_name']; ?></td>
 									<td><?php echo $row['cat_name']; ?></td>
-									<td><?php echo $row['price']; ?></td>
 									<td><?php echo $row['sku']; ?></td>
-									<td><?php echo $row['p_code']; ?></td>
-
-									<!-- <td><? //php echo $row['gender_name']; 
-												?><br><?php echo $row['ctype_name']; ?><br><?php echo $row['cat_name']; ?></td> -->
+									<td><?php echo $row['quantity']; ?></td>
+									<td><?php echo $row['price']; ?></td>
+									<td>
+										<label class="switch">
+											<input type="checkbox" class="product-toggle" data-id="<?php echo $row['p_id']; ?>" <?php echo ($row['p_status'] == 1) ? 'checked' : ''; ?>>
+											<span class="slider round"></span>
+										</label>
+									</td>
 									<td>
 										<a href="product-edit.php?id=<?php echo $row['p_id']; ?>" class="btn btn-primary btn-xs">Edit</a>
 										<a href="#" class="btn btn-danger btn-xs" data-href="product-delete.php?id=<?php echo $row['p_id']; ?>" data-toggle="modal" data-target="#confirm-delete">Delete</a>

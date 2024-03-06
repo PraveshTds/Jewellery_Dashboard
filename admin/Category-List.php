@@ -5,7 +5,7 @@
 		<h1>Manage Category List</h1>
 	</div>
 	<div class="content-header-right">
-		<a href="category-add.php" class="btn btn-primary btn-sm">Add New</a>
+		<a href="category-list-add.php" class="btn btn-primary btn-sm">Add New</a>
 	</div>
 </section>
 

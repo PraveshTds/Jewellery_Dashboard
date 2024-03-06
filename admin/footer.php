@@ -58,7 +58,7 @@
 			});
 			$(".cat-type").on('change', function() {
 				var id = $(this).val();
-				var dataString = 'id=' + id;
+				var dataString = {id : id};
 				$.ajax({
 					type: "POST",
 					url: "get-Category.php",
@@ -69,14 +69,40 @@
 					}
 				});
 			});
-			$('input[type="checkbox"]').on('change', function() {
-				var isChecked = $(this).is(':checked');
-				var id = $(this).val();
-				var data = {val:  isChecked, id: id};
-				console.log(data);
+			$('.category-toggle').on('change', function() {
+				var id = $(this).data('cat-id');
+				var data = 'id='+ id;
 				$.ajax({
 					type: "POST",
 					url: "category-change-status.php",
+					data: data,
+					cache: false,
+					success: function(html) {
+						console.log(data);
+					}
+				});
+			});
+
+			$('.customer-toggle').on('change', function() {
+				var id = $(this).data('id');
+				var data = 'id='+ id;
+				$.ajax({
+					type: "POST",
+					url: "customer-change-status.php",
+					data: data,
+					cache: false,
+					success: function(html) {
+						console.log(data);
+					}
+				});
+			});
+
+			$('.product-toggle').on('change', function() {
+				var id = $(this).data('id');
+				var data = 'id='+ id;
+				$.ajax({
+					type: "POST",
+					url: "product-change-status.php",
 					data: data,
 					cache: false,
 					success: function(html) {

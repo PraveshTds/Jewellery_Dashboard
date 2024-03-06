@@ -1,5 +1,5 @@
 <?php require_once('header.php'); ?>
-<?php 
+<?php
 // server connection
 // $local_folder = 'C:\xampp\htdocs\ECommerce\Pravesh';
 // function ftp_recursive_put($ftpConnection, $local_folder, $remote_folder) {
@@ -134,7 +134,7 @@ if (isset($_POST['form1'])) {
             $cust_timestamp,
             0
         ));
-       "Content-Type: text/html; charset=ISO-8859-1\r\n";
+        "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
         // saving into db for creating customer 
         $statement = $pdo->prepare("INSERT INTO tbl_user (
@@ -297,9 +297,14 @@ if (isset($_POST['form1'])) {
                                             <input type="text" class="form-control" name="cust_role">
                                         </div>
 
-                                        <div class="col-md-6 form-group">
-                                            <label for=""></label>
-                                            <input type="submit" class="btn btn-danger" value="Submit" name="form1">
+                                        <div class="form-group">
+                                            <div class="col-sm-6">
+                                                <label for=""></label>
+                                                <input type="submit" class="btn btn-success" value="Submit" name="form1">
+                                            </div>
+                                            <div class="col-sm-5 text-right ">
+                                                <a href="customer.php" class="btn btn-danger pull-right" name="cancel">Cancel</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
