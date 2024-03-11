@@ -6,7 +6,7 @@
 
 <?php
 $customer = $_SESSION['user']['id'];
-$statement = $pdo->prepare("SELECT * FROM tbl_category where customer=? AND cat_status=1");
+$statement = $pdo->prepare("SELECT * FROM tbl_cust_category where customer=? AND cat_status=1");
 $statement->execute(array($customer));
 $total_end_category = $statement->rowCount();
 

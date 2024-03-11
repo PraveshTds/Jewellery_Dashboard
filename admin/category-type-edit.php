@@ -46,7 +46,7 @@ if(!isset($_REQUEST['id'])) {
 		<h1>Edit Type</h1>
 	</div>
 	<div class="content-header-right">
-		<a href="category.php" class="btn btn-primary btn-sm">View All</a>
+		<a href="cust-category.php" class="btn btn-primary btn-sm">View All</a>
 	</div>
 </section>
 

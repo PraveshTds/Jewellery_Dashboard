@@ -216,7 +216,7 @@
 		}
 
 		$statement = $pdo->prepare("SELECT * 
-                        FROM tbl_category t1
+                        FROM tbl_cust_category t1
                         JOIN tbl_category_type t2
                         ON t1.ctype_id = t2.ctype_id
                         JOIN tbl_gender t3
@@ -272,7 +272,7 @@
 									<option value="">Select Category Name</option>
 									<?php
 									$cust_id = $_SESSION['user']['id'];
-									$statement = $pdo->prepare("SELECT * FROM tbl_category where customer=? AND cat_status=1 ORDER BY cat_name ASC");
+									$statement = $pdo->prepare("SELECT * FROM tbl_cust_category where customer=? AND cat_status=1 ORDER BY cat_name ASC");
 									$statement->execute(array($cust_id));
 									$result = $statement->fetchAll(PDO::FETCH_ASSOC);
 									foreach ($result as $row) {

@@ -109,7 +109,7 @@ if (!isset($_SESSION['user'])) {
 						</a>
 					</li>
 
-					<li class="treeview <?php if (($cur_page == 'country.php') || ($cur_page == 'country-add.php') || ($cur_page == 'country-edit.php') || ($cur_page == 'manage-gender.php') || ($cur_page == 'manage-gender-add.php') || ($cur_page == 'manage-gender-edit.php') || ($cur_page == 'category-list.php') || ($cur_page == 'category-list-add.php') || ($cur_page == 'category-list-edit.php') || ($cur_page == 'Category.php') || ($cur_page == 'Category-add.php') || ($cur_page == 'Category-edit.php')) {
+					<li class="treeview <?php if (($cur_page == 'country.php') || ($cur_page == 'country-add.php') || ($cur_page == 'country-edit.php') || ($cur_page == 'manage-gender.php') || ($cur_page == 'manage-gender-add.php') || ($cur_page == 'manage-gender-edit.php') || ($cur_page == 'category-type.php') || ($cur_page == 'category-type-add.php') || ($cur_page == 'category-type-edit.php') || ($cur_page == 'cust-category.php') || ($cur_page == 'cust-category-add.php') || ($cur_page == 'cust-category-edit.php') || ($cur_page == 'category.php')) {
 											echo 'active';
 										} ?>">
 						<a href="#">
@@ -121,13 +121,14 @@ if (!isset($_SESSION['user'])) {
 						</a>
 						<ul class="treeview-menu">
 							<li><a href="manage-gender.php"><i class="fa fa-circle-o"></i>Gender</a></li>
-							<li><a href="category-list.php"><i class="fa fa-circle-o"></i>Category List</a></li>
+							<li><a href="category-type.php"><i class="fa fa-circle-o"></i>Category Type</a></li>
+							<li><a href="category.php"><i class="fa fa-circle-o"></i>Category </a></li>
 						</ul>
 					</li>
 					<li class="treeview <?php if (($cur_page == 'product.php') || ($cur_page == 'product-add.php') || ($cur_page == 'product-edit.php')) {
 											echo 'active';
 										} ?>">
-						<a href="Category.php">
+						<a href="cust-category.php">
 							<i class="fa fa-shopping-bag"></i> <span>Customer Category</span>
 						</a>
 					</li>

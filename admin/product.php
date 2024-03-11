@@ -53,7 +53,7 @@
 														t4.gender_name
 
 							                           	FROM tbl_product t1
-							                           	JOIN tbl_category t2
+							                           	JOIN tbl_cust_category t2
 							                           	ON t1.cat_id = t2.cat_id
 							                           	JOIN tbl_category_type t3
 							                           	ON t2.ctype_id = t3.ctype_id

@@ -2,10 +2,10 @@
 
 <section class="content-header">
 	<div class="content-header-left">
-		<h1>Manage Category List</h1>
+		<h1>Manage Category Type</h1>
 	</div>
 	<div class="content-header-right">
-		<a href="category-list-add.php" class="btn btn-primary btn-sm">Add New</a>
+		<a href="category-type-add.php" class="btn btn-primary btn-sm">Add New</a>
 	</div>
 </section>
 
@@ -23,7 +23,7 @@
 			<thead>
 			    <tr>
 			        <th>#</th>
-			        <th>Category List</th>
+			        <th>Category Type</th>
                     <th> Gender </th>
 			        <th>Action</th>
 			    </tr>

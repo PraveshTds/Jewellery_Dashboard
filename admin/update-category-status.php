@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['cat_id']) && isset($_GE
     // Update the database based on the action
     $newStatus = $action === 'enable' ? 1 : 0;
 
-    $statement = $pdo->prepare("UPDATE tbl_category SET active = :newStatus WHERE cat_id = :catId");
+    $statement = $pdo->prepare("UPDATE tbl_cust_category SET active = :newStatus WHERE cat_id = :catId");
     $statement->bindParam(':newStatus', $newStatus, PDO::PARAM_INT);
     $statement->bindParam(':catId', $catId, PDO::PARAM_INT);
 

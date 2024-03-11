@@ -22,7 +22,7 @@ if(!isset($_REQUEST['id'])) {
 							FROM tbl_gender t1
 							JOIN tbl_category_type t2
 							ON t1.gender_id = t2.gender_id
-							JOIN tbl_category t3
+							JOIN tbl_cust_category t3
 							ON t2.ctype_id = t3.ctype_id
 							WHERE t1.gender_id=?");
 	$statement->execute(array($_REQUEST['id']));
@@ -74,15 +74,11 @@ if(!isset($_REQUEST['id'])) {
 			// $statement = $pdo->prepare("DELETE FROM tbl_product_size WHERE p_id=?");
 			// $statement->execute(array($p_ids[$i]));
 
-			// Delete from tbl_rating
-			$statement = $pdo->prepare("DELETE FROM tbl_rating WHERE p_id=?");
-			$statement->execute(array($p_ids[$i]));
-
 		}
 
-		// Delete from tbl_category
+		// Delete from tbl_cust_category
 		for($i=0;$i<count($cat_ids);$i++) {
-			$statement = $pdo->prepare("DELETE FROM tbl_category WHERE cat_id=?");
+			$statement = $pdo->prepare("DELETE FROM tbl_cust_category WHERE cat_id=?");
 			$statement->execute(array($cat_ids[$i]));
 		}
 

@@ -7,7 +7,7 @@ if(!isset($_REQUEST['id'])) {
 	exit;
 } else {
 	// Check the id is valid or not
-	$statement = $pdo->prepare("SELECT * FROM tbl_category WHERE category_id=?");
+	$statement = $pdo->prepare("SELECT * FROM tbl_cust_category WHERE cat_id=?");
 	$statement->execute(array($_REQUEST['id']));
 	$total = $statement->rowCount();
 	if( $total == 0 ) {
@@ -57,11 +57,15 @@ if(!isset($_REQUEST['id'])) {
 		$statement = $pdo->prepare("DELETE FROM tbl_product_photo WHERE p_id=?");
 		$statement->execute(array($p_ids[$i]));
 
+		// Delete from tbl_product_size
+		// $statement = $pdo->prepare("DELETE FROM tbl_product_size WHERE p_id=?");
+		// $statement->execute(array($p_ids[$i]));
+
 	}
 
 	// Delete from tbl_cust_category
-	$statement = $pdo->prepare("DELETE FROM tbl_category WHERE category_id=?");
+	$statement = $pdo->prepare("DELETE FROM tbl_cust_category WHERE cat_id=?");
 	$statement->execute(array($_REQUEST['id']));
 
-	header('location: category.php');
+	header('location: cust-category.php');
 ?>

@@ -7,7 +7,7 @@ if(!isset($_POST['id'])) {
 } else {
 	// Check the id is valid or not
 	$catid = $_POST['id'];
-	$statement = $pdo->prepare("SELECT * FROM tbl_category WHERE cat_id=?");
+	$statement = $pdo->prepare("SELECT * FROM tbl_cust_category WHERE cat_id=?");
 	$statement->execute(array($catid));
 	$total = $statement->rowCount();
 	if( $total == 0 ) {
@@ -23,8 +23,8 @@ if(!isset($_POST['id'])) {
 
 <?php
 if($cat_status == 0) {$final = 1;} else {$final = 0;}
-$statement = $pdo->prepare("UPDATE tbl_category SET cat_status=? WHERE cat_id=?");
+$statement = $pdo->prepare("UPDATE tbl_cust_category SET cat_status=? WHERE cat_id=?");
 $statement->execute(array($final,$catid));
 
-header('location: category.php');
+header('location: cust-category.php');
 ?>

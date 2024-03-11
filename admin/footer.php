@@ -48,7 +48,7 @@
 				var dataString = 'id=' + id;
 				$.ajax({
 					type: "POST",
-					url: "get-category-list.php",
+					url: "get-category-type.php",
 					data: dataString,
 					cache: false,
 					success: function(html) {
@@ -97,19 +97,19 @@
 				});
 			});
 
-			$('.product-toggle').on('change', function() {
-				var id = $(this).data('id');
-				var data = 'id='+ id;
-				$.ajax({
-					type: "POST",
-					url: "product-change-status.php",
-					data: data,
-					cache: false,
-					success: function(html) {
-						console.log(data);
-					}
-				});
-			});
+			// $('.product-toggle').on('change', function() {
+			// 	var id = $(this).data('id');
+			// 	var data = 'id='+ id;
+			// 	$.ajax({
+			// 		type: "POST",
+			// 		url: "product-change-status.php",
+			// 		data: data,
+			// 		cache: false,
+			// 		success: function(html) {
+			// 			console.log(data);
+			// 		}
+			// 	});
+			// });
 		</script>
 
 		<script>

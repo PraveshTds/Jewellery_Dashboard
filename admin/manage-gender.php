@@ -75,7 +75,6 @@
             </div>
             <div class="modal-body">
                 <p>Are you sure want to delete this item?</p>
-                <p style="color:red;">Be careful! All products, mid level categories and end level categories under this top lelvel category will be deleted from all the tables like order table, payment table, size table, color table, rating table etc.</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>

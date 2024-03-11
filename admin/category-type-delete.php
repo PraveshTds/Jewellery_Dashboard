@@ -20,7 +20,7 @@ if(!isset($_REQUEST['id'])) {
 <?php
 
 	// Getting all ecat ids
-	$statement = $pdo->prepare("SELECT * FROM tbl_category WHERE ctype_id=?");
+	$statement = $pdo->prepare("SELECT * FROM tbl_cust_category WHERE ctype_id=?");
 	$statement->execute(array($_REQUEST['id']));
 	$total = $statement->rowCount();
 	$result = $statement->fetchAll(PDO::FETCH_ASSOC);							
@@ -71,15 +71,11 @@ if(!isset($_REQUEST['id'])) {
 			// $statement = $pdo->prepare("DELETE FROM tbl_product_size WHERE p_id=?");
 			// $statement->execute(array($p_ids[$i]));
 
-			// Delete from tbl_rating
-			$statement = $pdo->prepare("DELETE FROM tbl_rating WHERE p_id=?");
-			$statement->execute(array($p_ids[$i]));
-
 		}
 
-		// Delete from tbl_category
+		// Delete from tbl_cust_category
 		for($i=0;$i<count($cat_ids);$i++) {
-			$statement = $pdo->prepare("DELETE FROM tbl_category WHERE cat_id=?");
+			$statement = $pdo->prepare("DELETE FROM tbl_cust_category WHERE cat_id=?");
 			$statement->execute(array($cat_ids[$i]));
 		}
 
@@ -89,5 +85,5 @@ if(!isset($_REQUEST['id'])) {
 	$statement = $pdo->prepare("DELETE FROM tbl_category_type WHERE ctype_id=?");
 	$statement->execute(array($_REQUEST['id']));
 
-	header('location: category.php');
+	header('location: cust-category.php');
 ?>

@@ -2,10 +2,10 @@
 
 <section class="content-header">
     <div class="content-header-left">
-        <h1>Category</h1>
+        <h1>Customer Category</h1>
     </div>
     <div class="content-header-right">
-        <a href="category-add.php" class="btn btn-primary btn-sm">Create Categories</a>
+        <a href="cust-category-add.php" class="btn btn-primary btn-sm">Assign Categories</a>
     </div>
 </section>
 <section class="content">
@@ -17,8 +17,10 @@
                         <thead>
                             <tr>
                                 <th>Id</th>
+                                <th>Customer</th>
                                 <th>Category Name</th>
-                                <th>Category Type</th>
+                                <!-- <th>Status</th> -->
+                                <th>Status</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -26,10 +28,12 @@
                             <?php
                             $i = 0;
                             $statement = $pdo->prepare("SELECT * 
-                                    FROM tbl_category t1
+                                    FROM tbl_cust_category t1
                                     JOIN tbl_category_type t2
                                     ON t1.ctype_id = t2.ctype_id
-                                    ORDER BY t1.category_id DESC
+                                    JOIN tbl_gender t3
+                                    ON t2.gender_id = t3.gender_id
+                                    ORDER BY t1.cat_id DESC
                                     ");
                             $statement->execute();
                             $result = $statement->fetchAll(PDO::FETCH_ASSOC);
@@ -41,15 +45,31 @@
                                         <?php echo $i; ?>
                                     </td>
                                     <td>
-                                        <?php echo $row['category_name']; ?>
+                                        <?php if ($row['customer']) {
+                                            $cust_id = $row['customer'];
+                                            $query = "SELECT * from tbl_user where id='$cust_id'";
+                                            $stmt = $pdo->prepare($query);
+                                            $stmt->execute();
+                                            $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                                            foreach ($res as $row1) {
+                                                echo $row1['full_name'];
+                                            }
+                                        } ?>
                                     </td>
                                     <td>
-                                        <?php echo $row['ctype_name']; ?>
+                                        <?php echo $row['cat_name']; ?>
                                     </td>
+                                    <!-- <td><?//php if ($row['cat_status'] == 1) { echo 'Enable'; } else { echo 'Disable'; } ?> -->
                                     </td>
                                     <td>
-                                        <a href="category-edit.php?id=<?php echo $row['category_id']; ?>" class="btn btn-primary btn-xs">Edit</a>
-                                        <a href="#" class="btn btn-danger btn-xs" data-href="category-delete.php?id=<?php echo $row['category_id']; ?>" data-toggle="modal" data-target="#confirm-delete">Delete</a>
+                                        <label class="switch">
+                                            <input type="checkbox" class="category-toggle" data-cat-id="<?php echo $row['cat_id']; ?>" <?php echo ($row['cat_status'] == 1) ? 'checked' : ''; ?>>
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <a href="cust-category-edit.php?id=<?php echo $row['cat_id']; ?>" class="btn btn-primary btn-xs">Edit</a>
+                                        <a href="#" class="btn btn-danger btn-xs" data-href="cust-category-delete.php?id=<?php echo $row['cat_id']; ?>" data-toggle="modal" data-target="#confirm-delete">Delete</a>
                                     </td>
                                 </tr>
                             <?php

@@ -13,7 +13,7 @@
 // $statement->execute();
 // $total_mid_category = $statement->rowCount();
 
-$statement = $pdo->prepare("SELECT cat_name, COUNT(*) as category_count FROM tbl_category GROUP BY cat_name");
+$statement = $pdo->prepare("SELECT category_name, COUNT(*) as category_count FROM tbl_category GROUP BY category_name");
 $statement->execute();
 $categories = $statement->fetchAll(PDO::FETCH_ASSOC);
 $category = $statement->rowCount();
@@ -79,7 +79,7 @@ $total_customers = $statement->rowCount();
 				</div>
 			</div>
 		</a>
-		<a href="category.php">
+		<a href="cust-category.php">
 			<div class="col-lg-3 col-xs-6">
 				<div class="small-box bg-maroon">
 					<div class="inner">
