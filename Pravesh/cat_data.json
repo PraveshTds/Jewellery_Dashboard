@@ -1,0 +1,129 @@
+{
+    "meta": {
+        "message": "Success",
+        "code": 200
+    },
+    "data": [
+        {
+            "category": "Chains",
+            "label": "Chains",
+            "type": "neck",
+            "sequence": 5,
+            "sets_info": [],
+            "active_product_count": 10
+        },
+        {
+            "category": "Pendants",
+            "label": "Pendants",
+            "type": "neck",
+            "sequence": 6,
+            "sets_info": [],
+            "active_product_count": 0
+        },
+        {
+            "category": "Mangalsutras",
+            "label": "Mangalsutras",
+            "type": "neck",
+            "sequence": 3,
+            "sets_info": [],
+            "active_product_count": 10
+        },
+        {
+            "category": "Sets",
+            "label": "Pendant Sets",
+            "type": "neck",
+            "sequence": 4,
+            "sets_info": [
+                {
+                    "set_category": "Sets",
+                    "category": "Necklace",
+                    "type": "neck",
+                    "category_singular": "pendant",
+                    "data_key": "pendant_data",
+                    "code_key": "pendant"
+                },
+                {
+                    "set_category": "Sets",
+                    "category": "Earrings",
+                    "type": "ear",
+                    "category_singular": "earring",
+                    "data_key": "earring_data",
+                    "code_key": "earring"
+                }
+            ],
+            "active_product_count": 2
+        },
+        {
+            "category": "Earrings",
+            "label": "Earrings",
+            "type": "ear",
+            "sequence": 1,
+            "sets_info": [],
+            "active_product_count": 1
+        },
+        {
+            "category": "7",
+            "label": "7",
+            "type": "60",
+            "sequence": "1",
+            "sets_info": [],
+            "active_product_count": "12"
+        },
+        {
+            "category": "Chain",
+            "label": "Chain",
+            "type": "60",
+            "sequence": "1",
+            "sets_info": [],
+            "active_product_count": "12"
+        },
+        {
+            "category": "Chain",
+            "label": "Chain",
+            "type": "60",
+            "sequence": "1",
+            "sets_info": [],
+            "active_product_count": "12"
+        },
+        {
+            "category": "Chain",
+            "label": "Chain",
+            "type": "60",
+            "sequence": "1",
+            "sets_info": [],
+            "active_product_count": "12"
+        },
+        {
+            "category": "Chain",
+            "label": "Chain",
+            "type": "60",
+            "sequence": "1",
+            "sets_info": [],
+            "active_product_count": "12"
+        },
+        {
+            "category": "Mangalsutra",
+            "label": "Mangalsutra",
+            "type": "60",
+            "sequence": "1",
+            "sets_info": [],
+            "active_product_count": "12"
+        },
+        {
+            "category": "Chain",
+            "label": "Chain",
+            "type": "60",
+            "sequence": "1",
+            "sets_info": [],
+            "active_product_count": "12"
+        },
+        {
+            "category": "Chain",
+            "label": "Chain",
+            "type": "60",
+            "sequence": "1",
+            "sets_info": [],
+            "active_product_count": "12"
+        }
+    ]
+}

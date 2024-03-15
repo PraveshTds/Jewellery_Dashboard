@@ -1,0 +1,56 @@
+/* iCheck plugin skins
+----------------------------------- */
+@import url("all/minimal/_all.css");
+@import url("all/square/_all.css");
+@import url("all/flat/_all.css");
+@import url("all/line/_all.css");
+@import url("all/polaris/polaris.css");
+@import url("all/futurico/futurico.css");
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 37px;
+    height: 20px;
+    border-radius: 10px; /* Added border-radius for the switch */
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: background-color 0.4s;
+    border-radius: 10px; /* Added border-radius for the slider */
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: left 0.4s, background-color 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    left: calc(100% - 18px);
+    background-color: white;
+}
