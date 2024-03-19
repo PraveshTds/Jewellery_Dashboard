@@ -1,7 +1,7 @@
 <?php require_once('header.php'); ?>
 
 <?php
-if(!isset($_REQUEST['id'])) {
+if (!isset($_REQUEST['id'])) {
 	header('location: logout.php');
 	exit;
 } else {
@@ -10,7 +10,7 @@ if(!isset($_REQUEST['id'])) {
 	$statement->execute(array($_REQUEST['id']));
 	$total = $statement->rowCount();
 	$data = $statement->fetchAll();
-	if( $total == 0 ) {
+	if ($total == 0) {
 		header('location: logout.php');
 		exit;
 	}
@@ -19,14 +19,21 @@ if(!isset($_REQUEST['id'])) {
 
 <?php
 
-	// Delete from tbl_customer
-	$statement = $pdo->prepare("DELETE FROM tbl_customer WHERE cust_id=?");
-	$statement->execute(array($_REQUEST['id']));
+// Delete from tbl_customer
+$statement = $pdo->prepare("DELETE FROM tbl_customer WHERE cust_id=?");
+$statement->execute(array($_REQUEST['id']));
 
 
-	// Delete from tbl_user
-	$statement = $pdo->prepare("DELETE FROM tbl_user WHERE email=?");
-	$statement->execute(array($data[0]['cust_email']));
+// Delete from tbl_user
+$statement = $pdo->prepare("DELETE FROM tbl_user WHERE email=?");
+$statement->execute(array($data[0]['cust_email']));
 
-	header('location: customer.php');
+
+$cust_name = $data[0]['cust_name'];
+$customer_folder = "/domains/textronic.info/public_html/api_jewellery/api/Brand/{$cust_name}";
+
+ftp_remove_directory_contents($ftpConnection, $customer_folder);
+ftp_rmdir($ftpConnection, $customer_folder);
+
+header('location: customer.php');
 ?>

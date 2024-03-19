@@ -25,12 +25,17 @@ function ftp_files_put($ftpConnection, $local_folder, $remote_folder)
 
     // closedir($dir);
 }
-function getting_files($ftpConnection, $pdo)
+function getting_files_category($ftpConnection, $pdo, $customer)
 {
-    $customer = $pdo->prepare("SELECT * FROM tbl_user WHERE id=?");
-    $customer->execute(array($_POST['customer']));
-    $total_cust = $customer->fetchAll();
-    $cust = strtolower($total_cust[0]['full_name']);
+    if (isset($_POST['category_name'])) {
+        $customer = $pdo->prepare("SELECT * FROM tbl_user WHERE id=?");
+        $customer->execute(array($_POST['customer']));
+        $total_cust = $customer->fetchAll();
+        $cust = strtolower($total_cust[0]['full_name']);
+    } else {
+        $cust = strtolower($customer);
+    }
+
 
     $ftpDirectory = "/domains/textronic.info/public_html/api_jewellery/api/Brand/{$cust}";
 
@@ -40,7 +45,7 @@ function getting_files($ftpConnection, $pdo)
     if (is_array($dirlist)) {
         foreach ($dirlist as $filename) {
             // Check if the file is cat_data.json in the desired directory
-            if ($filename == '/domains/textronic.info/public_html/api_jewellery/api/Brand/pravesh/cat_data.json') {
+            if ($filename == "/domains/textronic.info/public_html/api_jewellery/api/Brand/{$cust}/cat_data.json") {
                 // Download the JSON file
                 $localFile = tempnam(sys_get_temp_dir(), 'cat_data_');
                 if (ftp_get($ftpConnection, $localFile, $filename, FTP_BINARY)) {
@@ -54,5 +59,32 @@ function getting_files($ftpConnection, $pdo)
                 }
             }
         }
+    }
+}
+
+function getting_files_cust($ftpConnection, $cust)
+{
+    $ftpDirectory = "/domains/textronic.info/public_html/api_jewellery/api/Brand";
+
+    // returns files present in that directory
+    $dirlist = ftp_nlist($ftpConnection, $ftpDirectory);
+
+    if (is_array($dirlist)) {
+        foreach ($dirlist as $filename) {
+            // Check if the customer file already present
+            if ($filename == "/domains/textronic.info/public_html/api_jewellery/api/Brand/{$cust}") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+}
+
+function ftp_remove_directory_contents($ftpConnection, $customer_folder)
+{
+    $files = ftp_nlist($ftpConnection, $customer_folder);
+    foreach ($files as $file) {
+        ftp_delete($ftpConnection, $file);
     }
 }

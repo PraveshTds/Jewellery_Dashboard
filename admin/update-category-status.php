@@ -20,6 +20,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['cat_id']) && isset($_GE
     $statement->bindParam(':newStatus', $newStatus, PDO::PARAM_INT);
     $statement->bindParam(':catId', $catId, PDO::PARAM_INT);
 
+    // update 
+    $statement = $pdo->prepare("UPDATE tbl_cust_category SET active_product_count = :newStatus WHERE cat_id = :catId");
+    $statement->bindParam(':newStatus', $newStatus, PDO::PARAM_INT);
+    $statement->bindParam(':catId', $catId, PDO::PARAM_INT);
+
     if ($statement->execute()) {
         // Return the new status (1 for active, 0 for inactive)
         echo $newStatus;

@@ -8,6 +8,7 @@ ob_start();
 include("../inc/config.php");
 include("../inc/functions.php");
 include("../inc/CSRF_Protect.php");
+require_once('server.php');
 $csrf = new CSRF_Protect();
 $error_message = '';
 $success_message = '';
@@ -123,7 +124,7 @@ if (!isset($_SESSION['user'])) {
 							</span>
 						</a>
 						<ul class="treeview-menu">
-							<li><a href="manage-gender.php"><i class="fa fa-circle-o"></i>Gender</a></li>
+							<!-- <li><a href="manage-gender.php"><i class="fa fa-circle-o"></i>Gender</a></li> -->
 							<li><a href="category-type.php"><i class="fa fa-circle-o"></i>Category Type</a></li>
 							<li><a href="category.php"><i class="fa fa-circle-o"></i>Category </a></li>
 						</ul>

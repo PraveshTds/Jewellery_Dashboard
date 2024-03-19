@@ -1,6 +1,6 @@
 <?php
 require_once('header.php');
-require_once('server.php');
+require_once('category_functions.php');
 ?>
 
 <?php
@@ -11,6 +11,11 @@ if (isset($_POST['form1'])) {
 	$existing_cat->execute(array($_POST['category_name']));
 	$total = $existing_cat->fetchAll();
 	$cat_name = $total[0]['category_name'];
+
+	$existing_cat_type = $pdo->prepare("SELECT * FROM tbl_category_type WHERE ctype_id=?");
+	$existing_cat_type->execute(array($_POST['ctype_id']));
+	$total_type = $existing_cat_type->fetchAll();
+	$cat_type_name = $total_type[0]['ctype_name'];
 
 	if (empty($_POST['gender_id'])) {
 		$valid = 0;
@@ -44,49 +49,10 @@ if (isset($_POST['form1'])) {
 	}
 
 	if ($valid == 1) {
-		$statement = $pdo->prepare("INSERT INTO tbl_cust_category (cat_name,ctype_id,sequence,active_product_count,customer,cat_status) VALUES (?,?,?,?,?,0)");
-		$statement->execute(array($cat_name, $_POST['ctype_id'], $_POST['sequence'], $_POST['active_product_count'], $_POST['customer']));
-
-		$json_data = getting_files($ftpConnection, $pdo);
-		$categories = json_decode($json_data, true);
-
-		// Construct new category data
-		$new_category = array(
-			"category" => $cat_name,
-			"label" => $cat_name, // Assuming label is same as category name
-			"type" => $_POST['ctype_id'], // Assuming ctype_id corresponds to type
-			"sequence" => $_POST['sequence'],
-			"sets_info" => array(),
-			"active_product_count" => $_POST['active_product_count']
-		);
-
-		// Append new category to existing categories array
-		$categories['data'][] = $new_category;
-
-		// Convert array back to JSON
-		$updated_json = json_encode($categories, JSON_PRETTY_PRINT);
-
-		$remote_json_file = '/domains/textronic.info/public_html/api_jewellery/api/Brand/pravesh/cat_data.json';
-
-		// Write updated JSON to a temporary local file
-		$temp_file = tempnam(sys_get_temp_dir(), 'updated_json_');
-		if ($temp_file === false) {
-			$error_message .= 'Unable to create temporary file.';
-		} else {
-			if (file_put_contents($temp_file, $updated_json)) {
-				$upload_result = ftp_put($ftpConnection, $remote_json_file, $temp_file, FTP_BINARY);
-				if ($upload_result === false) {
-					$error_message .= 'Unable to upload JSON data to the server.';
-				} else {
-					$success_message .= ' JSON data updated successfully.';
-				}
-				unlink($temp_file);
-			} else {
-				$error_message .= 'Unable to write JSON data to temporary file.';
-			}
-		}
-
-		ftp_close($ftpConnection);
+		addCategory($pdo, $ftpConnection, $cat_name, $cat_type_name, $_POST['sequence'],$error_message,$success_message);
+		
+		$statement = $pdo->prepare("INSERT INTO tbl_cust_category (cat_name,ctype_id,sequence,customer,active_product_count) VALUES (?,?,?,?,0)");
+		$statement->execute(array($cat_name, $_POST['ctype_id'], $_POST['sequence'], $_POST['customer']));
 
 		$success_message = 'Category is added successfully.';
 	}
@@ -186,12 +152,6 @@ if (isset($_POST['form1'])) {
 							<label for="" class="col-sm-3 control-label">sequence<span>*</span></label>
 							<div class="col-sm-4">
 								<input type="text" class="form-control" name="sequence">
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">active_product_count<span>*</span></label>
-							<div class="col-sm-4">
-								<input type="text" class="form-control" name="active_product_count">
 							</div>
 						</div>
 

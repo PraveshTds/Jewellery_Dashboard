@@ -19,7 +19,6 @@
                                 <th>Id</th>
                                 <th>Customer</th>
                                 <th>Category Name</th>
-                                <!-- <th>Status</th> -->
                                 <th>Status</th>
                                 <th>Action</th>
                             </tr>
@@ -59,11 +58,10 @@
                                     <td>
                                         <?php echo $row['cat_name']; ?>
                                     </td>
-                                    <!-- <td><?//php if ($row['cat_status'] == 1) { echo 'Enable'; } else { echo 'Disable'; } ?> -->
                                     </td>
                                     <td>
                                         <label class="switch">
-                                            <input type="checkbox" class="category-toggle" data-cat-id="<?php echo $row['cat_id']; ?>" <?php echo ($row['cat_status'] == 1) ? 'checked' : ''; ?>>
+                                            <input type="checkbox" class="category-toggle" data-cat-id="<?php echo $row['cat_id']; ?>" <?php echo ($row['active_product_count'] == 1) ? 'checked' : ''; ?>>
                                             <span class="slider round"></span>
                                         </label>
                                     </td>

@@ -75,6 +75,23 @@ if (isset($_POST['form1'])) {
         }
     }
 
+    $customer_directory = getting_files_cust($ftpConnection,$_POST['cust_name']);
+
+    if ($customer_directory == false) {
+        // Create a new folder
+        if (ftp_mkdir($ftpConnection, $ftpDirectory . strip_tags($_POST['cust_name']))) {
+            echo 'Folder created successfully';
+        } else {
+            echo 'Failed to create folder';
+        }
+        $server_folder = strip_tags($_POST['cust_name']);
+        $remote_folder = "/domains/textronic.info/public_html/api_jewellery/api/Brand/{$server_folder}";
+        ftp_files_put($ftpConnection, $local_folder, $remote_folder);
+    } else {
+        $valid = 0;
+        $error_message .= "Customer already been created" . "<br>";
+    }
+
     if ($valid == 1) {
 
         $token = md5(time());
@@ -135,17 +152,6 @@ if (isset($_POST['form1'])) {
             strip_tags($_POST['cust_role']),
             strip_tags('Active')
         ));
-        // end
-
-        // Create a new folder
-        if (ftp_mkdir($ftpConnection, $ftpDirectory . strip_tags($_POST['cust_name']))) {
-            echo 'Folder created successfully';
-        } else {
-            echo 'Failed to create folder';
-        }
-        $server_folder = strip_tags($_POST['cust_name']);
-        $remote_folder = "/domains/textronic.info/public_html/api_jewellery/api/Brand/{$server_folder}";
-        ftp_files_put($ftpConnection, $local_folder, $remote_folder);
 
         // Sending Email
         // mail($to, $subject, $message, $headers);
@@ -155,10 +161,12 @@ if (isset($_POST['form1'])) {
         unset($_POST['cust_email']);
         unset($_POST['cust_phone']);
         unset($_POST['cust_address']);
+        unset($_POST['cust_password']);
         unset($_POST['cust_city']);
         unset($_POST['cust_state']);
         unset($_POST['cust_zip']);
-        // ftp_close($ftpConnection);
+        unset($_POST['cust_role']);
+        ftp_close($ftpConnection);
         $success_message = "Customer has been added successfully.";
     }
 }
@@ -219,8 +227,8 @@ if (isset($_POST['form1'])) {
                                         <div class="col-md-6 form-group">
                                             <label for="">Phone *</label>
                                             <input type="number" minlength="10" maxlength="12" class="form-control" name="cust_phone" value="<?php if (isset($_POST['cust_phone'])) {
-                                                                                                                    echo $_POST['cust_phone'];
-                                                                                                                } ?>">
+                                                                                                                                                    echo $_POST['cust_phone'];
+                                                                                                                                                } ?>">
                                         </div>
                                         <div class="col-md-12 form-group">
                                             <label for="">Address *</label>
@@ -260,8 +268,8 @@ if (isset($_POST['form1'])) {
                                         <div class="col-md-6 form-group">
                                             <label for="">Zipcode *</label>
                                             <input type="number" class="form-control" name="cust_zip" value="<?php if (isset($_POST['cust_zip'])) {
-                                                                                                                echo $_POST['cust_zip'];
-                                                                                                            } ?>">
+                                                                                                                    echo $_POST['cust_zip'];
+                                                                                                                } ?>">
                                         </div>
                                         <div class="col-md-6 form-group">
                                             <label for="">Password *</label>

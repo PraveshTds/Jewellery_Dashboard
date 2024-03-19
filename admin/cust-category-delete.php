@@ -1,4 +1,6 @@
-<?php require_once('header.php'); ?>
+<?php require_once('header.php');
+require_once('category_functions.php');
+ ?>
 
 <?php
 // Preventing the direct access of this page.
@@ -10,11 +12,19 @@ if(!isset($_REQUEST['id'])) {
 	$statement = $pdo->prepare("SELECT * FROM tbl_cust_category WHERE cat_id=?");
 	$statement->execute(array($_REQUEST['id']));
 	$total = $statement->rowCount();
+	$result = $statement->fetchAll();
+	$cat_name = $result[0]['cat_name'];
 	if( $total == 0 ) {
 		header('location: logout.php');
 		exit;
 	}
 }
+$cust_id = $result[0]['customer'];
+
+    $customer = $pdo->prepare("SELECT * FROM tbl_user WHERE id=?");
+    $customer->execute(array($cust_id));
+    $total_cust = $customer->fetchAll();
+    $customer = strtolower($total_cust[0]['full_name']);
 ?>
 
 <?php
@@ -27,7 +37,6 @@ if(!isset($_REQUEST['id'])) {
 	foreach ($result as $row) {
 		$p_ids[] = $row['p_id'];
 	}
-
 
 	for($i=0;$i<count($p_ids);$i++) {
 
@@ -64,8 +73,8 @@ if(!isset($_REQUEST['id'])) {
 	}
 
 	// Delete from tbl_cust_category
+	deleteCategory($pdo, $ftpConnection, $cat_name, $customer);
 	$statement = $pdo->prepare("DELETE FROM tbl_cust_category WHERE cat_id=?");
 	$statement->execute(array($_REQUEST['id']));
-
 	header('location: cust-category.php');
 ?>
