@@ -87,12 +87,18 @@ if(isset($_POST['form1'])) {
 						
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label"></label>
+<<<<<<< HEAD
 							<div class="col-sm-3">
 								<button type="submit" class="btn btn-success pull-left" name="form1">Submit</button>
 							</div>
 							<div class="col-sm-4 text-right">
 								<a href="category-type.php" class="btn btn-danger pull-left" name="cancel">Cancel</a>
 							</div>
+=======
+							<div class="col-sm-6">
+								<button type="submit" class="btn btn-success pull-left" name="form1">Submit</button>
+							</div>
+>>>>>>> 47de46c2ba56d2c2293d4a12fa1245cdfa13ebd7
 						</div>
 					</div>
 				</div>

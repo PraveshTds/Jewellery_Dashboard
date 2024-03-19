@@ -124,7 +124,11 @@ if (!isset($_SESSION['user'])) {
 							</span>
 						</a>
 						<ul class="treeview-menu">
+<<<<<<< HEAD
 							<!-- <li><a href="manage-gender.php"><i class="fa fa-circle-o"></i>Gender</a></li> -->
+=======
+							<li><a href="manage-gender.php"><i class="fa fa-circle-o"></i>Gender</a></li>
+>>>>>>> 47de46c2ba56d2c2293d4a12fa1245cdfa13ebd7
 							<li><a href="category-type.php"><i class="fa fa-circle-o"></i>Category Type</a></li>
 							<li><a href="category.php"><i class="fa fa-circle-o"></i>Category </a></li>
 						</ul>
